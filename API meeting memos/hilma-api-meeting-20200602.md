@@ -1,10 +1,10 @@
 # Hilma API meeting 06.2.2020 14:00-14:30 (EET)
 
 ## Participants
-Antti Remes
-Esa Ikonen
-Janne Forsell
-Henri Hietala
+*Antti Remes
+*Esa Ikonen
+*Janne Forsell
+*Henri Hietala
 
 ## Topics
 ### Announcing new policy on support
