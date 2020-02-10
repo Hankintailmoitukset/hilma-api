@@ -12,7 +12,7 @@ Here we will publish information about api hotfixes, upcoming changes and docume
 | Release date | Changes |
 |--------------|---------|
 | 7.2.2020 hotfix    | Fixed null reference issues in defence corrigendum notice factory. Fixed corrigendum notices to generate new notice numbers on create |
-| 10.2.2020 hotfix | Fixed issue with notice validation incorrectly using depricated TED schema version. Now the validation uses |
+| 10.2.2020 hotfix | Fixed issue with notice validation incorrectly using depricated TED schema version. Now the validation uses the latest release |
  
 
 
