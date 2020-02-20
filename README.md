@@ -13,6 +13,7 @@ Here we will publish information about api hotfixes, upcoming changes and docume
 |--------------|---------|
 | 7.2.2020 hotfix    | Fixed null reference issues in defence corrigendum notice factory. Fixed corrigendum notices to generate new notice numbers on create |
 | 10.2.2020 hotfix | Fixed issue with notice validation incorrectly using depricated TED schema version. Now the validation uses the latest release |
+| 20.2.2020 release (to be deployed) | 1.4.0 Release. Includes fix for Defence schema validation. Validation now works in api for defence notices. notice.additionalInformation max size is reduced to 9800 characters due to adding link and attachment information to notice |
  
 
 
