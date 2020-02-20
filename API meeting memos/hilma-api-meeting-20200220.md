@@ -2,7 +2,11 @@
 
 ## Participants
 
--
+- Antti Remes
+- Ari Nurkkala
+- Janne Forsell
+- Esa Ikonen
+- Marko Rossi
 
 ## Topics
 
@@ -13,10 +17,12 @@
   * API Developer portal: https://hns-hilma-staging-apim.developer.azure-api.net/. 
   * UI: https://hilma-staging.azurefd.net/
   * The "48h rule" will be deactivated in test/staging environment
+  * Please register to the new environment as soon as possible.
 * Near future
   * Notice cancellation through ETS API
   * Documentation enhancements
 
 ## Known bugs
 
--
+* EU ulkopuoliset nuts codet eivät vieläkään ole kunnossa. Janne tekee tiketin.
+* F17 ilmoitukset eivät palauta XML dokumenttia. Janne tekee tiketin.
