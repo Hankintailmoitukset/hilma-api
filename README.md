@@ -38,7 +38,5 @@ AVP APi is for fetching open data from hankintailmoitukset.fi. The API is free t
 #### ETS
 ETS is an API to send notices to Hilma and TED. Limitations and requirements on the API usage apply.
 
-### Getting access to API
-
 ### Using the API
 Send requests, get responses.
