@@ -3,7 +3,10 @@
 ## Participants
 
 - Janne Forsell
-- 
+- Ari Nurkkala
+- Joona Tuominen
+- Antti Remes
+- Markus Paasiniemi
 
 
 ## Topics
@@ -18,7 +21,9 @@
 
 ### Upcoming API changes/features
 
-*
+* RESTFUL api to control publication in test
+
 ## Known bugs
 
-*
+* Passing time zone to API causes problems. Cloudia will create issue in github.
+* Testing currently seems little tedius / unstable.
