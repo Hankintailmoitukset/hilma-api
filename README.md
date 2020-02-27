@@ -58,3 +58,14 @@ Fetch most recent notice meta-data for the given notice. Optionally includes the
 
 ##### GET /notice
 Search notices sent by current API user. Supplie query parameters as search predicates. Following filters are available. Before (datetime), After (datetime), HilmaStatus, TedStatus and Type (noticeType). Returns notice meta-data, and optionally the full dto.
+
+#### AVP
+Due technical limitaions, the API is split into separate API's under the AVP product.
+
+##### POST /notices/docs/search
+Search API. This endpoint exposes Azure Cognitive Search search endpoint for the api users. For full documentation and instructions, refer to [Azure documentation](https://docs.microsoft.com/en-us/rest/api/searchservice/search-documents). The exposed endpoint is the more versatile POST endpoint.
+
+For upto date information about the **notices** search index schema, refer to ***GET /notices*** endpoint.
+
+##### GET /notices
+Returns current definition document for the notices search index. Refer here to see a list of searchable / filterable / facetable fields etc.
