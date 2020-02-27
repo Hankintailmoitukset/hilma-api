@@ -43,9 +43,13 @@ Send requests, get responses.
 
 #### ETS
 ##### POST /notice/{etsIdentifier}
+Endpoint for running validation on a notice. The notice is not commited nor sent upstream. Validation report and generated TED XML is returned.
 
 ##### PUT /notice/{etsIdentifier}
+Endpoint for sending notices. Notices sent to this endpoint are commited and publication process for them is immediately started. Track the notice publication process using ***GET /notice/{etsIdentifier}***. If there is a problem in the process, the notice will be returned to a "draft" steate, and should be updated using the same EtsIdentifier. The update again starts the publication process right away.
 
 ##### GET /notice/{etsIdentifier}
+Fetch most recent notice meta-data for the given notice. Optionally includes the full notice dto.
 
 ##### GET /notice
+Search notices sent by current API user. Supplie query parameters as search predicates. Following filters are available. Before (datetime), After (datetime), HilmaStatus, TedStatus and Type (noticeType). Returns notice meta-data, and optionally the full dto.
