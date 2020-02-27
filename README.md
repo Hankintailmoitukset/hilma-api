@@ -27,4 +27,18 @@ Here we will publish information about api hotfixes, upcoming changes and docume
 ## Basic API usage
 <a name="instructions"></a>
 
+### What is the API?
+Hankintailmoitukset.fi API consists of two products: AVP-Read (Additional Value Provider) and ETS-Write (Electronic Tender Sender). Both API's support self-registration in the portal. To self-register, create subscribtion to corresponding product in the API [portal](https://hns-hilma-prod-apim.developer.azure-api.net/signup).
+
+AVP API is available for use immediately after creating the subscription. ETS API subscriptions are created pending approval. Please contact Hansel Oy at yllapito@hankintailmoitukset.fi to start the process / for additional information. The API keys and such are managed by the user in the self service portal.
+
+#### AVP
+AVP APi is for fetching open data from hankintailmoitukset.fi. The API is free to use. Commercial usage is allowed. Request rates however are limited per API key and the API does not serve CORS headers.
+
+#### ETS
+ETS is an API to send notices to Hilma and TED. Limitations and requirements on the API usage apply.
+
+### Getting access to API
+
+### Using the API
 Send requests, get responses.
