@@ -40,3 +40,12 @@ ETS is an API to send notices to Hilma and TED. Limitations and requirements on 
 
 ### Using the API
 Send requests, get responses.
+
+#### ETS
+##### POST /notice/{etsIdentifier}
+
+##### PUT /notice/{etsIdentifier}
+
+##### GET /notice/{etsIdentifier}
+
+##### GET /notice
