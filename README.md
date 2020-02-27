@@ -1,7 +1,9 @@
 # TOC
-1. [hilma-api](#hilma-api)
-2. [Release notes](#release-notes)
-3. [Basic usage](#instructions)
+* [hilma-api](#hilma-api)
+* [Release notes](#release-notes)
+* [Basic usage](#instructions)
+  * [Summary](#api-summary)
+  * [Usage](#api-usage)
 
 
 # hilma-api
@@ -28,6 +30,7 @@ Here we will publish information about api hotfixes, upcoming changes and docume
 <a name="instructions"></a>
 
 ### What is the API?
+<a name="api-summary"></a>
 Hankintailmoitukset.fi API consists of two products: AVP-Read (Additional Value Provider) and ETS-Write (Electronic Tender Sender). Both API's support self-registration in the portal. To self-register, create subscribtion to corresponding product in the API [portal](https://hns-hilma-prod-apim.developer.azure-api.net/signup).
 
 AVP API is available for use immediately after creating the subscription. ETS API subscriptions are created pending approval. Please contact Hansel Oy at yllapito@hankintailmoitukset.fi to start the process / for additional information. The API keys and such are managed by the user in the self service portal.
@@ -39,9 +42,11 @@ AVP APi is for fetching open data from hankintailmoitukset.fi. The API is free t
 ETS is an API to send notices to Hilma and TED. Limitations and requirements on the API usage apply.
 
 ### Using the API
+<a name="api-usage"></a>
 Send requests, get responses.
 
 #### ETS
+
 ##### POST /notice/{etsIdentifier}
 Endpoint for running validation on a notice. The notice is not commited nor sent upstream. Validation report and generated TED XML is returned.
 
