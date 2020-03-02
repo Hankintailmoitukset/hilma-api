@@ -59,6 +59,12 @@ Fetch most recent notice meta-data for the given notice. Optionally includes the
 ##### GET /notice
 Search notices sent by current API user. Supplie query parameters as search predicates. Following filters are available. Before (datetime), After (datetime), HilmaStatus, TedStatus and Type (noticeType). Returns notice meta-data, and optionally the full dto.
 
+##### POST /notice/{etsIdentifier}/status[?noticeStatus][&reasonCode]
+Publish or reject a notice in TED. Only available against simulation endpoint.
+
+##### POST /notice/{etsIdentifier}/stop-publication[?simulateError]
+Stops publication of notice in TED. Only available in simulation or production TED environments. SimulateError parameter is available only in simulation endpoint.
+
 #### AVP
 Due technical limitaions, the API is split into separate API's under the AVP product.
 
