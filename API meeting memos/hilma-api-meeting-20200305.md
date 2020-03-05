@@ -13,6 +13,8 @@
 ### From previous meeting
 
 * TED Publication API now available in test environment
+  * The notice publish can be stopper while the notice is not scheduled for TED publish
+  * If the notice publish is cancelled because of wrong information, a new notice with new identifier has to be submitted because TED rejects notices with same notice number after publication is cancelled.
 
 ### Upcoming API changes/features
 
