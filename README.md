@@ -34,7 +34,7 @@ We are planning to add extra ted status to handle better publish process details
 | Ted status | Hilma TedPublishState |
 |------------|-----------------------|
 | IN_PROGRESS | “AwaitingTedPublish” |
-| PUBLISHED (scheduled in future) | "ApprovedForPublish” |
+| PUBLISHED (scheduled in future) | "*ApprovedForPublish*”  (NEW)|
 | PUBLISHED (scheduled publish time reached in TED) | “PublishedInTed” |
 
 ## Basic API usage
