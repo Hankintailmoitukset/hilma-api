@@ -26,6 +26,17 @@ Here we will publish information about api hotfixes, upcoming changes and docume
 | 20.2.2020 release | 1.4.0 Release. notice.additionalInformation max size is reduced to 9800 characters due to adding link and attachment information to notice |
 | 24.2.2020 hotfix | The update fixed the schema validation of defence notices. From now on the validation errors as well as produced xml is returned for defence notices in production as well as in staging and testing environments. Fixed issue #16, F17 xml issue. |
 
+### Planned changes
+
+We are planning to add extra ted status to handle better publish process details in TED api.
+
+
+| Ted status | Hilma TedPublishState |
+|------------------------------------|
+| IN_PROCESS | “AwaitingTedPublish”  |
+| PUBLISHED (scheduled in future) | "ApprovedForPublish” |
+| PUBLISHED (scheduled publish time reached in TED) | “PublishedInTed” |
+
 ## Basic API usage
 <a name="instructions"></a>
 
