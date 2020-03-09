@@ -46,7 +46,7 @@ The new values:
  * RejectedByTed = 5,
  * WaitingForInformation = 6,
  * NotPublished = 7,
- * *ApprovedForPublish = 8*
+ * **ApprovedForPublish = 8**
  
 ## Basic API usage
 <a name="instructions"></a>
