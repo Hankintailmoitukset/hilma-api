@@ -37,6 +37,17 @@ We are planning to add extra ted status to handle better publish process details
 | PUBLISHED (scheduled in future) | "*ApprovedForPublish*”  (NEW)|
 | PUBLISHED (scheduled publish time reached in TED) | “PublishedInTed” |
 
+The new values:
+
+ * SendingToTed = 1,
+ * SentToTed = 2,
+ * AwaitingTedPublish = 3,
+ * PublishedInTed = 4,
+ * RejectedByTed = 5,
+ * WaitingForInformation = 6,
+ * NotPublished = 7,
+ * *ApprovedForPublish = 8*
+ 
 ## Basic API usage
 <a name="instructions"></a>
 
