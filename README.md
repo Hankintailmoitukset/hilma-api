@@ -25,7 +25,7 @@ Here we will publish information about api hotfixes, upcoming changes and docume
 | 10.2.2020 hotfix | Fixed issue with notice validation incorrectly using depricated TED schema version. Now the validation uses the latest release |
 | 20.2.2020 release | 1.4.0 Release. notice.additionalInformation max size is reduced to 9800 characters due to adding link and attachment information to notice |
 | 24.2.2020 hotfix | The update fixed the schema validation of defence notices. From now on the validation errors as well as produced xml is returned for defence notices in production as well as in staging and testing environments. Fixed issue #16, F17 xml issue. |
-| 10.3.2020 release (planned) | Added a new ted publish state ApprovedForPublish. See details below. |
+| 11.3.2020 release | Added a new ted publish state ApprovedForPublish. See details below. |
 
 ### Planned changes
 
