@@ -29,6 +29,9 @@ Here we will publish information about api hotfixes, upcoming changes and docume
 
 ### Planned changes
 
+ETS users can add or update departments with a department identifier. The identifier is found in organisation.departmentIdentifier
+
+
 We are planning to add extra ted status to handle better publish process details in TED api.
 
 
