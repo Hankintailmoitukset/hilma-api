@@ -29,6 +29,9 @@ Here we will publish information about api hotfixes, upcoming changes and docume
 
 ### Planned changes
 
+New property for notice to signal if notice should not be published to search index.
+Note: this only affects national small value procurements
+
 ETS users can add or update departments with a department identifier. The identifier is found in organisation.departmentIdentifier
 
 
