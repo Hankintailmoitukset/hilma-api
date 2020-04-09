@@ -17,7 +17,7 @@
 # Suggestions
 - Adding TED names for enums for procedure types would clarify
 - Monitoring for Staging environment to avoid downtime
-- 
+- New issue type for github for general questions
 
 ## Known bugs
 - Annex procedure type outOfScope 
