@@ -1,0 +1,24 @@
+# Hilma API meeting 8.4.2020 14:00-14:30 (EET)
+
+## Participants
+- Ari Nurkkala
+- Esa Ikonen
+- Jyri Turkia
+- Antti Remes
+- Tuomas Tolvanen
+
+## Topics
+- Annex naming changes in enums
+  - This has been changes 
+- Small value procurement is coming. It will have the option to be not published to the search index.
+- Staging environment is in use: https://koulutus.hankintailmoitukset.fi
+  - Api portal at: https://hns-hilma-staging-apim.portal.azure-api.net/
+
+# Suggestions
+- Adding TED names for enums for procedure types would clarify
+- Monitoring for Staging environment to avoid downtime
+- 
+
+## Known bugs
+- Annex procedure type outOfScope 
+- Possible issue with notice documentation in test enviroment 
