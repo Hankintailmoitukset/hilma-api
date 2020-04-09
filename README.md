@@ -29,7 +29,7 @@ Here we will publish information about api hotfixes, upcoming changes and docume
 | 26.3.2020 hotfix | National defence contract didn't have UI support for procedure type other. Support is now added. |
 | 15.4.2020 TED Change in effect | ContractType must match Main CPV code values also in contract and prior information notices. This validation is changing from WARNING to ERROR on 15th of April. Further information: (todo) |
 
-### Planned changes
+### Notice status changes
 
 New property for notice to signal if notice should not be published to search index.
 Note: this only affects national small value procurements
@@ -37,7 +37,7 @@ Note: this only affects national small value procurements
 ETS users can add or update departments with a department identifier. The identifier is found in organisation.departmentIdentifier
 
 
-We are planning to add extra ted status to handle better publish process details in TED api.
+We have added extra ted status to handle better publish process details in TED api.
 
 
 | Ted status | Hilma TedPublishState |
