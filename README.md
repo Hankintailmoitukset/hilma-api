@@ -27,6 +27,7 @@ Here we will publish information about api hotfixes, upcoming changes and docume
 | 24.2.2020 hotfix | The update fixed the schema validation of defence notices. From now on the validation errors as well as produced xml is returned for defence notices in production as well as in staging and testing environments. Fixed issue #16, F17 xml issue. |
 | 11.3.2020 release | Added a new ted publish state ApprovedForPublish. See details below. New api for simulation notice publish and cancellation of notice publish for production TED |
 | 26.3.2020 hotfix | National defence contract didn't have UI support for procedure type other. Support is now added. |
+| 15.4.2020 TED Change in effect | ContractType must match Main CPV code values also in contracr and prior information notices. This validation is changing from WARNING to ERROR on 15th of April. Further information: (todo) |
 
 ### Planned changes
 
