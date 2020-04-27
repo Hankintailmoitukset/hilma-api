@@ -27,6 +27,6 @@
 
 ## Communication and documentation improvements
 - Tiina requested  practical suggestions to improve api related communication and documentation
-- We will add new issue type to GitHub got general suggestions an questions
+- We will add new issue type to GitHub for general suggestions and questions
 - We will continue weekly api meetings
 - Api changes and new features are communicated primarily via Gihub change log and in api meetings
