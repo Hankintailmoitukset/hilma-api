@@ -28,7 +28,8 @@ Here we will publish information about api hotfixes, upcoming changes and docume
 | 11.3.2020 release | Added a new ted publish state ApprovedForPublish. See details below. New api for simulation notice publish and cancellation of notice publish for production TED |
 | 26.3.2020 hotfix | National defence contract didn't have UI support for procedure type other. Support is now added. |
 | 15.4.2020 TED Change in effect | ContractType must match Main CPV code values also in contract and prior information notices. This validation is changing from WARNING to ERROR on 15th of April. Further information: https://op.europa.eu/en/web/eu-vocabularies/e-procurement/tedschemas |
-| 27.4.2020 hotfix (estimated date) | New validation for disagreeToBePublished. The validation allow the field disagreeToBePublished to be set true only for F06 totalValue and finalTotalValue field and national contract notice estimatedValue fields. Other use will result in validation errror in the ets api. The fix can be tested before production in staging environment | 
+| 4.5.2020 | New validation for disagreeToBePublished. The validation allow the field disagreeToBePublished to be set true only for F06 totalValue and finalTotalValue field and national contract notice estimatedValue fields. Other use will result in validation errror in the ets api. The fix can be tested before production in staging environment | 
+
 
 ### Notice status changes
 
