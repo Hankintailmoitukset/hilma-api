@@ -46,6 +46,28 @@ public HilmaStatistics HilmaStatistics { get; set; }
     }
 ```
 
+### National notice validation
+
+National notice validation is rolled out in near future. At first, the validation is optional and only available for two notice types. NationalContract (9902) and NationalAgricultureContract (9902). The feature will be up for testing soon and will be opt-in at first. Both, POST and PUT endpoints of the EtsApi will be accepting a new query parameter experimentalValidation, which, when set to true, will enable the validation. The validation report, in case of errors (there are no warnings, the validation is strict), a bad request is returned with error details in the response body.
+
+``` csharp
+[SwaggerResponse(202, "Notice update was successful, summary of the updated notice.", typeof(EtsNoticeSummary))]
+[SwaggerResponse(201, "Notice creation was successful, summary of the created notice.",
+    typeof(EtsNoticeSummary))]
+[SwaggerResponse(400, "Notice creation failed. returns errors describing the failure.", typeof(string))]
+[SwaggerResponse(409, "Specified EtsIdentifier already exists for this Ets API subscription", typeof(string))]
+[HttpPut("{etsIdentifier}")]
+public async Task<ActionResult<EtsNoticeSummary>> Put([FromBody] EtsNoticeContract dto,
+    [FromRoute] string etsIdentifier, CancellationToken token,
+    [FromQuery] string parentId = "",
+    [FromQuery] int projectId = 0,
+    [FromQuery] bool experimentalValidation = false)
+{
+ // Implementation
+}
+```
+
+
 ## Release notes
 <a name="release-notes"></a>
 
