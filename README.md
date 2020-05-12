@@ -13,6 +13,39 @@ Production notice documentation can be found at http://www.hankintailmoitukset.f
 
 Production api portal is hosted at: https://hns-hilma-prod-apim.portal.azure-api.net/
 
+## Upcoming changes
+
+### Statics
+New property will be added to EtsNoticeContract: HilmaStatics. The questions should be answered by the contracting authority. The object corresponds to "Statistics section" of Hilma UI.
+
+``` csharp
+public HilmaStatistics HilmaStatistics { get; set; }
+```
+
+``` csharp
+    [Contract]
+    public class HilmaStatistics
+    {
+        /// <summary>
+        /// The procurement takes energy efficiency into consideration
+        /// </summary>
+        public bool EnergyEfficiencyConsidered { get; set; }
+
+        /// <summary>
+        /// The procurement takes innovations into consideration
+        /// </summary>
+        public bool InnovationConsidered { get; set; }
+
+        /// <summary>
+        /// The procurement is inclusive to SMEs.
+        /// </summary>
+        public bool SMEParticipationConsidered { get; set; }
+
+        [NoValidation]
+        public ValidationState ValidationState { get; set; }
+    }
+```
+
 ## Release notes
 <a name="release-notes"></a>
 
