@@ -76,6 +76,7 @@ Here we will publish information about api hotfixes, upcoming changes and docume
 
 | Release date | Changes |
 |--------------|---------|
+| 1.7.2020 hotix | ExAnte notices can now correctly hide the final total value on utility procurements
 | 7.2.2020 hotfix    | Fixed null reference issues in defence corrigendum notice factory. Fixed corrigendum notices to generate new notice numbers on create |
 | 10.2.2020 hotfix | Fixed issue with notice validation incorrectly using depricated TED schema version. Now the validation uses the latest release |
 | 20.2.2020 release | 1.4.0 Release. notice.additionalInformation max size is reduced to 9800 characters due to adding link and attachment information to notice |
