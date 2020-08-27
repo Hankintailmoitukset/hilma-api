@@ -29,11 +29,11 @@ Add: MRU, STN, SVC, VES. Remove: CYP, EEK, LTL, LVL, MRO, MTL, SKK, STD, VEF.
 ####	eMail in XML R2.0.8
 Rule R123 will have severity ERROR
 R123 = Section I.1 Contracting authority/entity: the E-mail is required.
-### Legal Basis and Legal Basis Other
+#### Legal Basis and Legal Basis Other
 No change for Member States; the new schema release is less restrictive; hence, a rule will control the specific use.
-###	eMail and URL
+####	eMail and URL
 No change for Member States; the new R2.0.9 schema release is less restrictive; hence, a rule will control the specific use.
-###	Deprecated schema
+####	Deprecated schema
 Removal of the DEVCO schema (forms D01, D02, ...)
 European External Aid will use standard forms F01, F02, …
 The details on the implementation and on the planning will be communicated during the first half of September.
