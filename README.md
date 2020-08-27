@@ -15,6 +15,32 @@ Production api portal is hosted at: https://hns-hilma-prod-apim.portal.azure-api
 
 ## Upcoming changes
 
+### CONTENT OF THE NEXT TED XML PACKAGE, RELEASE 2020
+We would like to inform you about the content of the next TED XML package, Release 2020. Please see below the summary of the changes:
+•	NUTS upgrade
+NUTS-2021 classification will replace NUTS-2016.
+See https://ec.europa.eu/eurostat/web/nuts/history
+
+####	NUTS extended with Country codes
+For all regions which are not covered by the official NUTS, the Country code is used as NUTS code. Specific value ‘00’ will be removed.
+####	Currencies update
+Alignment with EU-Vocalularies code list
+Add: MRU, STN, SVC, VES. Remove: CYP, EEK, LTL, LVL, MRO, MTL, SKK, STD, VEF.
+####	eMail in XML R2.0.8
+Rule R123 will have severity ERROR
+R123 = Section I.1 Contracting authority/entity: the E-mail is required.
+### Legal Basis and Legal Basis Other
+No change for Member States; the new schema release is less restrictive; hence, a rule will control the specific use.
+###	eMail and URL
+No change for Member States; the new R2.0.9 schema release is less restrictive; hence, a rule will control the specific use.
+###	Deprecated schema
+Removal of the DEVCO schema (forms D01, D02, ...)
+European External Aid will use standard forms F01, F02, …
+The details on the implementation and on the planning will be communicated during the first half of September.
+Best regards
+OJS eSenders Team
+
+
 ### Statics
 New property will be added to EtsNoticeContract: HilmaStatics. The questions should be answered by the contracting authority. The object corresponds to "Statistics section" of Hilma UI.
 
