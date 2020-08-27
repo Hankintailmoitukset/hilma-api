@@ -41,8 +41,8 @@ Best regards
 OJS eSenders Team
 
 
-### Statics
-New property will be added to EtsNoticeContract: HilmaStatics. The questions should be answered by the contracting authority. The object corresponds to "Statistics section" of Hilma UI.
+### Statistics
+New property has been added to the EtsNoticeContract: HilmaStatics. The questions should be answered by the contracting authority. The object corresponds to "Statistics section" of Hilma UI.
 
 ``` csharp
 public HilmaStatistics HilmaStatistics { get; set; }
