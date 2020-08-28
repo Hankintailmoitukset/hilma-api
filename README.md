@@ -36,6 +36,8 @@ No change for Member States; the new R2.0.9 schema release is less restrictive; 
 ####	Deprecated schema
 Removal of the DEVCO schema (forms D01, D02, ...)
 European External Aid will use standard forms F01, F02, …
+
+#### Schedule and implementation
 The details on the implementation and on the planning will be communicated during the first half of September.
 Best regards
 OJS eSenders Team
