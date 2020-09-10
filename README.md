@@ -15,6 +15,14 @@ Production api portal is hosted at: https://hns-hilma-prod-apim.portal.azure-api
 
 ## Upcoming changes
 
+### Defence contract F17 can be cancelled
+By setting:
+IsCancelled = true 
+CancelledReason = "Some text about the cancellation"
+and sending the same F17 notice again.
+->
+This will create a corrigendum notice F14 with directive 2009/81/EC. CancellationReson will be populated to OTHER_ADDITIONAL_INFO.
+
 ### CONTENT OF THE NEXT TED XML PACKAGE, RELEASE 2020
 We would like to inform you about the content of the next TED XML package, Release 2020. Please see below the summary of the changes:
 •	NUTS upgrade
