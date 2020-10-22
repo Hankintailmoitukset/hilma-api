@@ -1,12 +1,12 @@
-# Api meeting 22.10.2020
+ # Api meeting 22.10.2020
 
 # Participants:
 
-Marko Rossi
-Antti Remes
-Esa Ikonen
-Alex Engblom
-Tuomas Tolvanen
+* Marko R
+* Antti R
+* Esa I
+* Alex E
+* Tuomas T
 
 ## F14 Notice corrigendum limitations published to production on 19.10.2020
   * ETS Api blocks publishing of F14 notices if their previous notice TedPublishState is not in ApprovedForPublish (8) or PublishedInTed (4) state
