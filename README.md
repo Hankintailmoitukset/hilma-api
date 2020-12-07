@@ -12,6 +12,7 @@
 Production notice documentation can be found at http://www.hankintailmoitukset.fi/en/documentation
 
 The new Production api portal is hosted at: https://hns-hilma-prod-apim.developer.azure-api.net/
+
 The old Production api portal is hosted at: https://hns-hilma-prod-apim.portal.azure-api.net/
 
 ## Upcoming changes
