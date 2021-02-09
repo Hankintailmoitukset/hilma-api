@@ -17,6 +17,26 @@ The old Production api portal is hosted at: https://hns-hilma-prod-apim.portal.a
 
 ## Upcoming changes
 
+### F14 changes to section VI.6) Original notice reference for ETS api corrigendums reference resolution
+
+We have identified an issue in Hilma F14 in corrigendum notice handling that has caused problems in TED XML for the section VI.6) referring to the original notice. The issue has concerned notices that are corrected and reference to a previous notice (i.e prior informtation notice). This issue has caused Hilma to incorrectly reference prior information notice as the original notice and this has resulted in rejections in TED.
+
+We have implemented a fix for the issue and the patch will be published later this week.  
+
+Guidelines for corrigendum notices after the patch is released:
+
+The ETS API interface does not change in the patch and no changes are needed.
+When publishing corrigendum {parentId} should contiue to point to the initial contract notice that is corrected or to the previous corrigendum notice if one has been published. 
+
+For F14 The section *VI.6) Original notice reference* is resolved recursively by Hilma from the original contract notice when a corrigendum is published to TED. These fields are: 
+  * Notice reference 
+  * Notice number in the OJS
+  * Date of dispatch of the original notice:
+
+It should be noted that the field `PreviousNoticeOjsNumber` field should only be used to indicate field: *IV.2.1) Previous publication concerning this procedure*  (contract and contract award notices)
+
+Estimated release date: 11.2.2021
+  
 ### F14 Notice corrigendum limitations
 
 Publishing corrigendums for notices that are not yet published by TED has caused notices to be merged by TED and therefore Hilma and extral systems have been out of sync.
