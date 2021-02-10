@@ -26,7 +26,7 @@ We have implemented a fix for the issue and the patch will be published later th
 Guidelines for corrigendum notices after the patch is released:
 
 The ETS API interface does not change in the patch and no changes are needed.
-When publishing corrigendum {parentId} should contiue to point to the initial contract notice that is corrected or to the previous corrigendum notice if one has been published. 
+When publishing corrigendum `parentId` should contiue to point to the initial contract notice that is corrected or to the previous corrigendum notice if one has been published. 
 
 For F14 The section *VI.6) Original notice reference* is resolved recursively by Hilma from the original contract notice when a corrigendum is published to TED. These fields are: 
   * Notice reference 
