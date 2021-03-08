@@ -56,14 +56,15 @@ We have identieifed an issue in F03 notice data model that has limited single co
 
 Current datamodel allows single awarded contract per lot: 
 
-    objectDescriptions[n].award.awardedContract = { ... }
+    objectDescriptions[n].awardContract.awardedContract = { ... }
     
 Updated datamodel allows multiple awarded contracts per lot:
     
-     objectDescriptions[n].award.awardedContracts = [ { ... }, { ... } ]
+     objectDescriptions[n].awardContract.awardedContracts = [ { ... }, { ... } ]
      
 Both object notations can be used mutually exclusively. When property `awardedContracts` is set and contains at least one awarded contract object, it is used. Otherwise the object in `awardedContract` property is used.
 
+Feature is currently testable in staging environment: https://koulutus.hankintailmoitukset.fi and https://hns-hilma-staging-apim.azure-api.net.
 
 ### F14 changes to section VI.6) Original notice reference for ETS api corrigendums reference resolution (Published to production on 2021-02-12)
 
