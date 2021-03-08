@@ -33,11 +33,12 @@ Here we will publish information about api hotfixes, upcoming changes and docume
 | 26.3.2020 hotfix | National defence contract didn't have UI support for procedure type other. Support is now added. |
 | 15.4.2020 TED Change in effect | ContractType must match Main CPV code values also in contract and prior information notices. This validation is changing from WARNING to ERROR on 15th of April. Further information: https://op.europa.eu/en/web/eu-vocabularies/e-procurement/tedschemas |
 | 4.5.2020 | New validation for disagreeToBePublished. The validation allow the field disagreeToBePublished to be set true only for F06 totalValue and finalTotalValue field and national contract notice estimatedValue fields. Other use will result in validation errror in the ets api. The fix can be tested before production in staging environment | 
-|19.10.2020 | F14 notices can be published only if previous notice in published in TED ( state in `ApprovedForPublish` (8) or `PublishedInTed` (4) state ). More information above. |
+|19.10.2020 | F14 notices can be published only if previous notice in published in TED ( state in `ApprovedForPublish` (8) or `PublishedInTed` (4) state ). More information below. |
 |25.1.2020| Hilma 2.1 Production release, no significan api chages |
 |12.2.2021| Fixed issue in original notice resolving in ETS Api. More information above |
 |22.1.2021| Fix released for issue in validating corrigendum notices via POST API |
-|10.3.2021| Hilma 2.2 Production release, TED Schema R2.0.9.S04 and R2.0.8.S05 support and NUTS 2021 support. More information oin separate section |
+|9.10.2021 (estimated)| Support for multiple contracts per lot for F03. More information below | 
+|10.3.2021| Hilma 2.2 Production release, TED Schema R2.0.9.S04 and R2.0.8.S05 support and NUTS 2021 support. More information on separate section below |
 
 ## Recent and upcoming changes
 
@@ -48,6 +49,21 @@ We are updating Hilma to support new TED Schema  on Wednesday 10.3.2021 starting
 By default the notices are validated and sent to TED using the latest TED schemas R2.0.9.S04 and R2.0.8.S05. The old schemas R2.0.9.S03 and R2.0.8.S04 are used for validation and sending to TED only if the notice uses NUTS codes from the 2016 version. This release does not require changes to the API requests. 
 
 The new features are available after the update by end of day Wednesday 10.3 
+
+### Support for multiple contracts per lot for F03
+
+We have identieifed an issue in F03 notice data model that has limited single contract per lot. We have implemented a fix for the data model issue with backward compatibility with current data model. 
+
+Current datamodel allows single awarded contract per lot: 
+
+    objectDescriptions[n].award.awardedContract = { ... }
+    
+Updated datamodel allows multiple awarded contracts per lot:
+    
+     objectDescriptions[n].award.awardedContracts = [ { ... }, { ... } ]
+     
+Both object notations can be used mutually exclusively. When property `awardedContracts` is set and contains at least one awarded contract object, it is used. Otherwise the object in `awardedContract` property is used.
+
 
 ### F14 changes to section VI.6) Original notice reference for ETS api corrigendums reference resolution (Published to production on 2021-02-12)
 
