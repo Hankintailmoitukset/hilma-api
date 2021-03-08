@@ -35,9 +35,8 @@ Here we will publish information about api hotfixes, upcoming changes and docume
 | 4.5.2020 | New validation for disagreeToBePublished. The validation allow the field disagreeToBePublished to be set true only for F06 totalValue and finalTotalValue field and national contract notice estimatedValue fields. Other use will result in validation errror in the ets api. The fix can be tested before production in staging environment | 
 |19.10.2020 | F14 notices can be published only if previous notice in published in TED ( state in `ApprovedForPublish` (8) or `PublishedInTed` (4) state ). More information above. |
 |25.1.2020| Hilma 2.1 Production release, no significan api chages |
-| 
 |12.2.2021| Fixed issue in original notice resolving in ETS Api. More information above |
-|22.1.2021| Fix released for issue in validating corrigendum notices via POST API|
+|22.1.2021| Fix released for issue in validating corrigendum notices via POST API |
 |10.3.2021| Hilma 2.2 Production release, TED Schema R2.0.9.S04 and R2.0.8.S05 support and NUTS 2021 support. More information oin separate section |
 
 ## Recent and upcoming changes
