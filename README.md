@@ -15,7 +15,40 @@ The new Production api portal is hosted at: https://hns-hilma-prod-apim.develope
 
 The old Production api portal is hosted at: https://hns-hilma-prod-apim.portal.azure-api.net/
 
+## Release notes
+<a name="release-notes"></a>
+
+Here we will publish information about api hotfixes, upcoming changes and documentation updates
+
+
+| Release date | Changes |
+|--------------|---------|
+| 9.7.2020 hotfix | Resending rejected corrigendums to defence family of notices should now work |
+| 1.7.2020 hotix | ExAnte notices can now correctly hide the final total value on utility procurements
+| 7.2.2020 hotfix    | Fixed null reference issues in defence corrigendum notice factory. Fixed corrigendum notices to generate new notice numbers on create |
+| 10.2.2020 hotfix | Fixed issue with notice validation incorrectly using depricated TED schema version. Now the validation uses the latest release |
+| 20.2.2020 release | 1.4.0 Release. notice.additionalInformation max size is reduced to 9800 characters due to adding link and attachment information to notice |
+| 24.2.2020 hotfix | The update fixed the schema validation of defence notices. From now on the validation errors as well as produced xml is returned for defence notices in production as well as in staging and testing environments. Fixed issue #16, F17 xml issue. |
+| 11.3.2020 release | Added a new ted publish state ApprovedForPublish. See details below. New api for simulation notice publish and cancellation of notice publish for production TED |
+| 26.3.2020 hotfix | National defence contract didn't have UI support for procedure type other. Support is now added. |
+| 15.4.2020 TED Change in effect | ContractType must match Main CPV code values also in contract and prior information notices. This validation is changing from WARNING to ERROR on 15th of April. Further information: https://op.europa.eu/en/web/eu-vocabularies/e-procurement/tedschemas |
+| 4.5.2020 | New validation for disagreeToBePublished. The validation allow the field disagreeToBePublished to be set true only for F06 totalValue and finalTotalValue field and national contract notice estimatedValue fields. Other use will result in validation errror in the ets api. The fix can be tested before production in staging environment | 
+|19.10.2020 | F14 notices can be published only if previous notice in published in TED ( state in `ApprovedForPublish` (8) or `PublishedInTed` (4) state ). More information above. |
+|25.1.2020| Hilma 2.1 Production release, no significan api chages |
+| 
+|12.2.2021| Fixed issue in original notice resolving in ETS Api. More information above |
+|22.1.2021| Fix released for issue in validating corrigendum notices via POST API|
+|10.3.2021| Hilma 2.2 Production release, TED Schema R2.0.9.S04 and R2.0.8.S05 support and NUTS 2021 support. More information oin separate section |
+
 ## Recent and upcoming changes
+
+### Hilma version release and TED Schema update on Wednesday 10.3.2021
+
+We are updating Hilma to support new TED Schema  on Wednesday 10.3.2021 starting at 17.30 as part of Hilma production release. After the update Hilma will support both schema versions and 2016 and 2021 NUTS codelists in parallel.
+
+By default the notices are validated and sent to TED using the latest TED schemas R2.0.9.S04 and R2.0.8.S05. The old schemas R2.0.9.S03 and R2.0.8.S04 are used for validation and sending to TED only if the notice uses NUTS codes from the 2016 version. This release does not require changes to the API requests. 
+
+The new features are available after the update by end of day Wednesday 10.3 
 
 ### F14 changes to section VI.6) Original notice reference for ETS api corrigendums reference resolution (Published to production on 2021-02-12)
 
@@ -132,29 +165,7 @@ public async Task<ActionResult<EtsNoticeSummary>> Put([FromBody] EtsNoticeContra
 ```
 
 
-## Release notes
-<a name="release-notes"></a>
 
-Here we will publish information about api hotfixes, upcoming changes and documentation updates
-
-
-| Release date | Changes |
-|--------------|---------|
-| 9.7.2020 hotfix | Resending rejected corrigendums to defence family of notices should now work |
-| 1.7.2020 hotix | ExAnte notices can now correctly hide the final total value on utility procurements
-| 7.2.2020 hotfix    | Fixed null reference issues in defence corrigendum notice factory. Fixed corrigendum notices to generate new notice numbers on create |
-| 10.2.2020 hotfix | Fixed issue with notice validation incorrectly using depricated TED schema version. Now the validation uses the latest release |
-| 20.2.2020 release | 1.4.0 Release. notice.additionalInformation max size is reduced to 9800 characters due to adding link and attachment information to notice |
-| 24.2.2020 hotfix | The update fixed the schema validation of defence notices. From now on the validation errors as well as produced xml is returned for defence notices in production as well as in staging and testing environments. Fixed issue #16, F17 xml issue. |
-| 11.3.2020 release | Added a new ted publish state ApprovedForPublish. See details below. New api for simulation notice publish and cancellation of notice publish for production TED |
-| 26.3.2020 hotfix | National defence contract didn't have UI support for procedure type other. Support is now added. |
-| 15.4.2020 TED Change in effect | ContractType must match Main CPV code values also in contract and prior information notices. This validation is changing from WARNING to ERROR on 15th of April. Further information: https://op.europa.eu/en/web/eu-vocabularies/e-procurement/tedschemas |
-| 4.5.2020 | New validation for disagreeToBePublished. The validation allow the field disagreeToBePublished to be set true only for F06 totalValue and finalTotalValue field and national contract notice estimatedValue fields. Other use will result in validation errror in the ets api. The fix can be tested before production in staging environment | 
-|19.10.2020 | F14 notices can be published only if previous notice in published in TED ( state in `ApprovedForPublish` (8) or `PublishedInTed` (4) state ). More information above. |
-|25.1.2020| Hilma 2.1 Production release, no significan api chages |
-| 
-|12.2.2021| Fixed issue in original notice resolving in ETS Api. More information above |
-|22.1.2021| Fix released for issue in validating corrigendum notices via POST API|
 
 ### Notice status changes
 
