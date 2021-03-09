@@ -37,7 +37,7 @@ Here we will publish information about api hotfixes, upcoming changes and docume
 |25.1.2020| Hilma 2.1 Production release, no significan api chages |
 |12.2.2021| Fixed issue in original notice resolving in ETS Api. More information above |
 |22.1.2021| Fix released for issue in validating corrigendum notices via POST API |
-|9.3.2021 (estimated)| Support for multiple contracts per lot for  F03, F06, F15, F21, F22 and F23. More information below | 
+|9.3.2021| Support for multiple contracts per lot for  F03, F06, F15, F21, F22 and F23. More information below | 
 |10.3.2021| Hilma 2.2 Production release, TED Schema R2.0.9.S04 and R2.0.8.S05 support and NUTS 2021 support. More information on separate section below |
 
 ## Recent and upcoming changes
@@ -50,7 +50,7 @@ By default the notices are validated and sent to TED using the latest TED schema
 
 The new features are available after the update by end of day Wednesday 10.3 
 
-### Support for multiple contracts per lot for F03, F06, F15, F21, F22 and F23
+### Support for multiple contracts per lot for F03, F06, F15, F21, F22 and F23, (Deployed 9.3.2021)
 
 We have identified an issue in F03, F06, F15, F21, F22 and F23 contract award notice data model that has limit of single contract per lot. We have implemented a fix for the data model issue with backward compatibility with current data model. 
 
@@ -64,7 +64,7 @@ Updated datamodel allows also multiple awarded contracts per lot:
      
 Both object notations can be used mutually exclusively. When property `awardedContracts` is set and contains at least one awarded contract object, it is used. Otherwise the object in `awardedContract` property is used.
 
-Feature is currently testable in staging environment: https://koulutus.hankintailmoitukset.fi and https://hns-hilma-staging-apim.azure-api.net.
+Feature is also testable in staging environment: https://koulutus.hankintailmoitukset.fi and https://hns-hilma-staging-apim.azure-api.net.
 
 ### F14 changes to section VI.6) Original notice reference for ETS api corrigendums reference resolution (Published to production on 2021-02-12)
 
