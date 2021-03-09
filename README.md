@@ -50,9 +50,9 @@ By default the notices are validated and sent to TED using the latest TED schema
 
 The new features are available after the update by end of day Wednesday 10.3 
 
-### Support for multiple contracts per lot for F03, F06 and F21
+### Support for multiple contracts per lot for F03, F06, F15, F21, F22 and F23
 
-We have identified an issue in F03, F06 and F21 contract award notice data model that has limit of single contract per lot. We have implemented a fix for the data model issue with backward compatibility with current data model. 
+We have identified an issue in F03, F06, F15, F21, F22 and F23 contract award notice data model that has limit of single contract per lot. We have implemented a fix for the data model issue with backward compatibility with current data model. 
 
 Current datamodel allows single awarded contract per lot: 
 
