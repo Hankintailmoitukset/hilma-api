@@ -37,7 +37,7 @@ Here we will publish information about api hotfixes, upcoming changes and docume
 |25.1.2020| Hilma 2.1 Production release, no significan api chages |
 |12.2.2021| Fixed issue in original notice resolving in ETS Api. More information above |
 |22.1.2021| Fix released for issue in validating corrigendum notices via POST API |
-|9.10.2021 (estimated)| Support for multiple contracts per lot for F03, F06, F21. More information below | 
+|9.3.2021 (estimated)| Support for multiple contracts per lot for F03, F06, F21. More information below | 
 |10.3.2021| Hilma 2.2 Production release, TED Schema R2.0.9.S04 and R2.0.8.S05 support and NUTS 2021 support. More information on separate section below |
 
 ## Recent and upcoming changes
