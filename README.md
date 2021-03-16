@@ -48,6 +48,8 @@ We are updating Hilma to support new TED Schema  on Wednesday 10.3.2021 starting
 
 By default the notices are validated and sent to TED using the latest TED schemas R2.0.9.S04 and R2.0.8.S05. The old schemas R2.0.9.S03 and R2.0.8.S04 are used for validation and sending to TED only if the notice uses NUTS codes from the 2016 version. This release does not require changes to the API requests. 
 
+Links to attachments going forward will change slightly. We have updated from deprecated Azure Storage SDK version. This caused order of query parameters in the link to the file to be reorganized in newly published notices. Old links remain the same. If you are using regular expression to handle attachment links, consider migrating to url parser solution (as reported in issue #97).
+
 The new features are available after the update by end of day Wednesday 10.3 
 
 ### Support for multiple contracts per lot for F03, F06, F15, F21, F22 and F23, (Deployed 9.3.2021)
