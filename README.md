@@ -42,6 +42,11 @@ Here we will publish information about api hotfixes, upcoming changes and docume
 
 ## Recent and upcoming changes
 
+### eForms infomration and eForms SDK on GitHub
+
+Technical information about eForms can be found on: https://simap.ted.europa.eu/fi/eforms
+Simap has also released SDK for eForms development on GitHub: https://github.com/OP-TED/eForms-SDK
+
 ### Hilma version release and TED Schema update on Wednesday 10.3.2021
 
 We are updating Hilma to support new TED Schema  on Wednesday 10.3.2021 starting at 17.30 as part of Hilma production release. After the update Hilma will support both schema versions and 2016 and 2021 NUTS codelists in parallel.
