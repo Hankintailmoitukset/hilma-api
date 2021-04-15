@@ -42,6 +42,20 @@ Here we will publish information about api hotfixes, upcoming changes and docume
 
 ## Recent and upcoming changes
 
+### Hilma version release 21.4.2021
+
+Contract award notices now fully support multiple contract awards per lot. Hilma internally uses an array of contract awards; API users can continue to use the single contract award. This contract award will be stored into the array. The API will only return notices in the array, no matter how they are posted.
+
+Buyer UI in Hilma has been reworked.
+
+Organisations can now define email domain restrictions for members.
+
+Buyers can now log in to Hankintaluotsi. This functionality will be enabled at later date.
+
+Buyer can now automatically generate and rectification and appeal instruction documents as PDF. 
+
+Fixed an issue that caused double TED submissions for notices posted to ETS API.
+
 ### eForms infomration and eForms SDK on GitHub
 
 Technical information about eForms can be found on: https://simap.ted.europa.eu/fi/eforms
