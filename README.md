@@ -9,7 +9,7 @@
 # hilma-api
 <a name="hilma-api"></a>
 
-Production notice documentation can be found at http://www.hankintailmoitukset.fi/en/documentation
+Production notice fields for Ets API users can be found at http://www.hankintailmoitukset.fi/en/documentation
 
 The new Production api portal is hosted at: https://hns-hilma-prod-apim.developer.azure-api.net/
 
