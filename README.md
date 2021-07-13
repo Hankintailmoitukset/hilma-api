@@ -44,7 +44,7 @@ Here we will publish information about api hotfixes, upcoming changes and docume
 
 ### Vehicle purchases are coming to hilma
 
-Test environment now supports new fields for vehicle purchases. Vehicle details are given on per lot basis. A lot for a contract notice (F02, F05, F21 , F22, F23, F24) is considered vehicle purchases if the primary CPV code (of the notice), or one of the additional CPV codes (of the lot) is from the following list: 60112000,60130000,60140000,90511000,60160000,60161000,64121100,64121200,60100000,90510000,64121000,34100000,3411*,3412*,3413*,3414* AND the buyer checks to confirming checboxes ("This procurement contains vehicles in certain categories" and "This procurement contains other than excluded vehicles").
+Test environment now supports new fields for vehicle purchases. Vehicle details are given on per lot basis. A lot for a contract notice (F02, F05, F21 , F22, F23, F24) is considered vehicle purchases if the primary CPV code (of the notice), or one of the additional CPV codes (of the lot) is from the following list: 60112000,60130000,60140000,90511000,60160000,60161000,64121100,64121200,60100000,90510000,64121000,34100000,3411*,3412*,3413*,3414* AND the buyer checks two confirming checboxes ("This procurement contains vehicles in certain categories" and "This procurement contains other than excluded vehicles").
 
 On contract award notices (F03, F06, F25, F21, F22, F23, F25 ... support for F25 is currently missing; it's comign soon). In addition to the previous, user is required to fill numbers of total and "clean" vehicles per vehicle category (6 numbers total per lot), if the checkboxes mentioned before are checked.
 
