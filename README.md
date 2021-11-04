@@ -42,6 +42,40 @@ Here we will publish information about api hotfixes, upcoming changes and docume
 
 ## Recent and upcoming changes
 
+### New statistics questions
+
+New statistics questions coming January 2022
+
+The questions will be mandatory, after end of January 2022 notices will be rejected if statistics are not provided
+
+No implementation details yet.
+
+Texts for upcoming questions, only in finnish for now:
+
+#### Ekologinen kestävyys
+
+**Tässä hankinnassa edistetään**:
+
+* Energiatehokkuutta (kyllä/ei) [infoboksi: Energiaa käyttävät laitteet ja ratkaisut, sekä rakentaminen]
+
+* Vähähiilisyyttä (kyllä/ei)  [Infoboksi: Päästöjen vähentäminen; fossiilisen energian tuotannon ja käytön vähentäminen tai uusiutuvan energian tuotannon ja käytön lisääminen]
+
+* Kiertotaloutta (kyllä/ei) [Infoboksi: Uusiomateriaalin käytön edistäminen, kierrätyksen edistäminen, jätteen määrän vähentäminen, haitallisten aineiden välttäminen]
+
+* Luonnon monimuotoisuutta (kyllä/ei) [Infoboksi: Kestävien tuotantotapojen edistäminen]
+
+* Kestävää ruokajärjestelmää (kyllä/ei) [Infoboksi: Hyvien viljelymenetelmien edistäminen, elintarviketurvallisuuden edistäminen, eläinten hyvinvoinnin edistäminen]
+
+  * jos käyttäjä on valinnut yhteenkään ekologisen kestävyyden kohtaan kyllä, niin tulee lopuksi yksi lisäalavalintakysymys:
+    * Käytetäänkö hankinnassa Motivan, ympäristömerkkien tai EU GPP kriteerejä (kyllä/ei)
+
+#### Sosiaalinen kestävyys
+
+* tässä hankinnassa otetaan huomioon työllistämisehto (kyllä/ei)
+  * lisäkysymys kyllä-valinneille : kuinka monta työ- ja oppisopimuspaikkaa ao. hankinnalla arvioidaan syntyvän [kokononaisluku]
+
+* Tässä hankinnassa käytetään vastuullisuuden vähimmäisvaatimuksia (Code of conduct) (kyllä/ei)
+
 ### Vehicle purchases are coming to hilma
 
 Test environment now supports new fields for vehicle purchases. Vehicle details are given on per lot basis. A lot for a contract notice (F02, F05, F21 , F22, F23, F24) is considered vehicle purchases if the primary CPV code (of the notice), or one of the additional CPV codes (of the lot) is from the following list: 60112000,60130000,60140000,90511000,60160000,60161000,64121100,64121200,60100000,90510000,64121000,34100000,3411*,3412*,3413*,3414* AND the buyer checks two confirming checboxes ("This procurement contains vehicles in certain categories" and "This procurement contains other than excluded vehicles").
