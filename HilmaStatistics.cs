@@ -1,3 +1,4 @@
+using System.Linq;
 using Hilma.Domain.Attributes;
 using Hilma.Domain.Enums;
 using System.Text;
@@ -44,21 +45,6 @@ namespace Hilma.Domain.DataContracts.Notices
 
         #region Social questions
         /// <summary>
-        /// Tämä hankinta edistää esteettömyyttä kaikille
-        /// </summary>
-        public bool? AccessibilityForAll { get; set; }
-
-        /// <summary>
-        /// Tämä hankinta edistää etnistä tasa-arvoa
-        /// </summary>
-        public bool? EthnicEquality { get; set; }
-
-        /// <summary>
-        /// Tämä hankinta edistää sukupuolten tasa-arvoa
-        /// </summary>
-        public bool? GenderEquality { get; set; }
-
-        /// <summary>
         /// Tämä hankinta edistää oikeudenmukaisia työoloja
         /// </summary>
         public bool? JustWorkingConditions { get; set; }
@@ -86,11 +72,6 @@ namespace Hilma.Domain.DataContracts.Notices
         public bool? InnovationConsidered { get; set; }
 
         /// <summary>
-        /// Hankinnan kohteen kuvaus perustuu toiminnallisiin ja suorituskykyvaatimuksiin, ei teknisen ratkaisun kuvaamiseen.​
-        /// </summary>
-        public bool? QualityAndPerformanceCriteria { get; set; }
-
-        /// <summary>
         /// Tavoiteltava ratkaisu tai sen osa on meille ostajana uusi.​
         /// </summary>
         public bool? SolutionNewToBuyer { get; set; }
@@ -99,11 +80,6 @@ namespace Hilma.Domain.DataContracts.Notices
         /// Tavoiteltava ratkaisu tai sen osa on markkinoille tai toimialalle uusi.
         /// </summary>
         public bool? SolutionNewToMarketOrIndustry { get; set; }
-
-        /// <summary>
-        /// Tavoiteltava ratkaisu sisältää tutkimus- ja kehittämistoimintaa.
-        /// </summary>
-        public bool? SolutionContainsResearch { get; set; }
         #endregion
 
         /// <summary>
@@ -126,7 +102,6 @@ namespace Hilma.Domain.DataContracts.Notices
                                                 || LowCarbon == true
                                                 || Biodiversity == true
                                                 || SustainableFoodProduction == true;
-
         /// <summary>
         /// Trims the conditional fields
         /// </summary>
@@ -150,12 +125,6 @@ namespace Hilma.Domain.DataContracts.Notices
             }
         }
 
-        /// <summary>
-        /// Validate object
-        /// </summary>
-        /// <param name="type">Notice type for which to validate</param>
-        /// <param name="errorMessage">Errors, if any</param>
-        /// <returns>Validation state</returns>
         public ValidationState Validate(NoticeType type, out string errorMessage)
         {
             var errorBuilder = new StringBuilder();
@@ -194,11 +163,6 @@ namespace Hilma.Domain.DataContracts.Notices
                 errorBuilder.AppendLine($"{nameof(InnovationConsidered)} is mandatory");
             }
 
-            if (QualityAndPerformanceCriteria == null)
-            {
-                errorBuilder.AppendLine($"{nameof(QualityAndPerformanceCriteria)} is mandatory");
-            }
-
             if (SolutionNewToBuyer == null)
             {
                 errorBuilder.AppendLine($"{nameof(SolutionNewToBuyer)} is mandatory");
@@ -208,12 +172,6 @@ namespace Hilma.Domain.DataContracts.Notices
             {
                 errorBuilder.AppendLine($"{nameof(SolutionNewToMarketOrIndustry)} is mandatory");
             }
-
-            if (SolutionContainsResearch == null)
-            {
-                errorBuilder.AppendLine($"{nameof(SolutionContainsResearch)} is mandatory");
-            }
-
         }
 
         private void ValidateGreenCriteria(StringBuilder errorBuilder)
@@ -262,21 +220,6 @@ namespace Hilma.Domain.DataContracts.Notices
 
         private void ValidateSocialCriteria(StringBuilder errorBuilder)
         {
-            if (AccessibilityForAll == null)
-            {
-                errorBuilder.AppendLine($"{nameof(AccessibilityForAll)} is mandatory");
-            }
-
-            if (EthnicEquality == null)
-            {
-                errorBuilder.AppendLine($"{nameof(EthnicEquality)} is mandatory");
-            }
-
-            if (GenderEquality == null)
-            {
-                errorBuilder.AppendLine($"{nameof(GenderEquality)} is mandatory");
-            }
-
             if (JustWorkingConditions == null)
             {
                 errorBuilder.AppendLine($"{nameof(JustWorkingConditions)} is mandatory");
