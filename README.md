@@ -46,7 +46,7 @@ Here we will publish information about api hotfixes, upcoming changes and docume
 
 New statistics questions coming January 2022
 
-The statistics update will be installed 2.1.2022. The questions will be mandatory. After end of January 2022 notices will be rejected if statistics are not provided.
+The statistics update will be installed 3.1.2022. The questions will be mandatory. After end of January 2022 notices will be rejected if statistics are not provided.
 During January 2022, you can either provide a null or a valid object. Just sending the old fields will not be accepted. Sending the statistics object for prior information notices is also forbidden, please provide null instead. F15 Ex-ante is a prior information notice.
 
 Questions and validation rules can be found [here](HilmaStatistics.cs).
