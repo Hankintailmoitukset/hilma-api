@@ -1,0 +1,33 @@
+# Participants
+
+* Ari Nurkkala
+* Sami Pöysä
+* Julien Louvrier
+* Sampo Kivistä
+* Veera Lavikkala
+
+# Topics
+
+* Hilman eForms toteutus alkanut
+	- eForms lomakkeiden suomessa käytettävien nimet löytyy: https://github.com/Hankintailmoitukset/hilma-api/blob/master/Ilmoitusten%20nimet.xlsx
+	- eForms SDK 1.4.1 in Hilma
+	- Hilma statistiikat tullaan toteuttamaan nykysellä HilmaStatistics -luokalla. Tästä poimitaan pällekkäisyydet eForms tietomalliin. Tämä muuttaa mallia, jolla kirjoitusrajapintaa käytetään.
+		- Hilman eForms kirjoitusrajapinta tulee vastaanottamaan tietomallia, jossa on hankintamenettely, eForm ja Hilman tilastotiedot.
+	- Voidaan exporttaa eForms Loco resursseja rajapintakäyttäjille käytettäväksi tarpeen mukaan. Ei vielä toteutettu. Tehdään, kunhan Hanselin asiantuntijat ovat käyneet komission konekäännökset läpi. 
+		- SC haluaa lopulliset käännökset
+		- By June for Mercell!
+	- Työjärestys Hilmassa niin, että ensin ETS ja Hilma web api rajapinnat, Hilman käyttöliittymä, julkinen näkymä ja lopuksi indeksit / haku.
+		- https://hns-hilma-test-apim.developer.azure-api.net/ First POST endpoint are now available for the ETS product. Serialization, deserialization and validation endpoints.
+	- Current read API is sufficient (search & get published by id)
+	- Eu / komissio palavereita pidetty, jossa keksusteltu viimeisestä ajasta jolloin voi lähettää vanhoja ilmoituksia. Aikataulu pysyy ennallaan.
+		- Hilman sisäinen tavoite on olla eFormsin osalta valmis kesäkuussa 2023.
+		- Hilman eForms golive on 1.9.2023. Tämän jälkeen Hilma ei vastaanota nykyisiä ilmoituksia.
+		- Nykyinen TED vastaanottaa 24.10.2023. Sen jälkeen pakko lähettää eFormseja.
+	- eForms poissulkukriteerit ja ESPD vaatimuksissa päällekkäisyyksiä. Miten nämä hoidetaan? Kysymys Hanselille.
+		- ESPD not expected to change. Some questions will be similar, but not exactly the same with eForms
+		- ESPD 4.0 should fix these issues. Coming whenever publication office has time (hopefully 2024).
+	- Tehdään Hilmaan vastaava ilmoitustyyppeihin perustuva tietomalli dokumentaatio
+		- Can also be checked from fields.json in eForms SDK
+	- Current notice conversion
+		- All currently published notices should be converted to eForms and refilled to comply with eForms
+		- After filling, it can be sent and it can be used for its original purpose
