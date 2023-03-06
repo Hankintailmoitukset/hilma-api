@@ -1,0 +1,78 @@
+{
+  "ublExtensions.ublExtension.extensionContent.eformsExtension.organizations.organization.company.partyLegalEntity.companyID": {
+    "btId": "501",
+    "nationalidentifierorvatnumber": true
+  },
+  "ProcurementProjectLot.ProcurementProject.PlannedPeriod.DurationMeasure": {
+    "btId": "36",
+    "numeric": true,
+    "between": { "min": 1, "max": 999 }
+  },
+  "ProcurementProjectLot.ProcurementProject.ContractExtension.MaximumNumberNumeric": {
+    "btId": "58",
+    "numeric": true,
+    "between": { "min": 1, "max": 999 }
+  },
+  "ProcurementProjectLot.TenderingProcess.FrameworkAgreement.MaximumOperatorQuantity": {
+    "btId": "113",
+    "numeric": true,
+    "between": { "min": 1, "max": 999 }
+  },
+  "ProcurementProjectLot.tenderingTerms.allowedSubcontractTerms.minimumPercent": {
+    "btId": "64",
+    "numeric": true,
+    "between": { "min": 1, "max": 999 }
+  },
+  "ProcurementProjectLot.tenderingTerms.allowedSubcontractTerms.maximumPercent": {
+    "btId": "729",
+    "numeric": true,
+    "between": { "min": 1, "max": 999 }
+  },
+  "ProcurementProjectLot.tenderingTerms.requiredFinancialGuarantee.description": {
+    "btId": "75",
+    "required": true
+  },
+  "ublExtensions.ublExtension.extensionContent.eformsExtension.changes.changeReason.reasonDescription": {
+    "btId": "762",
+    "required": true
+  },
+  "procurementProjectLot.tenderingTerms.tenderValidityPeriod.durationMeasure": {
+    "btId": "98",
+    "numeric": true,
+    "between": { "min": 1, "max": 9999 }
+  },
+  "ublExtensions.ublExtension.extensionContent.eformsExtension.organizations.organization.company.postalAddress.postalZone": {
+    "btId": "512",
+    "max": 20
+  },
+  "procurementProject.requestedTenderTotal.estimatedOverallContractAmount": {
+    "btId": "27",
+    "numeric": true
+  },
+  "procurementProject.requestedTenderTotal.ublExtensions.ublExtension.extensionContent.eformsExtension.frameworkMaximumAmount": {
+    "btId": "271",
+    "numeric": true
+  },
+  "procurementProjectLot.tenderingTerms.callForTendersDocumentReference.attachment.externalReference.uri": {
+    "btId": "15",
+    "required": true
+  },
+  "procurementProjectLot.tenderingTerms.awardingTerms.awardingCriterion.subordinateAwardingCriterion.ublExtensions.uBLExtension.extensionContent.eformsExtension.awardCriterionParameter.parameterNumeric": {
+    "btId": "541",
+    "numeric": true
+  },
+  "procurementProjectLot.tenderingProcess.economicOperatorShortList.maximumQuantity": {
+    "btId": "51",
+    "numeric": true,
+    "between": { "min": 1, "max": 999 }
+  },
+  "procurementProjectLot.tenderingTerms.awardingTerms.prize.valueAmount": {
+    "btId": "644",
+    "numeric": true,
+    "between": { "min": 1, "max": 999999 }
+  },
+  "ublExtensions.ublExtension.extensionContent.eformsExtension.organizations.organization.touchPoint.postalAddress.postalZone": {
+    "btId": "512",
+    "max": 20
+  }
+}
