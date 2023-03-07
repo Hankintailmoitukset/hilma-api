@@ -38,6 +38,8 @@ The custom rules use the following structure:
 Each of the custom validation rules can be present once or not at all. Additionally, if the field path can contain one or more code list values, each of them can have their own custom validation rules. 
 Note that only a root or code list based custom validations are in use per field, not both.
 
+"nationalidentifierorvatnumber" and "nationalorprivateroadidentifier" validators validate the field to be either a valid Finnish Business ID (Y-Tunnus), any valid European VAT Number or a valid "Käyttöoikeusyksikkötunnus" issued for a private road.
+
 # Procedure
 <a name="Procedure"></a>
 Hilma API introduces a new concept of procedure on top of TED eNotice. 
