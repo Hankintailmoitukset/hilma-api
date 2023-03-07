@@ -1,77 +1,94 @@
 {
   "ublExtensions.ublExtension.extensionContent.eformsExtension.organizations.organization.company.partyLegalEntity.companyID": {
+    "xpathAbsolute" : "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:Organizations/efac:Organization/efac:Company/cac:PartyLegalEntity/cbc:CompanyID",
     "btId": "501",
     "nationalidentifierorvatnumber": true
   },
-  "ProcurementProjectLot.ProcurementProject.PlannedPeriod.DurationMeasure": {
+  "procurementProjectLot.procurementProject.plannedPeriod.durationMeasure": {
+    "xpathAbsolute" : "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:ProcurementProject/cac:PlannedPeriod/cbc:DurationMeasure",
     "btId": "36",
     "numeric": true,
     "between": { "min": 1, "max": 999 }
   },
-  "ProcurementProjectLot.ProcurementProject.ContractExtension.MaximumNumberNumeric": {
+  "procurementProjectLot.procurementProject.contractExtension.maximumNumberNumeric": {
+    "xpathAbsolute" : "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:ProcurementProject/cac:ContractExtension/cbc:MaximumNumberNumeric",
     "btId": "58",
     "numeric": true,
     "between": { "min": 1, "max": 999 }
   },
-  "ProcurementProjectLot.TenderingProcess.FrameworkAgreement.MaximumOperatorQuantity": {
+  "procurementProjectLot.tenderingProcess.frameworkAgreement.maximumOperatorQuantity": {
+    "xpathAbsolute" : "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingProcess/cac:FrameworkAgreement/cbc:MaximumOperatorQuantity",
     "btId": "113",
     "numeric": true,
     "between": { "min": 1, "max": 999 }
   },
-  "ProcurementProjectLot.tenderingTerms.allowedSubcontractTerms.minimumPercent": {
+  "procurementProjectLot.tenderingTerms.allowedSubcontractTerms.minimumPercent": {
+    "xpathAbsolute" : "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:AllowedSubcontractTerms/cbc:MinimumPercent",
     "btId": "64",
     "numeric": true,
     "between": { "min": 1, "max": 999 }
   },
-  "ProcurementProjectLot.tenderingTerms.allowedSubcontractTerms.maximumPercent": {
+  "procurementProjectLot.tenderingTerms.allowedSubcontractTerms.maximumPercent": {
+    "xpathAbsolute" : "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:AllowedSubcontractTerms/cbc:MaximumPercent",
     "btId": "729",
     "numeric": true,
     "between": { "min": 1, "max": 999 }
   },
-  "ProcurementProjectLot.tenderingTerms.requiredFinancialGuarantee.description": {
+  "procurementProjectLot.tenderingTerms.requiredFinancialGuarantee.description": {
+    "xpathAbsolute" : "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:RequiredFinancialGuarantee/cbc:Description",
     "btId": "75",
     "required": true
   },
   "ublExtensions.ublExtension.extensionContent.eformsExtension.changes.changeReason.reasonDescription": {
+    "xpathAbsolute" : "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:Changes/efac:ChangeReason/efbc:ReasonDescription",
     "btId": "762",
     "required": true
   },
   "procurementProjectLot.tenderingTerms.tenderValidityPeriod.durationMeasure": {
+    "xpathAbsolute" : "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:TenderValidityPeriod/cbc:DurationMeasure",
     "btId": "98",
     "numeric": true,
     "between": { "min": 1, "max": 9999 }
   },
   "ublExtensions.ublExtension.extensionContent.eformsExtension.organizations.organization.company.postalAddress.postalZone": {
+    "xpathAbsolute" : "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:Organizations/efac:Organization/efac:Company/cac:PostalAddress/cbc:PostalZone",
     "btId": "512",
     "max": 20
   },
   "procurementProject.requestedTenderTotal.estimatedOverallContractAmount": {
+    "xpathAbsolute" : "/*/cac:ProcurementProject/cac:RequestedTenderTotal/cbc:EstimatedOverallContractAmount",
     "btId": "27",
     "numeric": true
   },
   "procurementProject.requestedTenderTotal.ublExtensions.ublExtension.extensionContent.eformsExtension.frameworkMaximumAmount": {
+    "xpathAbsolute" : "/*/cac:ProcurementProject/cac:RequestedTenderTotal/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efbc:FrameworkMaximumAmount",
     "btId": "271",
     "numeric": true
   },
   "procurementProjectLot.tenderingTerms.callForTendersDocumentReference.attachment.externalReference.uri": {
+    "xpathAbsolute" : "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:CallForTendersDocumentReference[not(cbc:DocumentType/text()='restricted-document')]/cac:Attachment/cac:ExternalReference/cbc:URI",
     "btId": "15",
     "required": true
   },
   "procurementProjectLot.tenderingTerms.awardingTerms.awardingCriterion.subordinateAwardingCriterion.ublExtensions.uBLExtension.extensionContent.eformsExtension.awardCriterionParameter.parameterNumeric": {
+    "xpathAbsolute" : "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:AwardingTerms/cac:AwardingCriterion/cac:SubordinateAwardingCriterion/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:AwardCriterionParameter/efbc:ParameterNumeric",
     "btId": "541",
     "numeric": true
   },
   "procurementProjectLot.tenderingProcess.economicOperatorShortList.maximumQuantity": {
+    "xpathAbsolute" : "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingProcess/cac:EconomicOperatorShortList/cbc:MaximumQuantity",
     "btId": "51",
     "numeric": true,
     "between": { "min": 1, "max": 999 }
   },
   "procurementProjectLot.tenderingTerms.awardingTerms.prize.valueAmount": {
+    "xpathAbsolute" : "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:AwardingTerms/cac:Prize/cbc:ValueAmount",
     "btId": "644",
     "numeric": true,
     "between": { "min": 1, "max": 999999 }
   },
   "ublExtensions.ublExtension.extensionContent.eformsExtension.organizations.organization.touchPoint.postalAddress.postalZone": {
+    "xpathAbsolute" : "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:Organizations/efac:Organization/efac:TouchPoint/cac:PostalAddress/cbc:PostalZone",
     "btId": "512",
     "max": 20
   }
