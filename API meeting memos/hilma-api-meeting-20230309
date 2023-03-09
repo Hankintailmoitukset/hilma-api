@@ -1,0 +1,47 @@
+# Participants
+
+* Ari Nurkkala
+* Juho Esselström
+* Laura Kivikangas
+* Petteri Pohto
+* Mauri Korhonen
+* Joel Ollikainen
+
+
+# Topics
+
+* Hilman eForms toteutus alkanut
+	- eForms lomakkeiden suomessa käytettävien nimet löytyy: https://github.com/Hankintailmoitukset/hilma-api/blob/master/Ilmoitusten%20nimet.xlsx
+		- english translations are the orginal names
+		- kansalliset eFormsit (E1-E5) tuettuna TED:in arvion mukaan lokakuussa. Tieto tuli TEDiltä 1.2.2023
+		- Vasta kun TED on toteuttanut kansalliset ilmoitukset, Hilma voi siirtyä käyttämään niitä.
+	- eForms SDK 1.5.1 in Hilma
+		- Hilman tavoitteena päästä liveksi mahdollisimman uudella versiolla, joka on tuettu TEDin testissä ja tuotannossa
+	- Hilma statistiikat tullaan toteuttamaan nykysellä HilmaStatistics -luokalla. Tästä poimitaan pällekkäisyydet eForms tietomalliin. Tämä muuttaa mallia, jolla kirjoitusrajapintaa käytetään.
+		- Hilman eForms kirjoitusrajapinta tulee vastaanottamaan tietomallia, jossa on hankintamenettely, eForm ja Hilman tilastotiedot.
+		- validation endpoint for HilmaStatistics or schema?
+	- Voidaan exporttaa eForms Loco resursseja rajapintakäyttäjille käytettäväksi tarpeen mukaan. Ei vielä toteutettu. Tehdään, kunhan Hanselin asiantuntijat ovat käyneet komission konekäännökset läpi. 
+		- SC haluaa lopulliset käännökset
+		- By June for Mercell!
+		- Eduard wants to see the format (TODO: Ari)
+	- Työjärestys Hilmassa niin, että ensin ETS ja Hilma web api rajapinnat, Hilman käyttöliittymä, julkinen näkymä ja lopuksi indeksit / haku.
+		- https://hns-hilma-test-apim.developer.azure-api.net/ First POST endpoint are now available for the ETS product. Serialization, deserialization and validation endpoints.
+	- Current read API is sufficient (search & get published by id)
+	- Eu / komissio palavereita pidetty, jossa keksusteltu viimeisestä ajasta jolloin voi lähettää vanhoja ilmoituksia. Aikataulu pysyy ennallaan.
+		- Hilman sisäinen tavoite on olla eFormsin osalta valmis kesäkuussa 2023.
+		- Hilman eForms golive on 1.9.2023. Tämän jälkeen Hilma ei vastaanota nykyisiä ilmoituksia.
+		- Nykyinen TED vastaanottaa 24.10.2023. Sen jälkeen pakko lähettää eFormseja.
+		- Mercell will make a hard change to eForms in October. No switch time for corrigendums or contract awards.
+	- eForms poissulkukriteerit ja ESPD vaatimuksissa päällekkäisyyksiä. Miten nämä hoidetaan? Kysymys Hanselille.
+		- ESPD not expected to change. Some questions will be similar, but not exactly the same with eForms
+		- ESPD 4.0 should fix these issues. Coming whenever publication office has time (hopefully 2024).
+		- Many eForms fields can be copied to ESPD. Hilma UI should do this at some point.
+	- Tehdään Hilmaan vastaava ilmoitustyyppeihin perustuva tietomalli dokumentaatio
+		- Can also be checked from fields.json in eForms SDK
+	- Current notice conversion
+		- If a user wants to parent a current notice, it should be converted to eForms first
+		- After filling, it can be sent and it can be used for its original purpose
+		- How will DPS notices converted?
+			- Only if needed (eg. corrigendum)
+	- 1 API instead of 1 of each notice type (pri, cn, can)
+		- it will be extended by Hilma so that it also contains the HilmaStatistics
