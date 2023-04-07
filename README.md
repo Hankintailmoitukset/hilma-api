@@ -2,6 +2,8 @@
 
 <a href="https://github.com/Hankintailmoitukset/hilma-api/tree/master/validation">EForms validation</a>
 
+<a href="https://github.com/Hankintailmoitukset/hilma-api/tree/master/endpoints">EForms API endpoints</a>
+
 The production api portal is hosted at: https://hns-hilma-prod-apim.developer.azure-api.net/
 
 The test api portal is hosted at: https://hns-hilma-test-apim.developer.azure-api.net/
