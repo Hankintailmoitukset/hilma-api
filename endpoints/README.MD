@@ -105,6 +105,14 @@ Notice types E1 to E5 are not yet supported.
 
 ```
 
+## Special mappings
+  - Special mappings means that certain value in statistics object updates eform values
+  - field: "SMEParticipationConsidered"
+    - If set to True and procurement is not contract-award,
+      -  will set eforms(lot instance) ProcurementPlot.ProcurementProject to True
+
+
+
 Successful request to create a notice results in http status 201 response with the response body described in API reference. Possible error responses with status codes, in addition to general errors, are:
 
 - 400 Validation failure. Notice or request structure was invalid. Problem details will include either 'errors' and/or 'tedValidationErrors' additional properties. Errors include all possible errors caused by Hilma custom validations. TedValidationErrors includes full TED validation report XML as a string.
