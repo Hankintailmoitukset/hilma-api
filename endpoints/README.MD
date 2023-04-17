@@ -68,6 +68,43 @@ Notice types E1 to E5 are not yet supported.
 #### Consideration of SMEs
   - Procurement allows for participation of small and medium-sized enterprises.
 
+## Example json payload for hilma statistics
+
+- Note: key for statistics payload is LOT id
+  - LOT ID is defined in Eform's json:
+  ```json
+  "ProcurementProjectLot": [
+    {
+      ...
+      "ID": { "schemeName": "Lot", "Value": "LOT-0000" }
+      ...
+    }
+  }
+  ```
+
+```json
+{
+  "LOT-0000": {
+    "EnergyEfficiencyConsidered": false,
+    "LowCarbon": true,
+    "CircularEconomy": true,
+    "Biodiversity": false,
+    "SustainableFoodProduction": false,
+    "ListedGreenCriteriaUsed": true,
+    "JustWorkingConditions": true,
+    "EmploymentCondition": false,
+    "HowManyOpportunitiesIsEstimated": false,
+    "CodeOfConduct": true,
+    "InnovationConsidered": true,
+    "SolutionNewToBuyer": true,
+    "SolutionNewToMarketOrIndustry": false,
+    "SMEParticipationConsidered": false,
+    "EndUserInvolved": true,
+  }
+}
+
+```
+
 Successful request to create a notice results in http status 201 response with the response body described in API reference. Possible error responses with status codes, in addition to general errors, are:
 
 - 400 Validation failure. Notice or request structure was invalid. Problem details will include either 'errors' and/or 'tedValidationErrors' additional properties. Errors include all possible errors caused by Hilma custom validations. TedValidationErrors includes full TED validation report XML as a string.
