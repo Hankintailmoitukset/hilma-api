@@ -105,6 +105,22 @@ Notice types E1 to E5 are not yet supported.
 
 ```
 
+## Hilma to TED mapping values. (hilma key -> TED value)
+- TED field: **bt-776**
+- codelist: **innovative-acquisition**
+    "InnovationConsidered": "rd-act"
+    "SolutionNewToBuyer": "org-nov",
+    "SolutionNewToMarketOrIndustry": "mar-nov",
+
+- codelist: **environmental-impact**
+    "CircularEconomy": "circ-econ",
+    "Biodiversity": "biodiv-eco",
+
+- codelist: **social-objective**
+  "CodeOfConduct": "hum-right",
+  "EmploymentCondition": "opp",
+  "JustWorkingConditions": "work-cond",
+
 ## Special mappings
   - Special mappings means that certain value in statistics object updates eform values
   - field: "SMEParticipationConsidered"
