@@ -17,7 +17,7 @@
 		- see https://hns-hilma-test-apim.developer.azure-api.net/
 		- Public URL (test) https://testi.hankintailmoitukset.fi/fi/public/procedure/1523/enotice/1302/
 	- notice languages (TODO: Ari): should it be validated that at least FIN or SWE is provided in eForm?
-		- Finnish law requires it? Check with Hansel
+		- Finnish law requires it? Check with Hansel -> Checked: FIN or SWE may be validated for national (E1->) notices.
 
 	- eForms lomakkeiden suomessa käytettävien nimet löytyy: https://github.com/Hankintailmoitukset/hilma-api/blob/master/Ilmoitusten%20nimet.xlsx
 		- english translations are the orginal names
@@ -37,7 +37,7 @@
 		- SC haluaa lopulliset käännökset
 		- By June for Mercell!
 		- Translations (provided by Hansel) can be found from https://github.com/Hankintailmoitukset/hilma-api/tree/master/translations
-		- TODO (Ari): Provide all eForms translations to same folder
+		- TODO (Ari): Provide all eForms translations to same folder. Done.
 
 	- Aikataulu.
 		- Hilman sisäinen tavoite on olla eFormsin osalta valmis kesäkuussa 2023.
@@ -54,9 +54,10 @@
 		- How will DPS notices converted?
 			- Only if needed (eg. corrigendum)
 
-	- Hilma publish date in ets fetch by etsId? (Todo: Ari -> reply to Eduard)
+	- Hilma publish date in ets fetch by etsId? (Todo: Ari -> reply to Eduard). Done.
 	- Publication:
 		- If published in TED -> it will be published almost immediately in Hilma
 		- If for some reason TED doesn't publish in 48 hours, Hilma will publish the notice nationally (will also keep pinging TED for publication)
 		- EForms supports publication on a specific date -> should the 48h rule take this into account? Ask Hansel.
 			- Aris wild guess: will not be supported
+			- Hansel: It will not be supported in Finland. Hilma will validate this at some point.
