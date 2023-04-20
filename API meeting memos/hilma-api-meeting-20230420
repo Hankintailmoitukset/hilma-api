@@ -1,0 +1,62 @@
+# Participants
+
+* Ari Nurkkala
+* Mauri Korhonen
+* Juho Esselström
+* Eduard Smirnov
+* Juha Häkli
+* Simo Viitanen
+* Sami Ristinen
+* Jon Kjaen Amund
+
+
+# Topics
+
+* Hilman eForms toteutus alkanut
+	- Read API is now available for eForms in Hilma.
+		- see https://hns-hilma-test-apim.developer.azure-api.net/
+		- Public URL (test) https://testi.hankintailmoitukset.fi/fi/public/procedure/1523/enotice/1302/
+	- notice languages (TODO: Ari): should it be validated that at least FIN or SWE is provided in eForm?
+		- Finnish law requires it? Check with Hansel
+
+	- eForms lomakkeiden suomessa käytettävien nimet löytyy: https://github.com/Hankintailmoitukset/hilma-api/blob/master/Ilmoitusten%20nimet.xlsx
+		- english translations are the orginal names
+		- kansalliset eFormsit (E1-E5) tuettuna TED:in arvion mukaan lokakuussa. Tieto tuli TEDiltä 1.2.2023
+		- Vasta kun TED on toteuttanut kansalliset ilmoitukset, Hilma voi siirtyä käyttämään niitä.
+		
+	- eForms SDK 1.6 (bumped from 1.5.1) in Hilma
+		- Hilman tavoitteena päästä liveksi mahdollisimman uudella versiolla, joka on tuettu TEDin testissä ja tuotannossa
+	
+	- Hilma statistiikat on toteutettu nykysellä HilmaStatistics -luokalla. Tästä poimitaan pällekkäisyydet eForms tietomalliin. Tämä muuttaa mallia, jolla kirjoitusrajapintaa käytetään.
+		- Hilman eForms kirjoitusrajapinta tulee vastaanottamaan tietomallia, jossa on hankintamenettely, eForm ja Hilman tilastotiedot.
+		- validation endpoint for HilmaStatistics and Schematron
+		- HilmaStatistics are per Lot
+		- https://github.com/Hankintailmoitukset/hilma-api/blob/master/validation/HilmaStatistics.cs
+		
+	- Voidaan exporttaa eForms Loco resursseja rajapintakäyttäjille käytettäväksi tarpeen mukaan. Ei vielä toteutettu. Tehdään, kunhan Hanselin asiantuntijat ovat käyneet komission konekäännökset läpi. 
+		- SC haluaa lopulliset käännökset
+		- By June for Mercell!
+		- Translations (provided by Hansel) can be found from https://github.com/Hankintailmoitukset/hilma-api/tree/master/translations
+		- TODO (Ari): Provide all eForms translations to same folder
+
+	- Aikataulu.
+		- Hilman sisäinen tavoite on olla eFormsin osalta valmis kesäkuussa 2023.
+		- Hilman eForms golive on 1.9.2023. Tämän jälkeen Hilma ei vastaanota nykyisiä ilmoituksia.
+		- Nykyinen TED vastaanottaa 24.10.2023. Sen jälkeen pakko lähettää eFormseja.
+
+	- eForms poissulkukriteerit ja ESPD vaatimuksissa päällekkäisyyksiä. Miten nämä hoidetaan? Kysymys Hanselille.
+		- ESPD not expected to change. Some questions will be similar, but not exactly the same with eForms
+		- ESPD 4.0 should fix these issues. Coming whenever publication office has time (hopefully 2024).
+		- Many eForms fields can be copied to ESPD. Hilma UI should do this at some point.
+
+	- Current notice conversion
+		- Hilma is waiting for a conversion endpoint to be provided by TED
+		- How will DPS notices converted?
+			- Only if needed (eg. corrigendum)
+
+	- Hilma publish date in ets fetch by etsId? (Todo: Ari -> reply to Eduard)
+	- Publication:
+		- If published in TED -> it will be published almost immediately in Hilma
+		- If for some reason TED doesn't publish in 48 hours, Hilma will publish the notice nationally (will also keep pinging TED for publication)
+		- EForms supports publication on a specific date -> should the 48h rule take this into account? Ask Hansel.
+			- Aris wild guess: will not be supported
