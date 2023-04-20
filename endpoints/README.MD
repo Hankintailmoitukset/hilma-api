@@ -108,7 +108,6 @@ Notice types E1 to E5 are not yet supported.
 ## Hilma to TED mapping values. (hilma key -> TED value)
 - TED field: **bt-776**
 - codelist: **innovative-acquisition**
-    "InnovationConsidered": "rd-act"
     "SolutionNewToBuyer": "org-nov",
     "SolutionNewToMarketOrIndustry": "mar-nov",
 
