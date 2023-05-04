@@ -1,0 +1,67 @@
+# Participants
+
+* Ari Nurkkala
+* Julien Louvrier
+* Eduard Smirnov
+* Sampo Kivistö
+* Simo Viitanen
+* Laura Kivikangas
+* Juho Esselström
+* Jade Fräntilä
+
+
+# Topics
+
+* Hilman eForms toteutus alkanut
+	- Read API is now available for eForms in Hilma.
+		- see https://hns-hilma-test-apim.developer.azure-api.net/
+		- Public URL (test) https://testi.hankintailmoitukset.fi/fi/public/procedure/1523/enotice/1302/
+	- notice languages (TODO: Ari): should it be validated that at least FIN or SWE is provided in eForm?
+		- Finnish law requires it? Check with Hansel -> Checked: FIN or SWE may be validated for national (E1->) notices.
+		- Double check with Petteri and Anna-Elina.
+		
+	- eForms SDK 1.6 in Hilma
+		- Hilman tavoitteena päästä liveksi mahdollisimman uudella versiolla, joka on tuettu TEDin testissä ja tuotannossa
+	
+	- Hilma statistiikat on toteutettu nykysellä HilmaStatistics -luokalla. Tästä poimitaan pällekkäisyydet eForms tietomalliin. Tämä muuttaa mallia, jolla kirjoitusrajapintaa käytetään.
+		- Hilman eForms kirjoitusrajapinta tulee vastaanottamaan tietomallia, jossa on hankintamenettely, eForm ja Hilman tilastotiedot.
+		- validation endpoint for HilmaStatistics and Schematron
+		- HilmaStatistics are per Lot
+		- https://github.com/Hankintailmoitukset/hilma-api/blob/master/validation/HilmaStatistics.cs
+		- Some Strategic procurements fields (at least BT-717, BT-735) are dependent on CPV codes - provide documentation!
+		- TODO (Ari) is BT-06 or BT-707 implemented? 805, 774, 775, 776
+			- Fields are regarding HilmaStatistics that are mapped. We will add documentation about this mapping.
+			- CPV codes for showing BT-717 and BT-735 are in the old readme page: https://github.com/Hankintailmoitukset/hilma-api/blob/master/README-old.md
+				- 60112000,60130000,60140000,90511000,60160000,60161000,64121100,64121200,60100000,90510000,64121000,34100000,3411*,3412*,3413*,3414*
+				 - 60000000 coming at some point?
+		
+	- Voidaan exporttaa eForms Loco resursseja rajapintakäyttäjille käytettäväksi tarpeen mukaan. Ei vielä toteutettu. Tehdään, kunhan Hanselin asiantuntijat ovat käyneet komission konekäännökset läpi. 
+		- SC haluaa lopulliset käännökset
+		- By June for Mercell!
+		- Translations (provided by Hansel) can be found from https://github.com/Hankintailmoitukset/hilma-api/tree/master/translations
+
+	- Aikataulu.
+		- Hilman sisäinen tavoite on olla eFormsin osalta valmis kesäkuussa 2023.
+		- Hilman eForms golive on 1.9.2023. Tämän jälkeen Hilma ei vastaanota nykyisiä ilmoituksia.
+			- Grace period until 8.9 if wanted? Hilma could support both types during this week.
+			- Julien says yes! Eduard wants a longer grace period.
+		- Nykyinen TED vastaanottaa 24.10.2023. Sen jälkeen pakko lähettää eFormseja.
+		- Julien wants national notices in eForms as well.
+			- Hilma team is busy and it wasn't prioritized.. yet!
+
+	- eForms poissulkukriteerit ja ESPD vaatimuksissa päällekkäisyyksiä. Miten nämä hoidetaan? Kysymys Hanselille.
+		- ESPD not expected to change. Some questions will be similar, but not exactly the same with eForms
+		- ESPD 4.0 should fix these issues. Coming whenever publication office has time (hopefully 2024).
+		- Many eForms fields can be copied to ESPD. Hilma UI should do this at some point.
+		- eForms may have an option at some point, where you refer to ESPD document
+
+	- Current notice conversion
+		- Hilma has a conversion button for F02 (Contract notices)
+		- Conversion API can be opened to write users, if wanted
+
+	- Publication:
+		- If published in TED -> it will be published almost immediately in Hilma
+		- If for some reason TED doesn't publish in 48 hours, Hilma will publish the notice nationally (will also keep pinging TED for publication)
+		- EForms supports publication on a specific date -> should the 48h rule take this into account? Ask Hansel.
+			- Aris wild guess: will not be supported
+			- Hansel: It will not be supported in Finland. Hilma will validate this at some point. BT-738 (PreferredPublicationDate)
