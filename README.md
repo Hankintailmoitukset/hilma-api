@@ -1,9 +1,13 @@
-<a href="https://github.com/Hankintailmoitukset/hilma-api/tree/master/API%20meeting%20memos">Meeting memos</a>
+[Meeting memos](https://github.com/Hankintailmoitukset/hilma-api/tree/master/API%20meeting%20memos)
 
-<a href="https://github.com/Hankintailmoitukset/hilma-api/tree/master/validation">EForms validation</a>
+[EForms validation](https://github.com/Hankintailmoitukset/hilma-api/tree/master/validation)
 
-<a href="https://github.com/Hankintailmoitukset/hilma-api/tree/master/endpoints">EForms API endpoints</a>
+[EForms API endpoints](https://github.com/Hankintailmoitukset/hilma-api/tree/master/endpoints/endpoints.md)
 
-The production api portal is hosted at: https://hns-hilma-prod-apim.developer.azure-api.net/
+[Hilma Statistics](https://github.com/Hankintailmoitukset/hilma-api/tree/master/endpoints/hilmastatistics.md)
 
-The test api portal is hosted at: https://hns-hilma-test-apim.developer.azure-api.net/
+[EForms SDK deviations](https://github.com/Hankintailmoitukset/hilma-api/tree/master/deviations.md)
+
+The production API portal is hosted at: https://hns-hilma-prod-apim.developer.azure-api.net/
+
+The test API portal is hosted at: https://hns-hilma-test-apim.developer.azure-api.net/
