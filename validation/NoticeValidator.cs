@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using AutoMapper.Execution;
 using Hilma.Domain.DataContracts.Notices;
 using Hilma.Domain.EForms.Contracts;
 using Hilma.Domain.Enums;
@@ -18,21 +19,22 @@ namespace Hilma.Domain.Validators.EForms
         {
             var result = new List<ValidationError> {
                 ValidateBT501(eForm),
-                ValidateBT36(eForm),
-                ValidateBT58(eForm),
-                ValidateBT113(eForm),
                 ValidateBT64(eForm),
                 ValidateBT729(eForm),
                 ValidateBT75(eForm),
                 ValidateBT762(eForm),
-                ValidateBT98(eForm),
                 ValidateBT512Company(eForm),
                 ValidateBT15(eForm),
-                ValidateBT51(eForm),
-                ValidateBT644(eForm),
                 ValidateBT512TouchPoint(eForm),
                 ValidateHilmaStatistics(eForm, hilmaStatistics, nationalThreshold),
             };
+
+            result.AddRangeNullSafe(ValidateBT36(eForm));
+            result.AddRangeNullSafe(ValidateBT58(eForm));
+            result.AddRangeNullSafe(ValidateBT113(eForm));
+            result.AddRangeNullSafe(ValidateBT98(eForm));
+            result.AddRangeNullSafe(ValidateBT51(eForm));
+            result.AddRangeNullSafe(ValidateBT644(eForm));
 
             result.RemoveAll(e => e == null);
 
@@ -43,7 +45,7 @@ namespace Hilma.Domain.Validators.EForms
         public static ValidationError ValidateHilmaStatistics(EFormContract eForm, Dictionary<string, HilmaStatistics> hilmaStatistics, int nationalThreshold)
         {
             // Prior info or exante shouldn't have statistics
-            if (hilmaStatistics != null && (eForm.IsPriorInformation() || eForm.IsExAnte()))
+            if (hilmaStatistics != null && hilmaStatistics.Count > 0 && (eForm.IsPriorInformation() || eForm.IsExAnte()))
             {
                 return new ValidationError("hilmaStatistics",
                     "Hilma statistics is not allowed on prior information and ex-ante notices.");
@@ -55,7 +57,7 @@ namespace Hilma.Domain.Validators.EForms
             }
 
             // Contract awards with total value < national threshold do not need to be validated
-            if (eForm.IsContractAward() && eForm.GetTotalValue() < nationalThreshold)
+            if (eForm.IsContractAward() && (eForm.GetTotalValue() ?? 0) < nationalThreshold)
             {
                 return null;
             }
@@ -65,11 +67,17 @@ namespace Hilma.Domain.Validators.EForms
                 return new ValidationError("hilmaStatistics", "HilmaStatistics is required.");
             }
 
+            var lotIds = eForm.ProcurementProjectLot.Select(x => x.ID.Value);
+
             foreach (var statistics in hilmaStatistics)
             {
                 if (!statistics.Value.Validate(eForm, out var err))
                 {
                     return new ValidationError($"hilmaStatistics[{statistics.Key}]", err);
+                }
+
+                if (!lotIds.Any(x => statistics.Key == x)) {
+                    return new ValidationError($"hilmaStatistics[{statistics.Key}]", $"{statistics.Key} is not a valid LotId");
                 }
             }
 
@@ -88,58 +96,76 @@ namespace Hilma.Domain.Validators.EForms
                 : null;
         }
 
-        public static ValidationError ValidateBT36(EFormContract eForm)
+        public static List<ValidationError> ValidateBT36(EFormContract eForm)
         {
             const string path = "procurementProjectLot.procurementProject.plannedPeriod.durationMeasure";
+            const int min = 1;
+            const int max = 999;
 
             var values = eForm
                 .GetAllLots()
-                .Select(lot => lot
-                    .ProcurementProject?
-                    .PlannedPeriod?
-                    .DurationMeasure?
-                    .Value)
-                .Where(v => v != null);
+                .ToDictionary(
+                    lot => lot.ID.Value,
+                    lot => lot
+                        .ProcurementProject?
+                        .PlannedPeriod?
+                        .DurationMeasure?
+                        .Value)
+                .Where(v => v.Value != null);
 
-            return values.Any(val => val is < 1 or > 999)
-                ? new ValidationError(path, "Planned duration has to be between 1 and 999")
-                : null;
+            var errors = values.Where(val => val.Value is < min or > max)
+                .Select(value => new ValidationError(path, $"Planned duration has to be between {min} and {max} for lot {value.Key}"))
+                .ToList();
+
+            return errors.Any() ? errors : null;
         }
 
-        public static ValidationError ValidateBT58(EFormContract eForm)
+        public static List<ValidationError> ValidateBT58(EFormContract eForm)
         {
             const string path = "ProcurementProjectLot.ProcurementProject.ContractExtension.MaximumNumberNumeric";
+            const int min = 1;
+            const int max = 999;
 
             var values = eForm
                 .GetAllLots()
-                .Select(lot => lot
-                    .ProcurementProject?
-                    .ContractExtension?
-                    .MaximumNumberNumeric?
-                    .Value)
-                .Where(v => v != null);
+                .ToDictionary(
+                    lot => lot.ID.Value,
+                    lot => lot
+                        .ProcurementProject?
+                        .ContractExtension?
+                        .MaximumNumberNumeric?
+                        .Value)
+                .Where(v => v.Value != null);
 
-            return values.Any(val => val is < 1 or > 999)
-                ? new ValidationError(path, "Contract extension maximum has to be between 1 and 999")
-                : null;
+            var errors = values.Where(val => val.Value is < min or > max)
+                .Select(value => new ValidationError(path, $"Contract extension maximum has to be between {min} and {max} for lot {value.Key}"))
+                .ToList();
+
+            return errors.Any() ? errors : null;
         }
 
-        public static ValidationError ValidateBT113(EFormContract eForm)
+        public static List<ValidationError> ValidateBT113(EFormContract eForm)
         {
             const string path = "ProcurementProjectLot.TenderingProcess.FrameworkAgreement.MaximumOperatorQuantity";
+            const int min = 1;
+            const int max = 999;
 
             var values = eForm
                 .GetAllLots()
-                .Select(lot => lot
-                    .TenderingProcess?
-                    .FrameworkAgreement?
-                    .MaximumOperatorQuantity?
-                    .Value)
-                .Where(v => v != null);
+                .ToDictionary(
+                    lot => lot.ID.Value,
+                    lot => lot
+                        .TenderingProcess?
+                        .FrameworkAgreement?
+                        .MaximumOperatorQuantity?
+                        .Value)
+                .Where(v => v.Value != null);
 
-            return values.Any(val => val is < 1 or > 999)
-                ? new ValidationError(path, "Maximum operator quantity has to be between 1 and 999")
-                : null;
+            var errors = values.Where(val => val.Value is < min or > max)
+                .Select(value => new ValidationError(path, $"Maximum operator quantity has to be between {min} and {max} for lot {value.Key}"))
+                .ToList();
+
+            return errors.Any() ? errors : null;
         }
 
         public static ValidationError ValidateBT64(EFormContract eForm)
@@ -216,21 +242,27 @@ namespace Hilma.Domain.Validators.EForms
                 : null;
         }
 
-        public static ValidationError ValidateBT98(EFormContract eForm)
+        public static List<ValidationError> ValidateBT98(EFormContract eForm)
         {
             const string path = "procurementProjectLot.tenderingTerms.tenderValidityPeriod.durationMeasure";
+            const int min = 1;
+            const int max = 9999;
 
             var values = eForm
                 .GetAllLots()
-                .Select(lot => lot
-                    .TenderingTerms?
-                    .TenderValidityPeriod?
-                    .DurationMeasure?.Value)
-                .Where(v => v != null);
+                .ToDictionary(
+                    lot => lot.ID.Value,
+                    lot => lot
+                        .TenderingTerms?
+                        .TenderValidityPeriod?
+                        .DurationMeasure?.Value)
+                .Where(v => v.Value != null);
 
-            return values.Any(val => val is < 1 or > 9999)
-                ? new ValidationError(path, "Tender validity duration has to be between 1 and 999")
-                : null;
+            var errors = values.Where(val => val.Value is < min or > max)
+                .Select(value => new ValidationError(path, $"Tender validity duration hasto be between {min} and {max} for lot {value.Key}"))
+                .ToList();
+
+            return errors.Any() ? errors : null;
         }
 
         public static ValidationError ValidateBT512Company(EFormContract eForm)
@@ -268,39 +300,54 @@ namespace Hilma.Domain.Validators.EForms
                 : null;
         }
 
-        public static ValidationError ValidateBT51(EFormContract eForm)
+        public static List<ValidationError> ValidateBT51(EFormContract eForm)
         {
             const string path = "procurementProjectLot.tenderingProcess.economicOperatorShortList.maximumQuantity";
+            const int min = 1;
+            const int max = 999;
 
             var values = eForm
                 .GetAllLots()
-                .SelectMany(lot => lot.TenderingProcess.EconomicOperatorShortList?
-                    .Select(e => e.MaximumQuantity?.Value) ?? new List<decimal?>())
-                .Where(v => v != null);
+                .ToDictionary(
+                    lot => lot.ID.Value,
+                    lot => lot.TenderingProcess?.EconomicOperatorShortList?
+                        .Where(e => e?.LimitationDescription?
+                            .Any(ld => ld.Value.Equals("true", System.StringComparison.OrdinalIgnoreCase)) == true)
+                        .Select(e => e.MaximumQuantity?.Value));
 
-            return values.Any(val => val is < 1 or > 999)
-                ? new ValidationError(path, "Maximum quantity has to be between 1 and 999")
-                : null;
+            var errors = values
+                .Where(val => val.Value?.Any(x => x is null) == true || val.Value?.Any(x => x is < min or > max) == true)
+                .Select(value => new ValidationError(path, $"Maximum quantity has to be between {min} and {max} for lot {value.Key}"))
+                .ToList();
+
+            return errors.Any() ? errors : null;
         }
 
-        public static ValidationError ValidateBT644(EFormContract eForm)
+        public static List<ValidationError> ValidateBT644(EFormContract eForm)
         {
             const string path = "procurementProjectLot.tenderingTerms.awardingTerms.prize.valueAmount";
+            const int min = 1;
+            const int max = 999999;
 
             var values = eForm
                 .GetAllLots()
-                .SelectMany(lot => lot
+                .ToDictionary(
+                    lot => lot.ID.Value,
+                    lot => lot
                     .TenderingTerms?
                     .AwardingTerms?
-                    .Prize ?? new List<PrizeContract>())
-                .Select(e => e
-                    .ValueAmount?
-                    .Value)
-                .Where(v => v != null);
+                    .Prize?
+                    .Where(e => e
+                        .ValueAmount?
+                        .Value != null)
+                    .Select(e => e.ValueAmount.Value));
 
-            return values.Any(val => val is < 1 or > 999999)
-                ? new ValidationError(path, "Maximum quantity has to be between 1 and 999")
-                : null;
+            var errors = values
+                .Where(val => val.Value?.Any(x => x.Value is < min or > max) == true)
+                .Select(value => new ValidationError(path, $"Prize amount has to be between {min} and {max} for lot {value.Key}"))
+                .ToList();
+
+            return errors.Any() ? errors : null;
         }
 
         public static ValidationError ValidateBT512TouchPoint(EFormContract eForm)
