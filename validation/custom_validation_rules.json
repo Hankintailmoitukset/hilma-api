@@ -14,7 +14,7 @@
     "xpathAbsolute" : "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:ProcurementProject/cac:ContractExtension/cbc:MaximumNumberNumeric",
     "btId": "58",
     "numeric": true,
-    "between": { "min": 1, "max": 999 }
+    "between": { "min": 0, "max": 999 }
   },
   "procurementProjectLot.tenderingProcess.frameworkAgreement.maximumOperatorQuantity": {
     "xpathAbsolute" : "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingProcess/cac:FrameworkAgreement/cbc:MaximumOperatorQuantity",
@@ -58,12 +58,16 @@
   "procurementProject.requestedTenderTotal.estimatedOverallContractAmount": {
     "xpathAbsolute" : "/*/cac:ProcurementProject/cac:RequestedTenderTotal/cbc:EstimatedOverallContractAmount",
     "btId": "27",
-    "numeric": true
+    "number_range": { "min": 1, "max": 9007199254740991 },
+    "decimal": true,
+    "max_decimals": { "max": 2 }
   },
   "procurementProject.requestedTenderTotal.ublExtensions.ublExtension.extensionContent.eformsExtension.frameworkMaximumAmount": {
     "xpathAbsolute" : "/*/cac:ProcurementProject/cac:RequestedTenderTotal/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efbc:FrameworkMaximumAmount",
     "btId": "271",
-    "numeric": true
+    "number_range": { "min": 1, "max": 9007199254740991 },
+    "decimal": true,
+    "max_decimals": { "max": 2 }
   },
   "procurementProjectLot.tenderingTerms.callForTendersDocumentReference.attachment.externalReference.uri": {
     "xpathAbsolute" : "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:CallForTendersDocumentReference[not(cbc:DocumentType/text()='restricted-document')]/cac:Attachment/cac:ExternalReference/cbc:URI",
@@ -79,17 +83,88 @@
     "xpathAbsolute" : "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingProcess/cac:EconomicOperatorShortList/cbc:MaximumQuantity",
     "btId": "51",
     "numeric": true,
-    "between": { "min": 1, "max": 999 }
+    "between": { "min": 1, "max": 999 },
+    "required": true
   },
   "procurementProjectLot.tenderingTerms.awardingTerms.prize.valueAmount": {
     "xpathAbsolute" : "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:AwardingTerms/cac:Prize/cbc:ValueAmount",
     "btId": "644",
-    "numeric": true,
-    "between": { "min": 1, "max": 999999 }
+    "number_range": { "min": 1, "max": 9007199254740991 },
+    "decimal": true,
+    "max_decimals": { "max": 2 }
   },
   "ublExtensions.ublExtension.extensionContent.eformsExtension.organizations.organization.touchPoint.postalAddress.postalZone": {
     "xpathAbsolute" : "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:Organizations/efac:Organization/efac:TouchPoint/cac:PostalAddress/cbc:PostalZone",
     "btId": "512",
     "max": 20
+  },
+  "ublExtensions.ublExtension.extensionContent.eformsExtension.organizations.organization.company.postalAddress.countrySubentityCode": {
+    "xpathAbsolute" : "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:Organizations/efac:Organization/efac:Company/cac:PostalAddress/cbc:CountrySubentityCode",
+    "btId": "507",
+    "required": true
+  },
+  "procurementProjectLot.tenderingTerms.awardingTerms.prize.rankCode": {
+    "xpathAbsolute" : "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:AwardingTerms/cac:Prize/cbc:RankCode",
+    "btId": "44",
+    "numeric": true,
+    "between": { "min": 1, "max": 9999 }
+  },
+  "ublExtensions.ublExtension.extensionContent.eformsExtension.noticeResult.lotTender.rankCode": {
+    "xpathAbsolute" : "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/cbc:RankCode",
+    "btId": "171",
+    "numeric": true,
+    "between": { "min": 1, "max": 99999999 }
+  },
+  "ublExtensions.ublExtension.extensionContent.eformsExtension.noticeResult.lotTender.legalMonetaryTotal.payableAmount": {
+    "xpathAbsolute" : "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/cac:LegalMonetaryTotal/cbc:PayableAmount",
+    "btId": "720",
+    "number_range": { "min": 1, "max": 9007199254740991 },
+    "decimal": true,
+    "max_decimals": { "max": 2 }
+  },
+  "ublExtensions.ublExtension.extensionContent.eformsExtension.noticeResult.lotResult.frameworkAgreementValues.maximumValueAmount": {
+    "xpathAbsolute" : "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotResult/efac:FrameworkAgreementValues/cbc:MaximumValueAmount",
+    "btId": "709",
+    "number_range": { "min": 1, "max": 9007199254740991 },
+    "decimal": true,
+    "max_decimals": { "max": 2 }
+  },
+  "ublExtensions.ublExtension.extensionContent.eformsExtension.noticeResult.lotResult.frameworkAgreementValues.reestimatedValueAmount": {
+    "xpathAbsolute" : "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotResult/efac:FrameworkAgreementValues/efbc:ReestimatedValueAmount",
+    "btId": "660",
+    "number_range": { "min": 1, "max": 9007199254740991 },
+    "decimal": true,
+    "max_decimals": { "max": 2 }
+  },
+  "ublExtensions.ublExtension.extensionContent.eformsExtension.noticeResult.lotResult.lowerTenderAmount": {
+    "xpathAbsolute" : "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotResult/cbc:LowerTenderAmount",
+    "btId": "710",
+    "number_range": { "min": 1, "max": 9007199254740991 },
+    "decimal": true,
+    "max_decimals": { "max": 2 }
+  },
+  "ublExtensions.ublExtension.extensionContent.eformsExtension.noticeResult.lotResult.higherTenderAmount": {
+    "xpathAbsolute" : "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotResult/cbc:HigherTenderAmount",
+    "btId": "711",
+    "number_range": { "min": 1, "max": 9007199254740991 },
+    "decimal": true,
+    "max_decimals": { "max": 2 }
+  },
+  "ublExtensions.ublExtension.extensionContent.eformsExtension.noticeResult.lotTender.subcontractingTerm.termAmount": {
+    "xpathAbsolute" : "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:SubcontractingTerm/efbc:TermAmount",
+    "btId": "553",
+    "number_range": { "min": 1, "max": 9007199254740991 },
+    "decimal": true,
+    "max_decimals": { "max": 2 }
+  },
+  "tenderingTerms.tendererQualificationRequest.specificTendererRequirement.description": {
+    "xpathAbsolute" : "/*/cac:TenderingTerms/cac:TendererQualificationRequest/cac:SpecificTendererRequirement/cbc:Description",
+    "btId": "67",
+    "required": true
+  },
+  "tenderingTerms.procurementLegislationDocumentReference.documentDescription": {
+    "xpathAbsolute" : "/*/cac:TenderingTerms/cac:ProcurementLegislationDocumentReference[cbc:ID/text()='CrossBorderLaw']/cbc:DocumentDescription",
+    "btId": "09",
+    "required": true
   }
 }
