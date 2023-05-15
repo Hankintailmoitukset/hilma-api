@@ -4,7 +4,7 @@
 
 # Validation
 <a name="custom-validation"></a>
-Hilma API validation for eForms is based on TED validation with a few exceptions. These exceptions are listed in json files at: https://github.com/Hankintailmoitukset/hilma-api/tree/master/validation.
+Hilma API validation for eForms is based on TED validation with a few exceptions. These exceptions are listed in json files at: https://github.com/Hankintailmoitukset/hilma-api/blob/master/validation/custom_validation_rules.json
 The custom rules use the following structure:
 ```json
 "Field Path": {
