@@ -11,3 +11,5 @@
 The production API portal is hosted at: https://hns-hilma-prod-apim.developer.azure-api.net/
 
 The test API portal is hosted at: https://hns-hilma-test-apim.developer.azure-api.net/
+
+Hilma uses [eForms SDK 1.7.0](https://github.com/OP-TED/eForms-SDK/releases/tag/1.7.0)
