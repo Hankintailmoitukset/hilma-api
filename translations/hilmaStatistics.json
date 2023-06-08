@@ -1,8 +1,8 @@
 {
     "fi-FI": {
         "hilmaStatistics": {
-						"innovationConsidered": "Hankinnan valmisteluvaiheessa on kartoitettu tarve/mahdollisuudet uusiin ratkaisuihin tai niiden kehittämiseen​",
-						"sMEParticipationConsidered": "Tässä hankinnassa otetaan huomioon pienten ja keskisuurten yritysten osallistumismahdollisuudet​",
+	    "innovationConsidered": "Hankinnan valmisteluvaiheessa on kartoitettu tarve/mahdollisuudet uusiin ratkaisuihin tai niiden kehittämiseen​",
+	    "sMEParticipationConsidered": "Tässä hankinnassa otetaan huomioon pienten ja keskisuurten yritysten osallistumismahdollisuudet​",
             "description": "<p>Suomen ensimmäinen kansallinen julkisten hankintojen strategia julkaistiin syyskuussa 2020. Se laadittiin osana valtiovarainministeriön asettamaa ja yhdessä Suomen Kuntaliitto ry:n kanssa johtamaa Hankinta-Suomen toimenpideohjelmaa.&nbsp;<a style=\"color: #2e892e;\" href=\"https://julkaisut.valtioneuvosto.fi/handle/10024/162418\" target=\"_blank\" rel=\"noopener\">Tutustu tästä kansalliseen julkisten hankintojen strategiaan.</a></p>\n<p><span>Seuraavat kysymykset liittyvät kansallisen julkisten hankintojen strategian toteutumisen seurantaan.</span></p>",
             "lowCarbon": "Tällä hankinnalla edistetään vähähiilisyyttä.",
             "biodiversity": "Tällä hankinnalla edistetään luonnon monimuotoisuutta.",
@@ -34,8 +34,8 @@
     },
     "sv-SE": {
         "hilmaStatistics": {
-						"innovationConsidered": "Vid beredningen av upphandlingen analyserades om det finns behov/möjligheter till nya lösningar eller framtagande av nya lösningar",
-						"sMEParticipationConsidered": "Vid den här upphandlingen tar man hänsyn till att små och medelstora företag ska ha möjlighet att delta",
+	    "innovationConsidered": "Vid beredningen av upphandlingen analyserades om det finns behov/möjligheter till nya lösningar eller framtagande av nya lösningar",
+	    "sMEParticipationConsidered": "Vid den här upphandlingen tar man hänsyn till att små och medelstora företag ska ha möjlighet att delta",
             "description": "<p>Finlands första gemensamma nationella strategi för offentlig upphandling publicerades i september 2020 som en del av åtgärdsprogrammet för offentlig upphandling som upprättats och förvaltas av finansminsteriet och Finlands Kommunförbund rf. <a href=\"https://julkaisut.valtioneuvosto.fi/handle/10024/162418\" target=\"_blank\" rel=\"noopener\">Här kan du läsa strategin för offentlig upphandling.</a></p>\n<p>Dessa frågor rör övervakningen av genomförandet av den nationella strategin för offentlig upphandling.</p>",
             "lowCarbon": "Denna upphandling främjar koldioxidsnålhet.",
             "biodiversity": "Denna upphandling främjar naturens mångfald.",
@@ -67,8 +67,8 @@
     },
     "en-GB": {
         "hilmaStatistics": {
-						"innovationConsidered": "In preparation, need and opportunities for innovation was considered.",
-						"sMEParticipationConsidered": "Procurement allows for participation of small and medium-sized enterprises.",
+	    "innovationConsidered": "In preparation, need and opportunities for innovation was considered.",
+	    "sMEParticipationConsidered": "Procurement allows for participation of small and medium-sized enterprises.",
             "description": "<p>Finland's first joint national public procurement strategy was published in September 2020 as part of the Procurement Finland (Hankinta-Suomi) operational program set up by the Ministry of Finance a<span>nd managed together with Association of Finnish Muncipalities.&nbsp;</span></p>\n<p><span>Following questions relate to the monitoring of the implementation of the national public procurement strategy.&nbsp;&nbsp;</span></p>",
             "lowCarbon": "This procurement promotes low carbon emissions.",
             "biodiversity": "This procurement promotes biodiversity.",
