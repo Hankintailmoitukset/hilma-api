@@ -1,9 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
-using AutoMapper.Execution;
+using Hilma.Domain.DataContracts;
 using Hilma.Domain.DataContracts.Notices;
 using Hilma.Domain.EForms.Contracts;
-using Hilma.Domain.Enums;
 using Hilma.Domain.Extensions;
 
 namespace Hilma.Domain.Validators.EForms
@@ -15,10 +14,12 @@ namespace Hilma.Domain.Validators.EForms
     /// </summary>
     public class ENoticeValidator
     {
+        // Hard coded, should never change
+        private const string HanselNationalIdentifier = "0988084-1";
+
         public static List<ValidationError> Validate(EFormContract eForm, Dictionary<string, HilmaStatistics> hilmaStatistics, int nationalThreshold)
         {
             var result = new List<ValidationError> {
-                ValidateBT501(eForm),
                 ValidateBT64(eForm),
                 ValidateBT729(eForm),
                 ValidateBT75(eForm),
@@ -26,9 +27,12 @@ namespace Hilma.Domain.Validators.EForms
                 ValidateBT512Company(eForm),
                 ValidateBT15(eForm),
                 ValidateBT512TouchPoint(eForm),
+                ValidateBT738NotSet(eForm),
+                ValidateHanselESender(eForm),
                 ValidateHilmaStatistics(eForm, hilmaStatistics, nationalThreshold),
             };
 
+            result.AddRangeNullSafe(ValidateOrganisationIds(eForm));
             result.AddRangeNullSafe(ValidateBT36(eForm));
             result.AddRangeNullSafe(ValidateBT58(eForm));
             result.AddRangeNullSafe(ValidateBT113(eForm));
@@ -84,15 +88,31 @@ namespace Hilma.Domain.Validators.EForms
             return null;
         }
 
-        public static ValidationError ValidateBT501(EFormContract eForm)
+        public static List<ValidationError> ValidateOrganisationIds(EFormContract eForm)
         {
+            var errors = new List<ValidationError> { ValidateFinnishOrgIdentifier(eForm.GetPrimaryBuyer()?.CompanyLegalId()) };
+            var participatingOrganisationsInFinland = eForm
+                .GetParticipatingOrganisations()
+                .Where(o => o.Company.PostalAddress.Country.IdentificationCode.Value is "FIN" or "ALA");
+
+            errors.AddRange(participatingOrganisationsInFinland.Select(oid => ValidateFinnishOrgIdentifier(oid.CompanyLegalId())));
+            errors = errors.Where(e => e != null).ToList();
+
+            return errors.Any() ? errors : null;
+        }
+
+        private static ValidationError ValidateFinnishOrgIdentifier(string value)
+        {
+            if (value == null)
+            {
+                return null;
+            }
+
             const string path = "ublExtensions.ublExtension.extensionContent" +
                                 ".eformsExtension.organizations.organization.company.partyLegalEntity.companyID";
 
-            var values = eForm.GetCompanyIds();
-
-            return values.Any(id => !id.IsNationalIdentifier())
-                ? new ValidationError(path, $"Company Id ({string.Join(", ", values.Where(x => !x.IsNationalIdentifier()))}) is not a valid National Identifier")
+            return !(value.IsNationalIdentifier() || value.IsPrivateRoadIdentifier())
+                ? new ValidationError(path, $"Company Id is not a valid National Identifier or Private Road Identifier")
                 : null;
         }
 
@@ -367,6 +387,27 @@ namespace Hilma.Domain.Validators.EForms
 
             return values.Any(val => val.Length > 20)
                 ? new ValidationError(path, "Postal zone can have maximum length of 20 characters")
+                : null;
+        }
+
+        public static ValidationError ValidateBT738NotSet(EFormContract eForm)
+        {
+            const string path = "requestedPublicationDate";
+
+            return !string.IsNullOrEmpty(eForm.RequestedPublicationDate?.Value)
+                ? new ValidationError(path, "Requested Publication Date is not supported")
+                : null;
+        }
+
+        public static ValidationError ValidateHanselESender(EFormContract eForm)
+        {
+            const string path = "ublExtensions.ublExtension.extensionContent.eformsExtension.organizations.organization.company.partyLegalEntity.companyID";
+
+            var eSenders = eForm.GetESenders();
+
+            return eSenders.Any(e =>
+                e?.Company?.PartyLegalEntity?.FirstOrDefault()?.CompanyID?.Value != HanselNationalIdentifier)
+                ? new ValidationError(path, "Only Hansel can be set as eSender")
                 : null;
         }
     }
