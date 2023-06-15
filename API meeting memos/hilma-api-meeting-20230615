@@ -1,0 +1,77 @@
+# Participants
+
+* Ari Nurkkala
+* Eduard Smirnov
+* Heikki Kosonen
+* Joel Ollikainen
+* Sami Ristinen
+* Juho Esselström
+* Laura Kivikangas
+
+# Topics
+
+* Hilman eForms toteutus
+	- Organization national identifier issue should be resolved
+	- If country FI, national ID is validated by Y-tunnus / käyttöoikeusyksikkötunnus
+	- eSender: if sent, it must be Hansel
+	
+	- Read API is now available for eForms in Hilma.
+		- see https://hns-hilma-test-apim.developer.azure-api.net/
+		- Public URL (test) https://testi.hankintailmoitukset.fi/fi/public/procedure/1523/enotice/1302/
+	- notice languages will not be validated for FIN / SWE as main language.
+	- NoticeNumber was added to index 
+		- Hilma publication Id (equivalent to TED publication id, except this isn't used in any technical endpoint / url)
+		
+	- eForms SDK 1.7 in Hilma
+		- Hilman tavoitteena päästä liveksi mahdollisimman uudella versiolla, joka on tuettu TEDin testissä ja tuotannossa
+		- Mercell can commit to 1.any. 2. -> is questionable for go-live.
+		- Only one version of SDK will be properly for go-live. Hilma will add validation for SDK version.
+	
+	- Hilma statistiikat on toteutettu nykysellä HilmaStatistics -luokalla. Tästä poimitaan pällekkäisyydet eForms tietomalliin. Tämä muuttaa mallia, jolla kirjoitusrajapintaa käytetään.
+		- Hilman eForms kirjoitusrajapinta tulee vastaanottamaan tietomallia, jossa on hankintamenettely, eForm ja Hilman tilastotiedot.
+		- validation endpoint for HilmaStatistics and Schematron
+		- HilmaStatistics are per Lot
+		- https://github.com/Hankintailmoitukset/hilma-api/blob/master/validation/HilmaStatistics.cs
+		- Some Strategic procurements fields (at least BT-717, BT-735) are dependent on CPV codes
+			- https://github.com/Hankintailmoitukset/hilma-api/blob/master/endpoints/hilmastatistics.md
+		- CPV codes for showing BT-717 and BT-735 are in the old readme page: https://github.com/Hankintailmoitukset/hilma-api/blob/master/README-old.md
+			- 60112000,60130000,60140000,90511000,60160000,60161000,64121100,64121200,60100000,90510000,64121000,34100000,3411*,3412*,3413*,3414*
+			 - 60000000 coming at some point?
+		 - Schematron will validate this - Hilma backend does not validate this.
+		
+	- Voidaan exporttaa eForms Loco resursseja rajapintakäyttäjille käytettäväksi tarpeen mukaan. Ei vielä toteutettu. Tehdään, kunhan Hanselin asiantuntijat ovat käyneet komission konekäännökset läpi. 
+		- SC haluaa lopulliset käännökset
+		- By June for Mercell!
+		- Translations (provided by Hansel) can be found from https://github.com/Hankintailmoitukset/hilma-api/tree/master/translations
+
+	- Aikataulu.
+		- Hilman sisäinen tavoite on olla eFormsin osalta valmis kesäkuussa 2023.
+		- Hilman eForms golive on 1.9.2023. Tämän jälkeen Hilma ei vastaanota nykyisiä ilmoituksia.
+			- Grace period until 8.9 if wanted? Hilma could support both types during this week.
+			- Julien says yes! Eduard wants a longer grace period.
+		- Nykyinen TED vastaanottaa 24.10.2023. Sen jälkeen pakko lähettää eFormseja.
+		- Julien wants national notices in eForms as well.
+			- Hilma team is busy and it wasn't prioritized.. yet!
+			- Coming sometime 2024
+			
+	- National tailoring to be uploaded to GitHub next week (week 25)
+			
+	- Public UI is 95% complete
+
+	- eForms poissulkukriteerit ja ESPD vaatimuksissa päällekkäisyyksiä. Miten nämä hoidetaan? Kysymys Hanselille.
+		- ESPD not expected to change. Some questions will be similar, but not exactly the same with eForms
+		- ESPD 4.0 should fix these issues. Coming whenever publication office has time (hopefully 2024).
+		- Many eForms fields can be copied to ESPD. Hilma UI should do this at some point.
+		- eForms may have an option at some point, where you refer to ESPD document
+
+	- Current notice conversion
+		- Hilma has a conversion button for F02 (Contract notices)
+		- Conversion API can be opened to write users, if wanted
+
+	- Publication:
+		- If published in TED -> it will be published almost immediately in Hilma
+		- If for some reason TED doesn't publish in 48 hours, Hilma will publish the notice nationally (will also keep pinging TED for publication)
+		- WithheldPublication will not be used / supported by Hilma
+		- PreferredPublicationDate will not be supported in Finland. Hilma will validate this at some point. BT-738
+			
+* While sending draft notices, you may send a collaborator (email) that will be added to the project
