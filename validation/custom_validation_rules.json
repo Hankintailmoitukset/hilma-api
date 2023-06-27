@@ -166,5 +166,10 @@
     "xpathAbsolute" : "/*/cac:TenderingTerms/cac:ProcurementLegislationDocumentReference[cbc:ID/text()='CrossBorderLaw']/cbc:DocumentDescription",
     "btId": "09",
     "required": true
+  },
+  "ublExtensions.ublExtension.extensionContent.eformsExtension.noticeResult.settledContract.contractReference.id": {
+    "xpathAbsolute" : "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:SettledContract/efac:ContractReference/cbc:ID",
+    "btId": "150",
+    "required": true
   }
 }
