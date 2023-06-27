@@ -28,6 +28,7 @@ namespace Hilma.Domain.Validators.EForms
                 ValidateBT15(eForm),
                 ValidateBT512TouchPoint(eForm),
                 ValidateBT738NotSet(eForm),
+                ValidateBT150(eForm),
                 ValidateHanselESender(eForm),
                 ValidateHilmaStatistics(eForm, hilmaStatistics, nationalThreshold),
             };
@@ -368,6 +369,29 @@ namespace Hilma.Domain.Validators.EForms
                 .ToList();
 
             return errors.Any() ? errors : null;
+        }
+
+        public static ValidationError ValidateBT150(EFormContract eForm)
+        {
+            if (!eForm.IsContractAward() && !eForm.IsExAnte())
+            {
+                return null;
+            }
+
+            const string path = "ublExtensions.ublExtension.extensionContent.eformsExtension.noticeResult.settledContract.contractReference.id";
+
+            var contracts = eForm.GetAllContracts();
+            var references = contracts
+                .Where(c => c.ContractReference != null)
+                .SelectMany(c => c.ContractReference);
+
+            var emptyValues = references
+                    .Select(r => r?.ID?.Value)
+                    .Where(v => string.IsNullOrWhiteSpace(v)) ?? new List<string>();
+
+            return emptyValues?.Any() == true || contracts.Count() != references.Count()
+                ? new ValidationError(path, "SettledContract ContractReference ID is required")
+                : null;
         }
 
         public static ValidationError ValidateBT512TouchPoint(EFormContract eForm)
