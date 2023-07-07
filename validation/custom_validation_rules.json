@@ -171,5 +171,10 @@
     "xpathAbsolute" : "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:SettledContract/efac:ContractReference/cbc:ID",
     "btId": "150",
     "required": true
+  },
+	"procurementProjectLot.tenderingTerms.ublExtensions.ublExtension.extensionContent.eformsExtension.selectionCriteria.calculationExpressionCode": {
+		"xpathAbsolute": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:SelectionCriteria/cbc:CalculationExpressionCode[@listName='usage']"
+    "btId": "748",
+    "required": true
   }
 }
