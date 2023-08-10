@@ -1,0 +1,70 @@
+# Participants
+
+* Ari Nurkkala
+* Sami Ristinen
+* Veera Lavikkala
+* Juho Esselström
+* Eduard Smirnov
+* Julien Louvrier
+* Simo Viitanen
+
+
+# Topics
+
+* Hilman eForms toteutus
+	- If country FI, national ID is validated by Y-tunnus / käyttöoikeusyksikkötunnus
+	- eSender: if sent, it must be Hansel
+	
+	- Validation regarding TouchPoint will be removed soon (was unnecessary)
+	
+	- Eduard wants UPDATE to use same endpoint (needed for lawfullness check failure resubmit)
+	
+	- TED down -> Hilma should return a message saying that TED integration is not work
+	
+	- Read API is now available for eForms in Hilma.
+		- see https://hns-hilma-test-apim.developer.azure-api.net/
+		- Public URL (test) https://testi.hankintailmoitukset.fi/fi/public/procedure/1523/enotice/1302/
+	- notice languages will not be validated for FIN / SWE as main language.
+	- NoticeNumber was added to index 
+		- Hilma publication Id (equivalent to TED publication id, except this isn't used in any technical endpoint / url)
+		
+	- eForms SDK 1.7 in Hilma
+		- Mercell wants 1.7 for go-live
+		- Only one version of SDK will be properly for go-live. Hilma will add validation for SDK version.
+		- 1.7 will be in use for 2023 and well into 2024 as well -> Hilma will implement national eForms during 2024 and sometime after that we will get into different eForms versions
+		
+	- Voidaan exporttaa eForms Loco resursseja rajapintakäyttäjille käytettäväksi tarpeen mukaan. Ei vielä toteutettu. Tehdään, kunhan Hanselin asiantuntijat ovat käyneet komission konekäännökset läpi. 
+		- SC haluaa lopulliset käännökset
+		- By June for Mercell!
+		- Translations (provided by Hansel) can be found from https://github.com/Hankintailmoitukset/hilma-api/tree/master/translations
+		- Translations for exclusion grounds in GitHub under ExclusionGrounds.<codelistvalue>_default
+
+	- Aikataulu.
+		- Hilman eForms golive on 1.9.2023. Tämän jälkeen Hilma ei vastaanota nykyisiä ilmoituksia.
+			- Grace period until 8.9 if wanted? Hilma could support both types during this week.
+			- Julien says yes! Eduard wants a longer grace period.
+		- Nykyinen TED vastaanottaa 24.10.2023. Sen jälkeen pakko lähettää eFormseja.
+		- Julien wants national notices in eForms as well.
+			- Hilma team is busy and it wasn't prioritized.. yet!
+			- Coming sometime 2024
+		- Hilma will go into maintenance mode on 1.9 at 8:00 and will reopen at latest 4.9 8:00
+		
+	- National tailoring to be uploaded to GitHub next week (week 25)
+
+	- eForms poissulkukriteerit ja ESPD vaatimuksissa päällekkäisyyksiä. Miten nämä hoidetaan? Kysymys Hanselille.
+		- ESPD not expected to change. Some questions will be similar, but not exactly the same with eForms
+		- ESPD 4.0 should fix these issues. Coming whenever publication office has time (hopefully 2024).
+		- Many eForms fields can be copied to ESPD. Hilma UI should do this at some point.
+		- eForms may have an option at some point, where you refer to ESPD document
+
+	- Current notice conversion
+		- Hilma has a conversion button for F02 (Contract notices)
+		- Conversion API can be opened to write users, if wanted
+
+	- Publication:
+		- If published in TED -> it will be published almost immediately in Hilma
+		- If for some reason TED doesn't publish in 48 hours, Hilma will publish the notice nationally (will also keep pinging TED for publication)
+		- WithheldPublication will not be used / supported by Hilma
+		- PreferredPublicationDate will not be supported in Finland. Hilma will validate this at some point. BT-738
+			
+* While sending draft notices, you may send a collaborator (email) that will be added to the project
