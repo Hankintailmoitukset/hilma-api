@@ -8,7 +8,7 @@
 
 [EForms SDK deviations](https://github.com/Hankintailmoitukset/hilma-api/tree/master/deviations.md)
 
-<a href="https://github.com/Hankintailmoitukset/hilma-api/blob/master/Hilma_National_Tailoring_20230616_API.xlsx" download>Hilma national tailoring Excel</a>
+<a href="https://github.com/Hankintailmoitukset/hilma-api/blob/master/Hilma_national_tailoring_API.xlsx" download>Hilma national tailoring Excel</a>
 
 The production API portal is hosted at: https://hns-hilma-prod-apim.developer.azure-api.net/
 
