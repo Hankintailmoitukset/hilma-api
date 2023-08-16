@@ -27,9 +27,6 @@ namespace Hilma.Domain.Validators.EForms
 
             errors.AddRange(ValidateBT501OrganizationCompany(eForm));
             errors.AddRange(ValidateBT507OrganizationCompany(eForm));
-            errors.AddRange(ValidateBT502OrganizationTouchPoint(eForm));
-            errors.AddRange(ValidateBT506OrganizationTouchPoint(eForm));
-            errors.AddRange(ValidateBT503OrganizationTouchPoint(eForm));
             errors.AddRange(ValidateBT09bProcedure(eForm));
             errors.AddRange(ValidateBT51Lot(eForm));
             errors.AddRange(ValidateNDPrize(eForm));
@@ -206,57 +203,6 @@ namespace Hilma.Domain.Validators.EForms
             var errors = eForm.GetAllCompanies()
                 .Where(x => string.IsNullOrEmpty(x.PostalAddress?.CountrySubentityCode?.Value))
                 .Select(x => new ValidationError(path, $"CountrySubentityCode cannot be empty for company {x.PartyName?.FirstOrDefault()?.Name?.Value}"))
-                .ToList();
-
-            return errors;
-        }
-
-        /// <summary>
-        /// BT-502-Organization-TouchPoint
-        /// Organisation Contact Point
-        /// Contact name is mandatory, when organization has a touch point.
-        /// </summary>
-        public static List<ValidationError> ValidateBT502OrganizationTouchPoint(EFormContract eForm)
-        {
-            const string path = "ublExtensions.ublExtension.extensionContent.eformsExtension.organizations.organization.touchPoint.contact.name";
-
-            var errors = eForm.GetAllOrganizations()
-                .Where(x => x.TouchPoint?.Any() == true && x.TouchPoint.Any(y => string.IsNullOrEmpty(y.Contact?.Name?.Value)))
-                .Select(x => new ValidationError(path, $"organization.touchPoint.contact.name cannot be empty for company {x.Company.PartyName?.FirstOrDefault()?.Name?.Value}"))
-                .ToList();
-
-            return errors;
-        }
-
-        /// <summary>
-        /// BT-506-Organization-TouchPoint
-        /// Contact Email Address
-        /// Contact email is mandatory, when organization has a touch point.
-        /// </summary>
-        public static List<ValidationError> ValidateBT506OrganizationTouchPoint(EFormContract eForm)
-        {
-            const string path = "ublExtensions.ublExtension.extensionContent.eformsExtension.organizations.organization.touchPoint.contact.name";
-
-            var errors = eForm.GetAllOrganizations()
-                .Where(x => x.TouchPoint?.Any() == true && x.TouchPoint.Any(y => string.IsNullOrEmpty(y.Contact?.ElectronicMail?.Value)))
-                .Select(x => new ValidationError(path, $"organization.touchPoint.contact.electronicMail cannot be empty for company {x.Company.PartyName?.FirstOrDefault()?.Name?.Value}"))
-                .ToList();
-
-            return errors;
-        }
-
-        /// <summary>
-        /// BT-503-Organization-TouchPoint
-        /// Contact Telephone Number
-        /// Contact telephone number is mandatory, when organization has a touch point.
-        /// </summary>
-        public static List<ValidationError> ValidateBT503OrganizationTouchPoint(EFormContract eForm)
-        {
-            const string path = "ublExtensions.ublExtension.extensionContent.eformsExtension.organizations.organization.touchPoint.contact.telephone";
-
-            var errors = eForm.GetAllOrganizations()
-                .Where(x => x.TouchPoint?.Any() == true && x.TouchPoint.Any(y => string.IsNullOrEmpty(y.Contact?.Telephone?.Value)))
-                .Select(x => new ValidationError(path, $"organization.touchPoint.contact.telephone cannot be empty for company {x.Company.PartyName?.FirstOrDefault()?.Name?.Value}"))
                 .ToList();
 
             return errors;
