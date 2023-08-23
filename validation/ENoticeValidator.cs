@@ -4,6 +4,7 @@ using System.Linq;
 using Hilma.Domain.DataContracts.Notices;
 using Hilma.Domain.EForms.Contracts;
 using Hilma.Domain.Extensions;
+using ProcurementProjectContract = Hilma.Domain.EForms.Contracts.ProcurementProjectContract;
 
 namespace Hilma.Domain.Validators.EForms
 {
@@ -15,6 +16,13 @@ namespace Hilma.Domain.Validators.EForms
         // Hard coded, should never change
         private const string HanselNationalIdentifier = "0988084-1";
         public static readonly string[] SupportedEFormsSdkVersions = { "eforms-sdk-1.7" };
+        private static readonly IReadOnlySet<string> ExactAllowedCodesForCleanVehicles = new HashSet<string>(StringComparer.Ordinal)
+            { "60000000" ,"60112000", "60130000", "60140000", "90511000", "60160000",
+              "60161000", "64121100", "64121200", "60100000", "90510000", "64121000", "34100000" };
+        private static readonly IReadOnlyList<string> WildCardAllowedCodesForCleanVehicles = new List<string> { "3411", "3412", "3413", "3414" };
+        private const string PathForBT717 = "procurementProjectLot.tenderingTerms.ublExtensions.ublExtension.extensionContent.eformsExtension.strategicProcurement.applicableLegalBasis";
+        private const string PathForBT735 = "procurementProjectLot.tenderingTerms.ublExtensions.ublExtension.extensionContent" +
+            ".eformsExtension.strategicProcurement.strategicProcurementInformation.procurementCategoryCode";
 
         public static List<ValidationError> Validate(EFormContract eForm, Dictionary<string, HilmaStatistics> hilmaStatistics, int nationalThreshold)
         {
@@ -36,6 +44,8 @@ namespace Hilma.Domain.Validators.EForms
             errors.AddRange(ValidateBT75Lot(eForm));
             errors.AddRange(ValidateBT150Contract(eForm));
             errors.AddRange(ValidateBT539Lot(eForm));
+            errors.AddRange(ValidateBT161NoticeResult(eForm));
+            errors.AddRange(ValidateBT717LotAndBT735Lot(eForm));
 
             errors.RemoveAll(e => e is null);
 
@@ -475,6 +485,108 @@ namespace Hilma.Domain.Validators.EForms
             }
 
             return errors;
+        }
+
+        /// <summary>
+        /// BT-161-NoticeResult
+        /// Total amount
+        /// Notice results total amount is required when any lot has a winner.
+        /// </summary>
+        public static List<ValidationError> ValidateBT161NoticeResult(EFormContract eForm)
+        {
+            var errors = new List<ValidationError>();
+
+            if (!eForm.IsContractAward())
+            {
+                return errors;
+            }
+
+            const string path = "ublExtensions.ublExtension.extensionContent.eformsExtension.noticeResult.totalAmount";
+
+            if (!(eForm.UBLExtensions?.FirstOrDefault()?.ExtensionContent?.EformsExtension?.NoticeResult?.TotalAmount?.Value > 0))
+            {
+                var anyLotHasWinners = eForm.UBLExtensions?.FirstOrDefault()?
+                    .ExtensionContent?.EformsExtension?.NoticeResult?.LotResult?
+                    .Any(x => x?.TenderResultCode?.Value == "selec-w") == true;
+
+                if (anyLotHasWinners)
+                {
+                    errors.Add(path, $"BT-161-NoticeResult total amount is required when any lot has a winner.");
+                }
+            }
+
+            return errors;
+        }
+
+        /// <summary>
+        /// BT-717-Lot Clean Vehicles Directive and
+        /// BT-735-Lot CVD Contract Type
+        /// Clean Vehicles Directive and CVD Contract Type are allowed only for BT-262 or BT-263 values:
+        ///     '60000000,60112000,60130000,60140000,90511000,60160000,60161000,64121100,64121200'
+        ///     + ',60100000,90510000,64121000,34100000,3411*,3412*,3413*,3414*'
+        /// </summary>
+        public static List<ValidationError> ValidateBT717LotAndBT735Lot(EFormContract eForm)
+        {
+            var errors = new List<ValidationError>();
+            // Commodity codes for procedure level
+            if (CleanVehiclesAreAllowed(eForm?.ProcurementProject)) {
+                return errors;
+            }
+
+            foreach (var lot in eForm.ProcurementProjectLot)
+            {
+                // Commodity codes for lot level
+                if (CleanVehiclesAreAllowed(lot.ProcurementProject)) {
+                    continue;
+                }
+
+                var strategicProcurement = lot.TenderingTerms?.UBLExtensions?.FirstOrDefault()?.ExtensionContent?.EformsExtension?.StrategicProcurement?.FirstOrDefault();
+                if (strategicProcurement is null)
+                {
+                    continue;
+                }
+
+                // BT-717
+                if (!string.IsNullOrEmpty(strategicProcurement.ApplicableLegalBasis?.Value))
+                {
+                    errors.Add(PathForBT717, $"Clean Vehicles Directive is allowed only for commodity (Main and Additional) classification codes: " +
+                        $"{string.Join(", ", ExactAllowedCodesForCleanVehicles)}, 3411*, 3412*, 3413* and 3414*. Lot {lot.ID.Value}");
+                }
+
+                // BT-735
+                if (strategicProcurement.StrategicProcurementInformation is not null
+                    && strategicProcurement.StrategicProcurementInformation.Any(y => !string.IsNullOrEmpty(y?.ProcurementCategoryCode?.Value)))
+                {
+                    errors.Add(PathForBT735, $"CVD Contract Type is allowed only for commodity (Main and Additional) classification codes: " +
+                        $"{string.Join(", ", ExactAllowedCodesForCleanVehicles)}, 3411*, 3412*, 3413* and 3414*. Lot {lot.ID.Value}");
+                }
+            }
+            return errors;
+        }
+
+        private static bool CleanVehiclesAreAllowed(ProcurementProjectContract procurementProject)
+        {
+            var commodityCodes = new HashSet<string>();
+            var mainCommodity = procurementProject?.MainCommodityClassification?.FirstOrDefault()?.ItemClassificationCode?.Value;
+            var additionalCommodities = procurementProject?.AdditionalCommodityClassification?
+                .Where(x => !string.IsNullOrEmpty(x?.ItemClassificationCode?.Value))
+                .Select(y => y.ItemClassificationCode.Value);
+
+            if (!string.IsNullOrEmpty(mainCommodity))
+            {
+                commodityCodes.Add(mainCommodity);
+            }
+
+            if (additionalCommodities is not null)
+            {
+                foreach (var additionalCommodity in additionalCommodities)
+                {
+                    commodityCodes.Add(additionalCommodity);
+                }
+
+            }
+
+            return commodityCodes.Any(x => ExactAllowedCodesForCleanVehicles.Contains(x) || WildCardAllowedCodesForCleanVehicles.Any(w => x.StartsWith(w, StringComparison.Ordinal)));
         }
     }
 }
