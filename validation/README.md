@@ -47,4 +47,6 @@ Procedure is a container for related notices and all notices created over the AP
 Procedures impose restrictions on notices created in them. Currently, these restrictions are:
   * Only a single notice in state "Draft" or "WaitingToBePublished" is allowed.
     * This means after sending a notice for publication a new notice cannot be added to the same procedure until the first
+  * Procedure may only contain a single, published contract notice, excluding corrigendum to a contract notice inside the procedure.
+    * Contract notices: 14, 15, 16, 17, 18,19, 20, 21, 22, 23, 24
 notice has been published or rejected
