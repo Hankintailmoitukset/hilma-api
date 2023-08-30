@@ -1,0 +1,56 @@
+<diagram program="umletino" version="15.1"><zoom_level>9</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLSpecialState</id><coordinates><x>306</x><y>315</y><w>18</w><h>18</h></coordinates><panel_attributes>type=initial</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>567</x><y>216</y><w>1314</w><h>450</h></coordinates><panel_attributes>Hilma: Draft
+--
+
+valign=top
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>567</x><y>765</y><w>594</w><h>351</h></coordinates><panel_attributes>Hilma: WaitingToBePublished
+--
+
+valign=top
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>1197</x><y>765</y><w>684</w><h>351</h></coordinates><panel_attributes>Hilma: Published
+--
+
+valign=top
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>603</x><y>306</y><w>180</w><h>36</h></coordinates><panel_attributes>HilmaError: Undefined</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>954</x><y>873</y><w>99</w><h>36</h></coordinates><panel_attributes>TED: Submitted</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>981</x><y>1026</y><w>108</w><h>36</h></coordinates><panel_attributes>TED: Publishing</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>1737</x><y>891</y><w>99</w><h>36</h></coordinates><panel_attributes>TED: Published</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>594</x><y>261</y><w>396</w><h>108</h></coordinates><panel_attributes>TED: Undefined
+--
+
+valign=top
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>1071</x><y>261</y><w>396</w><h>108</h></coordinates><panel_attributes>TED: ValidationFailed
+--
+
+valign=top
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>630</x><y>873</y><w>225</w><h>99</h></coordinates><panel_attributes>TED: Undefined
+--
+valign=top</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLSpecialState</id><coordinates><x>2007</x><y>900</y><w>18</w><h>18</h></coordinates><panel_attributes>type=final</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1827</x><y>891</y><w>207</w><h>36</h></coordinates><panel_attributes>lt=-&gt;
+Published</panel_attributes><additional_attributes>10;20;210;20</additional_attributes></element><element><id>Relation</id><coordinates><x>306</x><y>306</y><w>315</w><h>36</h></coordinates><panel_attributes>lt=-&gt;
+Create/Corrigendum/CAN/Etc.</panel_attributes><additional_attributes>10;20;330;20</additional_attributes></element><element><id>UMLState</id><coordinates><x>1350</x><y>810</y><w>99</w><h>36</h></coordinates><panel_attributes>TED: Submitted</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>828</x><y>117</y><w>54</w><h>117</h></coordinates><panel_attributes>lt=-&gt;
+Delete</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element><element><id>UMLSpecialState</id><coordinates><x>828</x><y>117</y><w>18</w><h>18</h></coordinates><panel_attributes>type=final</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>801</x><y>306</y><w>180</w><h>36</h></coordinates><panel_attributes>HilmaError: TedSubmissionFailed</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>1080</x><y>306</y><w>378</w><h>36</h></coordinates><panel_attributes>HilmaError: Undefined</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>693</x><y>333</y><w>234</w><h>558</h></coordinates><panel_attributes>lt=-&gt;
+Submission Failed</panel_attributes><additional_attributes>10;600;240;10</additional_attributes></element><element><id>UMLState</id><coordinates><x>1341</x><y>981</y><w>108</w><h>36</h></coordinates><panel_attributes>TED: Publishing</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>846</x><y>873</y><w>126</w><h>36</h></coordinates><panel_attributes>lt=-&gt;
+Submitted</panel_attributes><additional_attributes>10;20;120;20</additional_attributes></element><element><id>Relation</id><coordinates><x>999</x><y>900</y><w>90</w><h>144</h></coordinates><panel_attributes>lt=-&gt;
+Publishing</panel_attributes><additional_attributes>10;10;40;140</additional_attributes></element><element><id>UMLState</id><coordinates><x>1269</x><y>441</y><w>189</w><h>36</h></coordinates><panel_attributes>HilmaError: PublishedThenRejected</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>1080</x><y>441</y><w>180</w><h>36</h></coordinates><panel_attributes>HilmaError: Undefined</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>1071</x><y>396</y><w>396</w><h>108</h></coordinates><panel_attributes>TED: Stopped
+--
+
+valign=top
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>1269</x><y>576</y><w>189</w><h>36</h></coordinates><panel_attributes>HilmaError: PublishedThenRejected
+group=group-16</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>1080</x><y>576</y><w>180</w><h>36</h></coordinates><panel_attributes>HilmaError: Undefined
+group=group-16</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>1071</x><y>531</y><w>396</w><h>108</h></coordinates><panel_attributes>TED: NotPublished
+--
+
+valign=top
+
+group=group-16</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1044</x><y>882</y><w>351</w><h>54</h></coordinates><panel_attributes>lt=-&gt;
+48h Rule</panel_attributes><additional_attributes>10;10;370;40</additional_attributes></element><element><id>UMLSpecialState</id><coordinates><x>1377</x><y>900</y><w>36</w><h>36</h></coordinates><panel_attributes>type=decision</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1386</x><y>837</y><w>81</w><h>81</h></coordinates><panel_attributes>lt=-&gt;
+Submitted</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1386</x><y>927</y><w>81</w><h>72</h></coordinates><panel_attributes>lt=-&gt;
+Publishing</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>1440</x><y>900</y><w>315</w><h>117</h></coordinates><panel_attributes>lt=-&gt;
+Published</panel_attributes><additional_attributes>10;110;330;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1440</x><y>819</y><w>315</w><h>108</h></coordinates><panel_attributes>lt=-&gt;
+Published</panel_attributes><additional_attributes>10;10;330;100</additional_attributes></element><element><id>Relation</id><coordinates><x>639</x><y>657</y><w>144</w><h>234</h></coordinates><panel_attributes>lt=-&gt;
+Set To Be Published</panel_attributes><additional_attributes>10;10;50;240</additional_attributes></element><element><id>Relation</id><coordinates><x>729</x><y>315</y><w>369</w><h>576</h></coordinates><panel_attributes>lt=-&gt;
+ValidationFailed</panel_attributes><additional_attributes>10;620;390;10</additional_attributes></element><element><id>Relation</id><coordinates><x>972</x><y>468</y><w>207</w><h>423</h></coordinates><panel_attributes>lt=-&gt;
+Stopped</panel_attributes><additional_attributes>10;450;80;80;210;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1026</x><y>603</y><w>162</w><h>288</h></coordinates><panel_attributes>lt=-&gt;
+NotPublished</panel_attributes><additional_attributes>10;300;160;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1350</x><y>468</y><w>270</w><h>360</h></coordinates><panel_attributes>lt=-&gt;
+Stopped</panel_attributes><additional_attributes>100;380;250;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1350</x><y>603</y><w>117</w><h>225</h></coordinates><panel_attributes>lt=-&gt;
+NotPublished</panel_attributes><additional_attributes>60;230;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1080</x><y>918</y><w>729</w><h>144</h></coordinates><panel_attributes>lt=-&gt;
+Published</panel_attributes><additional_attributes>10;140;480;140;790;10</additional_attributes></element><element><id>UMLState</id><coordinates><x>657</x><y>918</y><w>180</w><h>36</h></coordinates><panel_attributes>HilmaError: Undefined</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1080</x><y>909</y><w>315</w><h>153</h></coordinates><panel_attributes>lt=-&gt;
+48h Rule</panel_attributes><additional_attributes>10;150;330;10</additional_attributes></element><element><id>Relation</id><coordinates><x>846</x><y>918</y><w>162</w><h>126</h></coordinates><panel_attributes>lt=-&gt;
+Publishing</panel_attributes><additional_attributes>10;10;160;120</additional_attributes></element><element><id>Relation</id><coordinates><x>1035</x><y>900</y><w>774</w><h>162</h></coordinates><panel_attributes>lt=-&gt;
+</panel_attributes><additional_attributes>10;10;220;160;530;160;840;30</additional_attributes></element><element><id>Relation</id><coordinates><x>738</x><y>918</y><w>1071</w><h>189</h></coordinates><panel_attributes>lt=-&gt;
+</panel_attributes><additional_attributes>10;60;230;190;860;140;1170;10</additional_attributes></element></diagram>
