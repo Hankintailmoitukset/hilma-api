@@ -97,18 +97,27 @@ namespace Hilma.Domain.Validators.EForms
                 return new List<ValidationError>(0);
             }
 
-            if (hilmaStatistics is null || hilmaStatistics.Count == 0)
-            {
-                return new List<ValidationError>() {
-                    new ValidationError("hilmaStatistics", "HilmaStatistics is required.")
-                };
-            }
-
+            var lotResults = eForm.UBLExtensions.FirstOrDefault()?.ExtensionContent?.EformsExtension?.NoticeResult?.LotResult;
             var lotIds = eForm.ProcurementProjectLot.Select(x => x.ID.Value);
             var errors = new List<ValidationError>();
 
+            hilmaStatistics = hilmaStatistics ?? new Dictionary<string, HilmaStatistics>();
+
             foreach (var lotId in lotIds)
             {
+                // If there are no winners, then statistics are not to be used.
+                var lotResult = lotResults?.SingleOrDefault(x => x?.TenderLot?.ID?.Value == lotId);
+                if (lotResult is not null && lotResult.TenderResultCode?.Value != "selec-w")
+                {
+                    // Make sure there are no statistics for a lot like this.
+                    if (hilmaStatistics.ContainsKey(lotId))
+                    {
+                        errors.Add(new ValidationError($"hilmaStatistics[{lotId}]", $"hilmaStatistics.{lotId} is forbidden when BT-142-LotResult value is not 'selec-w'."));
+                    }
+
+                    continue;
+                }
+
                 if (!hilmaStatistics.TryGetValue(lotId, out var hilmaStatisticsLot))
                 {
                     errors.Add(new ValidationError($"hilmaStatistics[{lotId}]", $"hilmaStatistics.{lotId} is required."));
@@ -436,7 +445,7 @@ namespace Hilma.Domain.Validators.EForms
         {
             var errors = new List<ValidationError>();
 
-            if (!eForm.IsContractAward() && !eForm.IsExAnte())
+            if ((eForm.IsContractAward() || eForm.IsContractModification() || eForm.IsExAnte()) is false)
             {
                 return errors;
             }
@@ -547,7 +556,7 @@ namespace Hilma.Domain.Validators.EForms
                 }
 
                 // BT-717
-                if (!string.IsNullOrEmpty(strategicProcurement.ApplicableLegalBasis?.Value))
+                if (string.Equals(strategicProcurement.ApplicableLegalBasis?.Value, "true", StringComparison.OrdinalIgnoreCase))
                 {
                     errors.Add(PathForBT717, $"Clean Vehicles Directive is allowed only for commodity (Main and Additional) classification codes: " +
                         $"{string.Join(", ", ExactAllowedCodesForCleanVehicles)}, 3411*, 3412*, 3413* and 3414*. Lot {lot.ID.Value}");
