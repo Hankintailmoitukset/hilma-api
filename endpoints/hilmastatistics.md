@@ -2,6 +2,7 @@
 
 - Statistical questions are asked only in procurement and contract-award notice types
     - ('14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '29', '30', '31', '32', '33', '34', '35', '36', '37')
+- For contract award notices, they are only mandatory when BT-142-LotResult for the specific lot has value: 'selec-w', otherwise they are forbidden for that specific lot.
 - Statistical questions are:
     - Main statistical questions
         - Preparation of the procurement(social and contract-award  procurements)
