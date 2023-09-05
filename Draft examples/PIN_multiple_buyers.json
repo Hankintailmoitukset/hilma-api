@@ -1,0 +1,96 @@
+{
+	"EForm": {
+		"contractingParty": [
+			{
+				"party": {
+					"partyIdentification": [
+						{
+							"id": {
+								"value": "ORG-0001"
+							}
+						}
+					]
+				}
+			},
+			{
+				"party": {
+					"partyIdentification": [	
+						{
+							"id": {
+								"value": "ORG-0002"
+							}
+						}
+					]
+				}
+			}
+		],
+		"ublExtensions": [
+			{
+				"extensionContent": {
+					"eformsExtension": {
+						"organizations": {
+							"organization": [
+								{
+									"company": {
+										"partyIdentification": {
+											"id": {
+												"value": "ORG-0001"
+											}
+										},
+										"partyName": [
+											{
+												"name": {
+													"value": "Innofactor Oyj",
+													"languageID": "FIN"
+												}
+											}
+										],
+										"partyLegalEntity": [
+											{
+												"companyID": {
+													"value": "111111-6"
+												}
+											}
+										]
+									},
+									"groupLeadIndicator": {
+										"value": true
+									}
+								},
+								{
+									"company": {
+										"partyIdentification": {
+											"id": {
+												"value": "ORG-0002"
+											}
+										},
+										"partyName": [
+											{
+												"name": {
+													"value": "Yleisradio Oy",
+													"languageID": "FIN"
+												}
+											}
+										],
+										"partyLegalEntity": [
+											{
+												"companyID": {
+													"value": "0215438-8"
+												}
+											}
+										]
+									}
+								}
+							]
+						},
+						"noticeSubType": {
+							"subTypeCode": {
+								"value": "4"
+							}
+						}
+					}
+				}
+			}
+		]
+	}
+}

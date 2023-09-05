@@ -1,0 +1,58 @@
+{
+	"EForm": {
+		"contractingParty": [
+			{
+				"party": {
+					"partyIdentification": [
+						{
+							"id": {
+								"value": "ORG-0001"
+							}
+						}
+					]
+				}
+			}
+		],
+		"ublExtensions": [
+			{
+				"extensionContent": {
+					"eformsExtension": {
+						"organizations": {
+							"organization": [
+								{
+									"company": {
+										"partyIdentification": {
+											"id": {
+												"value": "ORG-0001"
+											}
+										},
+										"partyName": [
+											{
+												"name": {
+													"value": "Innofactor Oyj",
+													"languageID": "FIN"
+												}
+											}
+										],
+										"partyLegalEntity": [
+											{
+												"companyID": {
+													"value": "111111-6"
+												}
+											}
+										]
+									}
+								}
+							]
+						},
+						"noticeSubType": {
+							"subTypeCode": {
+								"value": "4"
+							}
+						}
+					}
+				}
+			}
+		]
+	}
+}
