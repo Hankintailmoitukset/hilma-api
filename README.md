@@ -2,7 +2,9 @@
 
 [EForms validation](https://github.com/Hankintailmoitukset/hilma-api/tree/master/validation)
 
-[EForms API endpoints](https://github.com/Hankintailmoitukset/hilma-api/tree/master/endpoints/endpoints.md)
+[EForms Write API endpoints](https://github.com/Hankintailmoitukset/hilma-api/tree/master/endpoints/endpoints.md)
+
+[EForms Read API endpoints](https://github.com/Hankintailmoitukset/hilma-api/tree/master/endpoints/avpendpoints.md)
 
 [Hilma Statistics](https://github.com/Hankintailmoitukset/hilma-api/tree/master/endpoints/hilmastatistics.md)
 
