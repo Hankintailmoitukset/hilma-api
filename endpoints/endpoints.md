@@ -7,7 +7,7 @@ A successful request to create a procedure results in an HTTP status 201 respons
 
 - 400 Validation failure. The request structure was invalid. Problem details will include 'errors' as an additional property. Errors include all possible errors caused by Hilma's custom validations.
 
-For general error handling details, see [Error Handling](#error-handling).
+For general error handling details, see [Error Handling](https://github.com/Hankintailmoitukset/hilma-api/blob/master/endpoints/errorhandling.md).
 
 # Create Notice
 <a name="create-notice"></a>
@@ -35,29 +35,4 @@ Successful request to create a notice results in HTTP status 201 response with t
 - 409 Conflict. ETS identifier or some other identifier already exists and cannot be reused.
 - 502 Upstream error. Hilma API failed to validate the notice in TED
 
-For general error handling details, see [Error Handling](#error-handling).
-
-# Hilma API Error Handling
-<a name="error-handling"></a>
-
-All successful requests return an HTTP success status (200, 201, or 204). Likewise, all errors are returned with either a 4xx or 5xx HTTP status code. For most errors, the response body will contain the problem details described below. Except 503 when only a string response is returned.
-
-```json
-{
-  "type": "string",
-  "title": "string",
-  "status": 0,
-  "detail": "string",
-  "instance": "string",
-  "additionalProp1": "string",
-  "additionalProp2": {},
-  "additionalProp3": []
-}
-```
-
-Title and detail contain human-readable error messages and additional properties provide further details about the error. Additional properties returned are explained in more detail along with each endpoint.
-
-Common error responses to all endpoints are
-- 403 Authorization failure. API user was not authorized to perform the requested operation.
-- 500 Unknown error or operation canceled. An unknown/unexpected error occurred while processing the request or the request was canceled.
-- 503 API unavailable.
+For general error handling details, see [Error Handling](https://github.com/Hankintailmoitukset/hilma-api/blob/master/endpoints/errorhandling.md).
