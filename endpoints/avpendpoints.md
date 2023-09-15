@@ -3,7 +3,7 @@
 
 For API reference, see [Search Notices](https://hns-hilma-test-apim.developer.azure-api.net/api-details#api=avp-read-api&operation=eform-search). (Sign in required)
 
-Search for EForms and non-EForms according to Azure Search queries: https://docs.microsoft.com/en-us/rest/api/searchservice/search-documents. Both, EForms and non-EForms (pre-EForms) notices can be searched from the same index, including all non-EForms notices published prior to EForms switch over.
+Search for EForms and non-EForms according to Azure Search queries: https://docs.microsoft.com/en-us/rest/api/searchservice/search-documents. Both, EForms and non-EForms (pre-EForms) notices can searched from the same index, including all non-EForms notices published prior to EForms switch over.
 
 For more information about fields available in the index, see [Index Definition](#index-definition).
 
@@ -23,10 +23,13 @@ Reading full notices has been split into two, one for EForms and one for non-EFo
 
 Note that all read endpoints have rate limits in use and the endpoints should be used in moderation.
 
+For error handling for read endpoints, see [Error Handling](https://github.com/Hankintailmoitukset/hilma-api/blob/master/endpoints/errorhandling.md)
+
 For API reference to read single EForms notice, see [Read EForms Notice](https://hns-hilma-test-apim.developer.azure-api.net/api-details#api=avp-read-eforms-api&operation=get-external-read-v1-notice-noticeid). (Sign in required)
 
-For API reference to read multiple EForms notices, see [Read EForms Notice](https://hns-hilma-test-apim.developer.azure-api.net/api-details#api=avp-read-eforms-api&operation=get-external-read-v1-notices). (Sign in required)
+For API reference to read multiple EForms notices, see [Read EForms Notices](https://hns-hilma-test-apim.developer.azure-api.net/api-details#api=avp-read-eforms-api&operation=get-external-read-v1-notices). (Sign in required)
 
-For API reference to read single non-EForms notice, see [Read EForms Notice](https://hns-hilma-test-apim.developer.azure-api.net/api-details#api=avp-read-notice-api&operation=get-api-avp-notices-noticeid). (Sign in required)
+For API reference to read single non-EForms notice, see [Read Notice](https://hns-hilma-test-apim.developer.azure-api.net/api-details#api=avp-read-notice-api&operation=get-api-avp-notices-noticeid). (Sign in required)
 
 EForms full notice is provided as Base64 encoded EForms XML document. For more information on the structure, see [EForms SDK](https://github.com/OP-TED/eForms-SDK)
+
