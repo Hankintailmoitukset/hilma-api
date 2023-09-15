@@ -3,7 +3,7 @@
 
 For API reference, see [Search Notices](https://hns-hilma-test-apim.developer.azure-api.net/api-details#api=avp-read-api&operation=eform-search). (Sign in required)
 
-Search for EForms and non-EForms according to Azure Search queries: https://docs.microsoft.com/en-us/rest/api/searchservice/search-documents. Both, EForms and non-EForms (pre-EForms) notices can searched from the same index, including all non-EForms notices published prior to EForms switch over.
+Search for EForms and non-EForms according to Azure Search queries: https://docs.microsoft.com/en-us/rest/api/searchservice/search-documents. Both, EForms and non-EForms (pre-EForms) notices can be searched from the same index, including all non-EForms notices published prior to EForms switch over.
 
 For more information about fields available in the index, see [Index Definition](#index-definition).
 
