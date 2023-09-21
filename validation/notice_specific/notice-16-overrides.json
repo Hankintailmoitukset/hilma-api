@@ -1,13 +1,4 @@
 {
-  "example": {
-    "max": 222,
-    "codeLists": [
-      {
-        "codeList": "codelist-a",
-        "max": 333
-      }
-    ]
-  },
   "procurementProjectLot.tenderingTerms.awardingTerms.awardingCriterion.subordinateAwardingCriterion.awardingCriterionTypeCode": {
     "btId": "539",
     "required": true
