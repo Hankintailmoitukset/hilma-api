@@ -485,9 +485,12 @@ namespace Hilma.Domain.Validators.EForms
 
             foreach (var lot in eForm.ProcurementProjectLot)
             {
-                if (lot.TenderingTerms?.AwardingTerms?.AwardingCriterion?
-                    .SelectMany(x => x.SubordinateAwardingCriterion)
-                    .Any(x => x.AwardingCriterionTypeCode?.Value is null) == true)
+                // When 539 is required, at least one SubordinateAwardingCriterion is required as well
+                if ((!lot.TenderingTerms?.AwardingTerms?.AwardingCriterion?
+                        .SelectMany(x => x.SubordinateAwardingCriterion).Any() ?? true)
+                    || lot.TenderingTerms?.AwardingTerms?.AwardingCriterion?
+                        .SelectMany(x => x.SubordinateAwardingCriterion)
+                        .Any(x => x.AwardingCriterionTypeCode?.Value is null) == true)
                 {
                     errors.Add(path, $"Awarding Criterion Type Code is required for notice subtypes: {string.Join(", ", noticeTypesWithMandatoryawardingCriterionTypeCode)}. Lot {lot.ID.Value}");
                 }
