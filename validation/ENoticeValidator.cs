@@ -34,7 +34,6 @@ namespace Hilma.Domain.Validators.EForms
             });
 
             errors.AddRange(ValidateBT501OrganizationCompany(eForm));
-            errors.AddRange(ValidateBT507OrganizationCompany(eForm));
             errors.AddRange(ValidateBT09bProcedure(eForm));
             errors.AddRange(ValidateBT51Lot(eForm));
             errors.AddRange(ValidateNDPrize(eForm));
@@ -208,23 +207,6 @@ namespace Hilma.Domain.Validators.EForms
             return !(value.IsNationalIdentifier() || value.IsPrivateRoadIdentifier())
                 ? new ValidationError(path, $"Company Id is not a valid National Identifier or Private Road Identifier")
                 : null;
-        }
-
-        /// <summary>
-        /// BT-507-Organization-Company
-        /// Organisation Country Subdivision (ie. Nuts code)
-        /// Mandatory
-        /// </summary>
-        public static List<ValidationError> ValidateBT507OrganizationCompany(EFormContract eForm)
-        {
-            const string path = "ublExtensions.ublExtension.extensionContent.eformsExtension.organizations.organization.company.postalAddress.countrySubentityCode";
-
-            var errors = eForm.GetAllCompanies()
-                .Where(x => string.IsNullOrEmpty(x.PostalAddress?.CountrySubentityCode?.Value))
-                .Select(x => new ValidationError(path, $"CountrySubentityCode cannot be empty for company {x.PartyName?.FirstOrDefault()?.Name?.Value}"))
-                .ToList();
-
-            return errors;
         }
 
         /// <summary>
