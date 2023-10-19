@@ -1,8 +1,16 @@
 # Participants
 
-
+Tuomas Saari
+Petteri Pohto
+Sampo Kivistö
+Eduard Smirnov
+Olli Surakka
+Sami Ristinen
+Sami Pöysä
 
 # Topics
+
+In urgent cases you can contact: yllapito@hankintailmoitukset.fi
 
 * Hilman eForms toteutus
 	- Hilma DNS changes coming - some outage to be expected
@@ -15,13 +23,17 @@
 	- BT-539Lot (Still waiting Mercell) change coming to validator
 		- Going live when Mercell says ok
 		- Eduard: Changes made - not sure if deployed
+		- ready to go!
 
     - Stuck notices, publication issues (Github#198)
+		-> We will try to minimize the need for retrying notice re-submissions
 
-	- BT-727 mandatory in SDK 1.8 and not in 1.7
+	- BT-727 (realized location) mandatory in SDK 1.8 and not in 1.7
 		- Hansel wants this field to be mandatory
 		- Mercell will look into setting BT-727 mandatory
 		- Can we already make this field required?
+				  --> Lets email Julien about this
+
 
 
 	- Read API is now available for eForms in Hilma.
@@ -29,13 +41,12 @@
 		- Public URL (test) https://testi.hankintailmoitukset.fi/fi/public/procedure/1523/enotice/1302/
 
 	- eForms SDK 1.7 in Hilma
+		- More information at the end of October
         - Mercell is considering version 1.9 (longer support)
 		- 1.7 will be in use for 2023 and well into 2024 as well -> Hilma will implement national eForms during 2024 and sometime after that we will get into different eForms versions
 
 
-	- Is there need for tailored finnish translations?
-		- Translations (provided by Hansel) can be found from https://github.com/Hankintailmoitukset/hilma-api/tree/master/translations
-		- Translations for exclusion grounds in GitHub under ExclusionGrounds.<codelistvalue>_default
+	- Lets update all translation files to Github
 
 	- eForms poissulkukriteerit ja ESPD vaatimuksissa päällekkäisyyksiä. Miten nämä hoidetaan? Kysymys Hanselille.
 	    - No official information about this yet...
