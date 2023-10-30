@@ -22,10 +22,10 @@ Note that not all notice types are supported in Hilma. Trying to create a non-su
 - Contract award notices from 29 to 37
 - Ex-Ante notices from 25 to 28
 - Contract modification notices from 38 to 40
-- Social notices 20 and 21 and 33 to 25A
+- Social notices 14, 20, 21 and 33 to 35
 
-Notice types E1 to E5 are not yet supported.
-- Will be supported from 1.1.2024
+Notice types E1 to E5 (national) are not yet supported.
+- Will be supported sometime in 2024
 
 
 Successful request to create a notice results in HTTP status 201 response with the response body described in the API reference. Possible error responses with status codes, in addition to general errors, are:
@@ -36,3 +36,9 @@ Successful request to create a notice results in HTTP status 201 response with t
 - 502 Upstream error. Hilma API failed to validate the notice in TED
 
 For general error handling details, see [Error Handling](https://github.com/Hankintailmoitukset/hilma-api/blob/master/endpoints/errorhandling.md).
+
+# Draft Notices
+
+Notices can be created as drafts to be finished in Hilma. To get started, you may use our [Examples](https://github.com/Hankintailmoitukset/hilma-api/tree/master/Draft%20examples)
+Once a notice is published, you may want to continue with the process. The easiest way to do this is by using the parentEtsIdentifier query param and by changing the notice subtype in the request. Otherwise the request payload may be identical to the published notice. You may use the /eforms -endpoint to retreive the entire content of the eform.
+For corrigendum notices when creating drafts, you may use isCorrigendum -query param. In this case, the parentEtsIdentifier is also required. The payload should also contain parent eform.
