@@ -1,0 +1,57 @@
+# Participants
+
+
+# Topics
+
+In urgent cases you can contact us by email: yllapito@hankintailmoitukset.fi
+
+* eForms
+  - Deadlines
+    - Only shown from first lot, which will cause issues if not the same for all lots
+
+	- Draft API muutokset menossa piakkoin tuotantoon
+		- Voi korjata julkaistuja ilmoituksia
+		- Voi tehdä seuraavan ilmoituksen edellisen julkaistun pohjalta
+	
+	- Hilma DNS changes coming - some outage to be expected
+		- When is to be discussed - 3:ish days in advance per environment via email.
+		- Domain names:
+			- test-api.hankintailmoitukset.fi
+			- staging-api.hankintailmoitukset.fi
+			- api.hankintailmoitukset.fi
+
+	- BT-539Lot (Still waiting Mercell) change coming to validator
+		- Going live when Mercell says ok
+		- Eduard: Changes made - not sure if deployed
+		- ready to go!
+
+    - Stuck notices, publication issues (Github#198)
+		-> We will try to minimize the need for retrying notice re-submissions
+
+	- Place of performance mandatory changes in SDK 1.8 and not in 1.7
+	    - Place of performance BT-5071 Country subdivision (NUTS), BT-5101 Street, BT-5121 Post code, BT-5131 City, BT-5141 Country, BT-727 Services other, BT-728 Additional information
+	        - https://github.com/OP-TED/eForms-SDK/releases/tag/1.8.0
+		- Hansel wants this field to be mandatory
+		- Mercell will look into setting BT-727 mandatory
+		- Can we already make this field required?
+              --> Lets email Julien about this
+
+
+	- Read API is now available for eForms in Hilma.
+		- see https://hns-hilma-test-apim.developer.azure-api.net/
+		- Public URL (test) https://testi.hankintailmoitukset.fi/fi/public/procedure/1523/enotice/1302/
+
+	- eForms SDK 1.7 in Hilma
+		- More information at the end of October
+        - Mercell is considering version 1.9 (longer support)
+		- 1.7 will be in use for 2023 and well into 2024 as well -> Hilma will implement national eForms during 2024 and sometime after that we will get into different eForms versions
+
+
+	- Lets update all translation files to Github
+
+	- eForms poissulkukriteerit ja ESPD vaatimuksissa päällekkäisyyksiä. Miten nämä hoidetaan? Kysymys Hanselille.
+	    - No official information about this yet...
+		- ESPD not expected to change. Some questions will be similar, but not exactly the same with eForms
+		- ESPD 4.0 should fix these issues. Coming whenever publication office has time (hopefully 2024).
+		- Many eForms fields can be copied to ESPD. Hilma UI should do this at some point.
+		- eForms may have an option at some point, where you refer to ESPD document
