@@ -1,9 +1,20 @@
 # Participants
-
+Julien Louvrier
+Eduard
+Sampo Kivistö
+Olli Surakka
+Sami Ristinen
+Laura Kivikangas
 
 # Topics
 
 In urgent cases you can contact us by email: yllapito@hankintailmoitukset.fi
+
+SDK 1.9 in Q1 to Hilma
+ Will try to support both 1.7 and 1.9 at the same time
+
+SC Software:
+ vois olla hyvä endpoint, joka palauttaa muuttuneet
 
 * eForms
   - Deadlines
@@ -41,15 +52,7 @@ In urgent cases you can contact us by email: yllapito@hankintailmoitukset.fi
 		- see https://hns-hilma-test-apim.developer.azure-api.net/
 		- Public URL (test) https://testi.hankintailmoitukset.fi/fi/public/procedure/1523/enotice/1302/
 
-	- eForms SDK 1.7 in Hilma
-		- More information at the end of October
-        - Mercell is considering version 1.9 (longer support)
-		- 1.7 will be in use for 2023 and well into 2024 as well -> Hilma will implement national eForms during 2024 and sometime after that we will get into different eForms versions
-
-
-	- Lets update all translation files to Github
-
-	- eForms poissulkukriteerit ja ESPD vaatimuksissa päällekkäisyyksiä. Miten nämä hoidetaan? Kysymys Hanselille.
+	- eForms poissulkukriteerit ja ESPD vaatimuksissa päällekkäisyyksiä.
 	    - No official information about this yet...
 		- ESPD not expected to change. Some questions will be similar, but not exactly the same with eForms
 		- ESPD 4.0 should fix these issues. Coming whenever publication office has time (hopefully 2024).
