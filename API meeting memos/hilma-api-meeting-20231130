@@ -1,10 +1,11 @@
 # Participants
-Julien Louvrier
+
+Tuomas Saari
+Petteri Pohto
+Joel Ollikainen
 Eduard
-Sampo Kivistö
-Olli Surakka
 Sami Ristinen
-Laura Kivikangas
+Simo viitanen
 
 # Topics
 
@@ -20,6 +21,9 @@ SC Software:
   - Deadlines
     - Only shown from first lot, which will cause issues if not the same for all lots
 
+	- KAnsallisten EForms tuki
+		- Ei vielä tarkkaa päivää, arvio aloituskelle Q1
+
 	- Draft API muutokset menossa piakkoin tuotantoon
 		- Voi korjata julkaistuja ilmoituksia
 		- Voi tehdä seuraavan ilmoituksen edellisen julkaistun pohjalta
@@ -29,15 +33,7 @@ SC Software:
 		- Domain names:
 			- test-api.hankintailmoitukset.fi
 			- staging-api.hankintailmoitukset.fi
-			- api.hankintailmoitukset.fi
-
-	- BT-539Lot (Still waiting Mercell) change coming to validator
-		- Going live when Mercell says ok
-		- Eduard: Changes made - not sure if deployed
-		- ready to go!
-
-    - Stuck notices, publication issues (Github#198)
-		-> We will try to minimize the need for retrying notice re-submissions
+			- api.hankintailmoitukset.fi -> this will take place on 9.12.23
 
 	- Place of performance mandatory changes in SDK 1.8 and not in 1.7
 	    - Place of performance BT-5071 Country subdivision (NUTS), BT-5101 Street, BT-5121 Post code, BT-5131 City, BT-5141 Country, BT-727 Services other, BT-728 Additional information
@@ -46,11 +42,7 @@ SC Software:
 		- Mercell will look into setting BT-727 mandatory
 		- Can we already make this field required?
               --> Lets email Julien about this
-
-
-	- Read API is now available for eForms in Hilma.
-		- see https://hns-hilma-test-apim.developer.azure-api.net/
-		- Public URL (test) https://testi.hankintailmoitukset.fi/fi/public/procedure/1523/enotice/1302/
+		- Will be mandatory in 1.9 -> plan is Q1 for that
 
 	- eForms poissulkukriteerit ja ESPD vaatimuksissa päällekkäisyyksiä.
 	    - No official information about this yet...
