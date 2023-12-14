@@ -1,0 +1,36 @@
+# Participants
+
+Ari Nurkkala
+Sami Ristinen
+Laura Kivikangas
+Åsa Collander
+Sampo Kivstö
+Julien Louvrier
+Eduard Smirnov
+
+# Topics
+
+In urgent cases you can contact us by email: yllapito@hankintailmoitukset.fi
+
+* eForms
+	- Support for SDK 1.10 to come in Q1 2024
+
+	- Support for national eForms
+		- No exact date yet known, sometime late Q1
+    - FYI: E6 Contract modification coming to TED hopefully in Q4 2024
+
+	- Draft API tuotannossa
+		- Voi korjata julkaistuja ilmoituksia
+		- Voi tehdä seuraavan ilmoituksen edellisen julkaistun pohjalta
+
+  - Procurement plans coming soon to test -> prod in 27.12
+    - Will external buyer be notified? - Ask Tuomas
+	
+	- Hilma DNS changes in production - hopefully this didn't cause any issues on saturday
+
+	- eForms poissulkukriteerit ja ESPD vaatimuksissa päällekkäisyyksiä.
+	    - No official information about this yet...
+		- ESPD 4.0 should fix these issues. Coming whenever publication office has time (hopefully 2024).
+		- Many eForms fields can be copied to ESPD. Hilma UI should do this at some point.
+
+  - Hilma dev team changes: 2 members (Tuomas, Juha) are leaving year-end
