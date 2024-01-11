@@ -1,0 +1,38 @@
+# Participants
+
+Ari Nurkkala
+Jon Amundsen
+Åsa Collander
+Olli Surakka
+Laura Kivikangas
+Kristian Nillson
+Antti Remes
+Sami Pöysä
+Joose Huopio
+
+# Topics
+
+In urgent cases you can contact us by email: yllapito@hankintailmoitukset.fi
+
+* eForms
+	- Support for SDK 1.10 to come in Q1 2024 (starting work on: 1.2.2024)
+
+	- Support for national eForms
+		- No exact date yet known, sometime late Q1
+    - FYI: E6 Contract modification coming to TED hopefully in Q4 2024
+
+  - Procurement plans in prod 27.12
+    - Cloudia & SCSoftware interested in likes and QnA for plans through API
+    - Linked notices?
+
+	- eForms poissulkukriteerit ja ESPD vaatimuksissa päällekkäisyyksiä.
+	    - No official information about this yet...
+		- ESPD 4.0 should fix these issues. Coming whenever publication office has time (hopefully 2024).
+		- Many eForms fields can be copied to ESPD. Hilma UI should do this at some point.
+
+  - mini DPS awards
+    - Hilma requests mini DPS awards to be sent to new procedure ids
+      - this will help users to see their notices in Hilma private UI
+    - Hilma will show mini DPS awards in public UI:
+      - Main DPS contract will show all mini DPS awards
+      - Mini DPS award will show only the main DPS contract and possibly its contract modifications
