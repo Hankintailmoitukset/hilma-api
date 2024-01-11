@@ -6,6 +6,8 @@
 
 [EForms Read API endpoints](https://github.com/Hankintailmoitukset/hilma-api/tree/master/endpoints/avpendpoints.md)
 
+[EForms Hilma publication flow](https://github.com/Hankintailmoitukset/hilma-api/tree/master/process%20flows/PublicationFlow.md)
+
 [Hilma Statistics](https://github.com/Hankintailmoitukset/hilma-api/tree/master/endpoints/hilmastatistics.md)
 
 [EForms SDK deviations](https://github.com/Hankintailmoitukset/hilma-api/tree/master/deviations.md)
