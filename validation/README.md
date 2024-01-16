@@ -46,8 +46,7 @@ Note that only a root or code list based custom validations are in use per field
 Hilma API introduces a new concept of procedure on top of TED eNotice. 
 Procedure is a container for related notices and all notices created over the API must be part of a procedure.
 Procedures impose restrictions on notices created in them. Currently, these restrictions are:
-  * Only a single notice in state "Draft" or "WaitingToBePublished" is allowed.
-    * This means after sending a notice for publication a new notice cannot be added to the same procedure until the first
+  * Parent notice must be published
   * Procedure may only contain a single, published contract notice, excluding corrigendum to a contract notice inside the procedure.
     * Contract notices: 14, 15, 16, 17, 18,19, 20, 21, 22, 23, 24
 notice has been published or rejected
