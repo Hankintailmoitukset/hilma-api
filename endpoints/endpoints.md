@@ -42,3 +42,7 @@ For general error handling details, see [Error Handling](https://github.com/Hank
 Notices can be created as drafts to be finished in Hilma. To get started, you may use our [Examples](https://github.com/Hankintailmoitukset/hilma-api/tree/master/Draft%20examples)
 Once a notice is published, you may want to continue with the process. The easiest way to do this is by using the parentEtsIdentifier query param and by changing the notice subtype in the request. Otherwise the request payload may be identical to the published notice. You may use the /eforms -endpoint to retreive the entire content of the eform.
 For corrigendum notices when creating drafts, you may use isCorrigendum -query param. In this case, the parentEtsIdentifier is also required. The payload should also contain parent eform.
+
+# Procurement Plans
+
+Procurement plans are a way of communicating their intended forthcoming procurements. Procurement plans are non-binding and may be updated at any time. Currently they cannot be removed, but you may update the planned notice date to today or past for it to disappear from active search. Procurement plan data model has lots in place for future updates, but as of early 2024, only one lot is supported. For API reference, see [Create Procurement Plan](https://hns-hilma-prod-apim.developer.azure-api.net/api-details#api=ets-write-eforms-api&operation=post-external-write-v1-procurementplan-etsidentifier) (Sign in required).
