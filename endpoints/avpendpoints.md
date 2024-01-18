@@ -38,6 +38,7 @@ EForms full notice is provided as Base64 encoded EForms XML document. For more i
 <a name="read-plans"></a>
 
 Reading plans has been implemented in a similar fashion to eForms. You can get them one at a time or up to 50 at a time. Also rate limits are used in these endpoints, so it should be used in moderation.
+
 For API reference to read single procurement plan, see [Read Procurement Plan](https://hns-hilma-prod-apim.developer.azure-api.net/api-details#api=avp-read-eforms-api&operation=get-external-read-v1-plan-planid). (Sign in required)
 
 For API reference to read multiple procurement plans, see [Read Procurement Plans](https://hns-hilma-prod-apim.developer.azure-api.net/api-details#api=avp-read-eforms-api&operation=get-external-read-v1-plans). (Sign in required)
