@@ -11,7 +11,7 @@ namespace Hilma.Domain.Validators.EForms
     /// <summary>
     /// National tailoring validator for eForms.
     /// </summary>
-    public class ENoticeValidator
+    public static class ENoticeValidator
     {
         // Hard coded, should never change
         private const string HanselNationalIdentifier = "0988084-1";
@@ -63,7 +63,7 @@ namespace Hilma.Domain.Validators.EForms
             return null;
         }
 
-        private static bool IsSdkVersionSupported(string sdkVersion)
+        public static bool IsSdkVersionSupported(string sdkVersion)
         {
             return SupportedEFormsSdkVersions.Contains(sdkVersion)
                    || SupportedEFormsSdkVersions.Any(v => sdkVersion.StartsWith($"{v}."));
@@ -85,7 +85,7 @@ namespace Hilma.Domain.Validators.EForms
                 };
             }
 
-            if (eForm.IsPriorInformation() || eForm.IsExAnte() || (eForm.IsContractModification() && hilmaStatistics is null))
+            if (eForm.IsPriorInformation() || eForm.IsExAnte() || eForm.IsContractModification())
             {
                 return new List<ValidationError>(0);
             }
@@ -95,8 +95,8 @@ namespace Hilma.Domain.Validators.EForms
             {
                 return new List<ValidationError>(0);
             }
-
-            var lotResults = eForm.UBLExtensions.FirstOrDefault()?.ExtensionContent?.EformsExtension?.NoticeResult?.LotResult;
+            
+            var lotResults = eForm.FirstOrDefaultUblExtension()?.NoticeResult?.LotResult;
             var lotIds = eForm.ProcurementProjectLot.Select(x => x.ID.Value);
             var errors = new List<ValidationError>();
 
@@ -106,7 +106,7 @@ namespace Hilma.Domain.Validators.EForms
             {
                 // If there are no winners, then statistics are not to be used.
                 var lotResult = lotResults?.SingleOrDefault(x => x?.TenderLot?.ID?.Value == lotId);
-                if (lotResult is not null && lotResult.TenderResultCode?.Value != "selec-w")
+                if (eForm.IsContractAward() && lotResult is not null && lotResult.TenderResultCode?.Value != "selec-w")
                 {
                     // Make sure there are no statistics for a lot like this.
                     if (hilmaStatistics.ContainsKey(lotId))
@@ -204,6 +204,12 @@ namespace Hilma.Domain.Validators.EForms
             const string path = "ublExtensions.ublExtension.extensionContent" +
                                 ".eformsExtension.organizations.organization.company.partyLegalEntity.companyID";
 
+            if (value.IsInVatNumberFormat())
+            {
+                return !value.ToNationalIdFormat().IsNationalIdentifier()
+                    ? new ValidationError(path, $"Company Id is not a valid Finnish VAT-number.") : null;
+            }
+
             return !(value.IsNationalIdentifier() || value.IsPrivateRoadIdentifier())
                 ? new ValidationError(path, $"Company Id is not a valid National Identifier or Private Road Identifier")
                 : null;
@@ -293,14 +299,14 @@ namespace Hilma.Domain.Validators.EForms
         /// <summary>
         /// BT-67(a)-Procedure
         /// Exclusion Grounds
-        /// Validates that mandatory esclusion grounds are set for competition notices (14, 15, 16, 17, 19, 20, 21, 22, 23, 24), excluding 18 (defence):
+        /// Validates that mandatory esclusion grounds are set for competition notices (14, 15, 16, 17, 19, 20, 21, 23, 24), excluding 18 and 22 (defence):
         ///     Conviction = crime-org, corruption, fraud, terr-offence, finan-laund, human-traffic
         ///     Taxes and social security = tax-pay, socsec-pay
         ///     Finnish law = nati-ground
         /// </summary>
         public static List<ValidationError> ValidateBT67aProcedure(EFormContract eForm)
         {
-            var noticeTypesWithMandatoryExclusionGrounds = new List<string>() { "14", "15", "16", "17", "19", "20", "21", "22", "23", "24" };
+            var noticeTypesWithMandatoryExclusionGrounds = new List<string>() { "14", "15", "16", "17", "19", "20", "21", "23", "24" };
             var errors = new List<ValidationError>();
 
             if (!noticeTypesWithMandatoryExclusionGrounds.Contains(eForm.GetNoticeType()))
@@ -313,11 +319,11 @@ namespace Hilma.Domain.Validators.EForms
             var allExclusionGrounds = eForm.TenderingTerms?.TendererQualificationRequest?
                 .SelectMany(x => x?.SpecificTendererRequirement
                 .Where(z => z?.TendererRequirementTypeCode?.listName == "exclusion-ground"))
-                .Select(f => f.TendererRequirementTypeCode.Value)?.ToList();
+                .Select(f => f.TendererRequirementTypeCode.Value)?.ToList() ?? new List<string>();
 
             var mandatoryExclusionGrounds = new List<string> { "crime-org", "corruption", "fraud", "terr-offence", "finan-laund", "human-traffic", "tax-pay", "socsec-pay", "nati-ground" };
 
-            foreach (var mandatoryExclusionGround in mandatoryExclusionGrounds ?? Enumerable.Empty<string>())
+            foreach (var mandatoryExclusionGround in mandatoryExclusionGrounds)
             {
                 if (!allExclusionGrounds.Contains(mandatoryExclusionGround))
                 {
@@ -373,8 +379,8 @@ namespace Hilma.Domain.Validators.EForms
 
             foreach(var lot in eForm.ProcurementProjectLot)
             {
-                var lotSelectionCriteria = lot.TenderingTerms?.UBLExtensions?.FirstOrDefault()?.ExtensionContent?.EformsExtension?
-                    .SelectionCriteria?.Where(x => x?.CriterionTypeCode?.listName == "selection-criterion").ToList();
+                var lotSelectionCriteria = lot.TenderingTerms.FirstOrDefaultUblExtension()
+                    ?.SelectionCriteria?.Where(x => x?.CriterionTypeCode?.listName == "selection-criterion").ToList();
 
                 foreach (var criteria in lotSelectionCriteria ?? Enumerable.Empty<CriterionContract>())
                 {
@@ -421,7 +427,7 @@ namespace Hilma.Domain.Validators.EForms
         /// <summary>
         /// BT-150-Contract
         /// Contract Identifier
-        /// Contract reference id is mandatory for each contract
+        /// Contract reference id is mandatory for each contract when notice type is not design award result 36, 37
         /// </summary>
         public static List<ValidationError> ValidateBT150Contract(EFormContract eForm)
         {
@@ -432,13 +438,18 @@ namespace Hilma.Domain.Validators.EForms
                 return errors;
             }
 
+            if (eForm.IsDesign())
+            {
+                return errors;
+            }
+
             const string path = "ublExtensions.ublExtension.extensionContent.eformsExtension.noticeResult.settledContract.contractReference.id";
 
             var contracts = eForm.GetAllContracts();
 
             foreach(var contract in contracts ?? Enumerable.Empty<SettledContractContract>())
             {
-                if (contract.ContractReference is null || contract.ContractReference?.Any(x => string.IsNullOrEmpty(x.ID.Value)) == true)
+                if (contract.ContractReference is null || contract.ContractReference.Any(x => string.IsNullOrEmpty(x.ID.Value)) == true)
                 {
                     errors.Add(path, $"ContractReference ID is required for contract {contract.ID?.Value}");
                 }
@@ -488,19 +499,20 @@ namespace Hilma.Domain.Validators.EForms
         /// </summary>
         public static List<ValidationError> ValidateBT161NoticeResult(EFormContract eForm)
         {
+            var noticeTypesWithConditionalMandatoryTotalAmount = new List<string>()
+                { "29", "30", "31", "32", "33", "34", "35"};
             var errors = new List<ValidationError>();
 
-            if (!eForm.IsContractAward())
+            if (!noticeTypesWithConditionalMandatoryTotalAmount.Contains(eForm.GetNoticeType()))
             {
                 return errors;
             }
 
             const string path = "ublExtensions.ublExtension.extensionContent.eformsExtension.noticeResult.totalAmount";
 
-            if (!(eForm.UBLExtensions?.FirstOrDefault()?.ExtensionContent?.EformsExtension?.NoticeResult?.TotalAmount?.Value > 0))
+            if (!(eForm.FirstOrDefaultUblExtension()?.NoticeResult?.TotalAmount?.Value > 0))
             {
-                var anyLotHasWinners = eForm.UBLExtensions?.FirstOrDefault()?
-                    .ExtensionContent?.EformsExtension?.NoticeResult?.LotResult?
+                var anyLotHasWinners = eForm.FirstOrDefaultUblExtension()?.NoticeResult?.LotResult?
                     .Any(x => x?.TenderResultCode?.Value == "selec-w") == true;
 
                 if (anyLotHasWinners)
@@ -534,7 +546,7 @@ namespace Hilma.Domain.Validators.EForms
                     continue;
                 }
 
-                var strategicProcurement = lot.TenderingTerms?.UBLExtensions?.FirstOrDefault()?.ExtensionContent?.EformsExtension?.StrategicProcurement?.FirstOrDefault();
+                var strategicProcurement = lot.TenderingTerms?.FirstOrDefaultUblExtension()?.StrategicProcurement?.FirstOrDefault();
                 if (strategicProcurement is null)
                 {
                     continue;
