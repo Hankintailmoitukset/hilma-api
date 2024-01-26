@@ -1,3 +1,4 @@
+using System;
 using System.Text.RegularExpressions;
 
 namespace Hilma.Domain.Validators
@@ -7,7 +8,23 @@ namespace Hilma.Domain.Validators
         private const char Dash = '-';
 
         private static readonly Regex PrivateRoadIdentifierRegex =
-            new Regex("/^(Y[0-9]{4}-[0-9]{5})$|([0-9]{3}-(1|2)[0-9]{3}-K[0-9]{1,6})$/", RegexOptions.Compiled);
+            new ("^(Y[0-9]{4}-[0-9]{1,5})$|([0-9]{3}-(1|2)[0-9]{3}-K[0-9]{1,6})$", RegexOptions.Compiled);
+        private static readonly Regex VatNumberRegex = new("^FI[\\d]{8}$");
+
+        public static bool IsInVatNumberFormat(this string input)
+        {
+            return VatNumberRegex.IsMatch(input);
+        }
+
+        // FI22100803 -> 2210080-3
+        public static string ToNationalIdFormat(this string vatNumber)
+        {
+            if (!vatNumber.IsInVatNumberFormat()) {  return vatNumber; }
+
+            return vatNumber
+                .Replace("FI", "", StringComparison.Ordinal)
+                .Insert(7, "-");
+        }
 
         public static bool IsNationalIdentifier(this string input)
         {
