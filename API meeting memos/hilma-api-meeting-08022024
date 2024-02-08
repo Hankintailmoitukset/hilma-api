@@ -1,0 +1,42 @@
+# Participants
+
+Ari Nurkkala
+Mikko Hagman
+Sampo Kivistö
+Petteri Pohto
+Juho Esselstöm
+Sami Pöysä
+Julien Louvrier
+Joose Huopio
+
+# Topics
+
+In urgent cases you can contact us by email: yllapito@hankintailmoitukset.fi
+
+* eForms
+	- Support for SDK 1.10 to come in Q1 2024 (work started - under code review at the moment)
+    - Mercell hopes to send by end of Q1 2024
+
+	- Support for national eForms
+		- No exact date yet known, sometime late Q1. After SDK update
+    - FYI: E6 Contract modification coming to TED hopefully in Q4 2024
+
+  - Procurement plans in prod 27.12
+    - Cloudia & SCSoftware interested in likes and QnA for plans through API
+    - Linked notices?
+
+	- eForms poissulkukriteerit ja ESPD vaatimuksissa päällekkäisyyksiä.
+	    - No official information about this yet...
+		- ESPD 4.0 should fix these issues. Coming whenever publication office has time (hopefully 2024).
+		- Many eForms fields can be copied to ESPD. Hilma UI should do this at some point.
+
+  - mini DPS awards
+    - Discussion with commission - might use E4?
+    - Link via ContractFolderId
+    - Contract award notice should not be tied to DPS contract with regards to data
+    - Some supplier data not wanted to be public -> some update incoming to make them optional
+
+  - Hilma notice lifecycle added to documentation: https://github.com/Hankintailmoitukset/hilma-api/blob/master/process%20flows/PublicationFlow.md
+
+  - Stop publication through API
+    - Story created to backlog
