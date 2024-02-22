@@ -1,0 +1,51 @@
+# Participants
+
+Ari Nurkkala
+Laura Kivikangas
+Sampo Kivistö
+Petteri Pohto
+Juho Esselström
+Sami Pöysä
+Olli Surakka
+Joose Huopio
+
+# Topics
+
+In urgent cases you can contact us by email: yllapito@hankintailmoitukset.fi
+
+* eForms
+	- Support for SDK 1.10 to come in Q1 2024 (work started - going through validation rules and testing)
+    - Mercell hopes to send by end of Q1 2024
+    - Hankinta-asiakirjoissa tietomallimuutos SDK versiopäivityksen myötä
+
+	- Support for national eForms
+		- No exact date yet known, sometime late Q1 or early Q2. After SDK update
+    - E3 notice type (kansallinen hankintailmoitus) is our first victim
+      - Kaikki kansalliset kerralla tuotantoon? - mielummin näin
+      - pienhankinta, maatalouden investointi ja yleinen avoimuus ehkä jää vanhaan muotoon
+    - E -koodit jakoon
+    - FYI: E6 Contract modification coming to TED hopefully in Q4 2024
+
+  - mini DPS awards
+    - Link via ContractFolderId
+    - Contract award notice should not be tied to DPS contract with regards to data
+    - Some supplier data not wanted to be public -> some update incoming to make them optional
+    - now in production!
+
+  -  Hilma infra changes may cause some shortages in Hilma test env services
+    - changes are now in the past and shouldn't cause more issues
+
+  - Procurement plans in prod 27.12
+    - Cloudia & SCSoftware interested in likes and QnA for plans through API
+    - Linked notices - not yet implemented
+
+	- eForms poissulkukriteerit ja ESPD vaatimuksissa päällekkäisyyksiä.
+	    - No official information about this yet...
+		- ESPD 4.0 should fix these issues. Coming whenever publication office has time (hopefully 2024).
+		- Many eForms fields can be copied to ESPD. Hilma UI should do this at some point.
+
+  - Stop publication through API
+    - Story created to backlog
+
+  - Sitäseuraava (21.3.2024) palaveri tunnin mittainen
+    - Käydään läpi Hilman roadmap 2027. Olli-Juhani Piri esittää suomeksi
