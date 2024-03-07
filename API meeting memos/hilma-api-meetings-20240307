@@ -1,0 +1,32 @@
+# Participants
+
+Ari Nurkkala
+Sampo Kivistö
+Sami Pöysä
+Olli Surakka
+Joose Huopio
+Julien Louvrier
+
+# Topics
+
+In urgent cases you can contact us by email: yllapito@hankintailmoitukset.fi
+
+* eForms
+	- Support for SDK 1.10 to come in Q1 2024 (going through validation rules and testing)
+    - Mercell hopes to send by end of Q1 2024
+    - Hankinta-asiakirjoissa tietomallimuutos SDK versiopäivityksen myötä
+    - Mercell will start with 1.11 ASAP
+    - Cloudia wishes to release at the same time - agree on a date for release!
+
+	- Support for national eForms
+		- No exact date yet known, sometime late Q1 or early Q2. After SDK update
+    - E3 notice type (kansallinen hankintailmoitus) is our first victim
+      - Kaikki kansalliset kerralla tuotantoon? - mielummin näin
+      - pienhankinta, maatalouden investointi ja yleinen avoimuus ehkä jää vanhaan muotoon
+    - FYI: E6 Contract modification coming to TED hopefully in Q4 2024
+
+  - Stop publication through API
+    - Story created to backlog
+
+  - Next API meeting (21.3.2024) one hour
+    - Roadmap 2027. Olli-Juhani Piri presents in Finnish
