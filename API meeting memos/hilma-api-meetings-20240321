@@ -1,0 +1,41 @@
+# Participants
+
+Ari Nurkkala
+Ville Knuuttila
+Laura Kivikangas
+Antti Remes
+Sami Ristinen
+Paula Kainiemi
+Sampo Kivistö
+Olli Surakka
+Joose Huopio
+Mikko Hagman
+Gunnar
+
+# Topics
+
+In urgent cases you can contact us by email: yllapito@hankintailmoitukset.fi
+
+* eForms
+	- SDK 1.10
+    - Hilma DEV is ready for SDK release -> coming to test environment soon
+      - Go-live target 10.4. This is ok for Mercell.
+    - Draft API: Hankinta-asiakirjoissa tietomallimuutos SDK versiopäivityksen myötä
+    - Mercell will start with 1.11 ASAP
+
+	- Support for national eForms
+		- After SDK update
+    - E3 notice type (kansallinen hankintailmoitus) is our first victim
+      - Kaikki kansalliset kerralla tuotantoon? - mielummin näin
+      - pienhankinta, maatalouden investointi ja yleinen avoimuus ehkä jää vanhaan muotoon
+    - FYI: E6 Contract modification coming to TED hopefully in Q4 2024
+
+  - Stop publication through API
+    - Story created to backlog
+
+  - Hilma development team change
+    - Juho & Jade leaving end of month
+    - Sami, Sampo and Ari later - before summer
+    - Solita will be the new supplier
+
+  - Hilma Roadmap 2027 to come later - delayed by a few months
