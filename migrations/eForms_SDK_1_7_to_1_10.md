@@ -15,6 +15,7 @@ In SDK 1.7 the languages are located in the following path:
 
 BT-737 non-official languages `"/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:CallForTendersDocumentReference/cbc:LanguageID[../cbc:DocumentStatusCode/text()='non-official']",`
 BT-708 official languages: `/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:CallForTendersDocumentReference/cbc:LanguageID[not(../cbc:DocumentStatusCode/text()='non-official')]`
+
 OPT-050 DocumentStatusCode = `non-official` or `official`
 
 In SDK 1.10 the languages are located in following path:
@@ -22,7 +23,7 @@ In SDK 1.10 the languages are located in following path:
 BT-737 non-official languages `"/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NonOfficialLanguages/cac:Language/cbc:ID"`
 BT-708 official languages: `"/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:OfficialLanguages/cac:Language/cbc:ID"`
 
-OPT-050 DocumentStatusCode value has been removed, it is not clearly separated by the path
+OPT-050 DocumentStatusCode value has been removed, it is now clearly separated by the path
 
 For more details see:
 
@@ -34,7 +35,7 @@ sdk 1.10 https://github.com/OP-TED/eForms-SDK/blob/1.10.1/fields/fields.json
 Here is an example of how to migrate the languages from 1.7 to 1.10.1:
 
 
-In SDK 1.7 notice declared Finnish as official language and Swedish and Spanish as non-official language following way:
+In SDK 1.7 notice declared Finnish as official language and Swedish and Spanish as non-official language:
 ```json
 {
     "eForm": {
@@ -121,7 +122,7 @@ In SDK 1.7 notice declared Finnish as official language and Swedish and Spanish 
 }
 ```
 
-In SDK 1.10 the same call for tender document can contain all that information, if the document is the same it can be declared following way:
+In SDK 1.10 the same call for tender document can contain all that information, if the actual document URI is the same:
 
 ```json
 {
