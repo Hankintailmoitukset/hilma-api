@@ -263,3 +263,63 @@ eForms 1.10
     </cac:CallForTendersDocumentReference>
 </cac:ProcurementProjectLot>
 ```
+
+
+## Hilma UI changes
+
+The following document descibes the summary of changes done to Hilma UI during SDK upgrade process. These changes affect only the notice editing views
+
+#### Organisation
+- buyer organisation groupLeadIndicator should **not** be defined when there is a single buyer organisation in the notice. `ublExtensions.extensionContent.eformsExtension.organizations.organization.groupLeadIndicator`.
+- BT-10 Activity authority field is shown only when buyer legal type (BT-11) is public authority. See SDK for technical details: 
+https://github.com/OP-TED/eForms-SDK/blob/1.10.1/fields/fields.json#L2607
+- Only selected organisation roles are being defined in the eForms, not selecting the role now does not define the role at all.previously the role detail was defined as 'false'
+
+
+#### Contact point
+- When setting address for contact point all address fields are required, leaving the address is empty is allowed
+
+#### Place of performance
+- In Hilma UI BT-727 "place performance services other" -field empty selection has a help text "Specific place of performance" to guide the user what it means to leave that field empty
+- Selecting BT-727 "anywhere in the given country" - only country selection and additional information is available
+- Selecting BT-727 "anywhere" or "Anywhere in the European Economic Area" only additional information is available
+
+
+#### Deadlines
+- in Hilma UI deadline fields (BT-631, BT-130, BT-127, BT-13, BT-630, BT-1311, BT-537) are required to be earliest tomorrow to prevent issues with the notice publication issue date. This is not a validation rule but a UI requirement.
+- when BT-631: dispatch invitation interest is set BT-630: deadline receipt expressions has to be later than BT-631
+- in EF21 BT-630 deadline receipt expressions field is shown only when procedure type is "Negotiated with prior publication of a call for competition / competitive with negotiation"
+
+#### Decision-making criteria
+- in Hilma UI when notice is type of result, contract modification or direct award preannouncement then award criterion number weight type (BT-5421) selection does not allow "middle of a range" options
+- When any of the award criterion type (BT-5421, BT-5422, BT-5423) is selected then award criterion number (BT-541) is required
+- BT-543 award criteria complicated is shown only when awarding criteria (BT-539 and BT-541) cannot be used
+- awarding criteria fields BT-539 award criterion type and BT-540 award criterion description are always required
+
+#### Contract modification notice
+- When creating a contract modification notice from scratch it contains one empty contract by default
+
+#### Submission of tenders, participation requests or answers
+- BT-18: Submission URL is not allowed when electronic submission is not allowed
+- When electronic submission is not "Required" then the description of non-electronic submission (BT-745) is required
+
+#### Contract duration fields
+- In many notice types the contract duration needs to be defined one way or another. One of the following BT fields or combinations are required: BT-36 duration period, BT-536 duration start date and BT-537 duration end date or BT-538 duration known or unknown.
+- Contract duration end date (BT-537) needs to be after contract start date (BT-536)
+
+#### Framework agreement fields
+- A new "framework agreement" checkbox was added to notice procuremnent details page, selecting the checkbox controls if any of the framework agreement fields are shown or not
+- Notice result amount fields (BT-161, BT-118 and BT-1118) are disabled when there are no winners selected
+
+#### Awards and selection committee
+- BT-47 participant name cannot be repeated
+
+
+#### Corrigendum notices
+- Changes section in corrigendum notices was renewed. The view now contains change reason (BT-140) and change reason description (BT-762) to be given once and possibility to define the change itself multiple times using (BT-13716, BT-141 and BT-718)
+
+#### other small improvements
+- eForms SDK version was added to notice PDF.
+- translations and help texts have been improved
+- TED validation errors are shown in the UI 
+language
