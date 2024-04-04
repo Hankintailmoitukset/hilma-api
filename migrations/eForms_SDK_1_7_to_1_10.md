@@ -277,7 +277,7 @@ https://github.com/OP-TED/eForms-SDK/blob/1.10.1/fields/fields.json#L2607
 
 
 #### Contact point
-- When setting the address for the contact point all address fields are required, leaving the address empty is allowed
+- When "Add contact point address" is checked, all address fields are required 
 
 #### Place of performance
 - In Hilma UI BT-727 "place performance services other" -field empty selection has a help text "Specific place of performance" to guide the user on what it means to leave that field empty
@@ -309,6 +309,7 @@ https://github.com/OP-TED/eForms-SDK/blob/1.10.1/fields/fields.json#L2607
 
 #### Framework agreement fields
 - A new "framework agreement" checkbox was added to the notice procurement details page, selecting the checkbox controls if any of the framework agreement fields are shown or not
+  - This field is not available through API's and will be selected in the Hilma UI when any of the notice lots have a framework agreement
 - Notice result amount fields (BT-161, BT-118 and BT-1118) are disabled when there are no winners selected
 
 #### Awards and selection committee
