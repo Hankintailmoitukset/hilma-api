@@ -7,7 +7,7 @@ Aiheet/Topics
   * Ongelma on korjattu 13.5. ja Hilma lähettää normaalisti TEDiin ilmoitukset, jotka on lähetetty Hilmaan korjauksen jälkeen tai ennen yhteysongelman alkamista. 
   * Yhteysongelman aikana Hilmaan lähetetyt ilmoitukset on myös lähetetty TEDiin normaalisti korjauksen jälkeen. Nämä ilmoitukset ovat Hilmassa 'Julkaistu' -tilassa ja ne julkaistaan Hilmassa ja TEDissä normaalisti. Kilpailutusjärestelmän tulee hakea näiden ilmoitusten tilat Hilmasta uudelleen, jotta ajantasainen tila päivittyy kilpailutusjärjestelmään.
   * Keskusteltava:
-    * Hakevatko kilpailutusjärjestelmät Hilmasta ilmoitusten tilaa enää sen jälkeen, kun Hilma antaa ilmoituksen tilat 'Luonnos' ja 'Hilma error state' ja 'Error state' !=0? Kannattaisiko ilmoituksen tilan hakemista Hilmasta jatkaa tästä tilasta huolimatta? Muut tilat, jolloin hakemista
+    * Hakevatko kilpailutusjärjestelmät Hilmasta ilmoitusten tilaa enää sen jälkeen, kun Hilma antaa ilmoituksen tilat 'Luonnos' ja 'Hilma error state' ja 'Error state' !=0? Kannattaisiko ilmoituksen tilan hakemista Hilmasta jatkaa tästä tilasta huolimatta? Onko muita tiloja, jolloin hakemista kannattaisi jatkaa?
 
 * eForms
   * Kansalliset ilmoitukset/National notices 
