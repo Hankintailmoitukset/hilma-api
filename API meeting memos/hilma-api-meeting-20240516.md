@@ -12,4 +12,5 @@ Aiheet/Topics
 * eForms
   * Kansalliset ilmoitukset/National notices 
   * SDK 1.11
+  * Tulevat SDK-versiopäivitykset/Discussion on future SDK versions
   * Lue eFormseista lisää Hilmassa: https://www.hankintailmoitukset.fi/fi/info/eforms-uudistus
