@@ -1,4 +1,15 @@
 Paricipants
+ * Ville Knuuttila
+ * Laura Kivikangas
+ * Sampo Kivistö
+ * Ari Nurkkala
+ * Jake Reddy
+ * Anssi Salo
+ * Petteri Photo
+ * Julien Louvrier
+ * Max
+ * Olli Surakka
+ * Åsa Collander
 
 Aiheet/Topics
 
@@ -9,8 +20,14 @@ Aiheet/Topics
   * Keskusteltava:
     * Hakevatko kilpailutusjärjestelmät Hilmasta ilmoitusten tilaa enää sen jälkeen, kun Hilma antaa ilmoituksen tilat 'Luonnos' ja 'Hilma error state' ja 'Error state' !=0? Kannattaisiko ilmoituksen tilan hakemista Hilmasta jatkaa tästä tilasta huolimatta? Onko muita tiloja, jolloin hakemista kannattaisi jatkaa?
 
+ * Mercell suggested that we implement more preciess error messages
+ * Some time constraint should be implemented if Hilma sends automatically failed submissions
+  * End of next business day
+
 * eForms
   * Kansalliset ilmoitukset/National notices 
   * SDK 1.11
+   * Mercell will go straight to 1.13 and not go live with 1.11
+   * Hilma will skip 1.11, implement 1.12 before end of year, as 1.13 should go live then 
   * Tulevat SDK-versiopäivitykset/Discussion on future SDK versions
   * Lue eFormseista lisää Hilmassa: https://www.hankintailmoitukset.fi/fi/info/eforms-uudistus
