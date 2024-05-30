@@ -21,6 +21,6 @@ Aiheet/Topics
     * No API changes
    
 * SDK
- * 1.10 will be supported by TED until end of 02/2025
- * Hilma is not going to 1.11
- * Hilma will implement 1.12 and after that 1.13 with the current information
+  * 1.10 will be supported by TED until end of 02/2025
+  * Hilma is not going to 1.11
+  * Hilma will implement 1.12 and after that 1.13 with the current information
