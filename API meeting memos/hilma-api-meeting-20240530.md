@@ -1,4 +1,13 @@
 Paricipants
+* Ville Knuuttila
+* Ari Nurkkala
+* Petteri Pohto
+* Jake Reddy
+* Sampo Kivistö
+* Gunnar Westman
+* Åsa Collander
+* Anssi Salo
+* Julien Louvrier
 
 Aiheet/Topics
 
@@ -8,4 +17,10 @@ Aiheet/Topics
     Due to that change we are planning to make BT-88 (Procedure features / menettelyn kuvaus) required for the above notice types.
 
 * EForms
-  * FYI. Hilma is going live with SDK 1.10.2 in the upcoming release ( NO API changes required )
+  * FYI. Hilma went live with SDK 1.10.2 2024-05-29
+    * No API changes
+   
+* SDK
+ * 1.10 will be supported by TED until end of 02/2025
+ * Hilma is not going to 1.11
+ * Hilma will implement 1.12 and after that 1.13 with the current information
