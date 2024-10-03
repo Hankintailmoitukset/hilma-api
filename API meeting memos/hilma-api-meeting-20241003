@@ -1,0 +1,24 @@
+# Participants
+
+Ville Knuuttila
+Diego Rönkkömäki-Tapia
+Olli Surakka
+Max Kholoshnyi
+
+# Topics
+
+## eForms
+### SDK 1.12 update
+- Gathering info/changelog about what has changed and what changes need to be implemented
+- Draft-API. Previously there have been validation problems after update, let's try to prevent problems in 1.12 update
+  - 1.12 will be tested in test environment before go-live
+
+### National eForms
+- BT fields will be used
+- For national fields some prefix will be used (e.g. FI-1234)
+- only work on 1.12, not 1.10
+  - For other notices, 1.10 notices will be accepted until the EOL specified by TED
+
+### Validation
+- No timetable for validation yet. Validation is currently WIP.
+  
