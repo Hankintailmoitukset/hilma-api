@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<!-- The rules Idendifier is as follows FI-E3-BT-<xxxxx>-<yzzz> -->
+<!-- <xxxxx> is the BT Identifier -->
+<!-- <yzzz> 'y': '0' = global, '1' = lot, '2' = part. -->
+<!-- <yzzz> 'zzz': rule identifier -->
+<properties>
+    <entry key="rule|text|FI-E1-BT-00783-001">BT-783 - 'Requested Publication Date' is not in use.</entry>
+    <entry key="rule|text|FI-E1-BT-00789-001">BT-739 - 'Telefax' is not in use.</entry>
+    <entry key="rule|text|FI-E1-BT-00509-001">BT-509 - 'Endpoint' Id is not in use.</entry>
+    <entry key="rule|text|FI-E1-BT-00633-001">BT-633 - 'Natural Person Indicator' is not in use.</entry>
+    <entry key="rule|text|FI-E1-BT-00508-001">BT-508 - 'Buyer Profile Uri' is not in use</entry>
+    <entry key="rule|text|FI-E1-BT-00011-001">BT-11 - 'Party Type Code'/'buyer-legal-type' is mandatory</entry>
+    <entry key="rule|text|FI-E1-BT-00740-001">BT-740 - 'Party Type Code'/'buyer-contracting-type' is not in use.</entry>
+    <entry key="rule|text|FI-E1-BT-00010-001">'Activity of the contracting authority' (BT-10-Procedure-Buyer) is not allowed when: 'Legal type of the buyer' (BT-11-Procedure-Buyer) is not one of the following: 'Body governed by public law'; 'Body governed by public law, controlled by a central government authority'; 'Body governed by public law, controlled by a local authority'; 'Body governed by public law, controlled by a regional authority'; 'Central government authority'; 'Defence contractor'; 'EU institution, body or agency'; 'Group of public authorities'; 'International organisation'; 'Local authority'; 'Organisation awarding a contract subsidised by a contracting authority'; 'Organisation awarding a contract subsidised by a central government authority'; 'Organisation awarding a contract subsidised by a local authority'; 'Organisation awarding a contract subsidised by a regional authority'; 'Regional authority' (in '6 – Prior information notice used only for information – defence directive')</entry>
+    <entry key="rule|text|FI-E1-BT-00610-001">'Activity of the contracting entity' (BT-610-Procedure-Buyer) is not allowed when: 'Legal type of the buyer' (BT-11-Procedure-Buyer) is not one of the following: 'Public undertaking'; 'Public undertaking, controlled by a central government authority'; 'Public undertaking, controlled by a local authority'; 'Public undertaking, controlled by a regional authority' or 'Entity with special or exclusive rights' (in '6 – Prior information notice used only for information – defence directive')</entry>
+    <entry key="rule|text|FI-E1-BT-00023-001">BT-23 - 'Procurement Type Code'/'contract-nature' is mandatory.</entry>
+    <entry key="rule|text|FI-E1-BT-00271-001">BT-271 - 'Framework Maximum Amount' is not in use.</entry>
+    <entry key="rule|text|FI-E1-BT-00156-001">BT-156 - 'Group Framework Maximum Value Amount' is not in use.</entry>
+    <entry key="rule|text|FI-E1-BT-00632-101">BT-632(lot) - 'Access Tool Name' is not in use.</entry>
+    <entry key="rule|text|FI-E1-BT-00632-201">BT-632(part) - 'Access Tool Name' is not in use.</entry>
+    <entry key="rule|text|FI-E1-BT-00124-101">BT-124(lot) - 'Access Tools Uri' is not in use.</entry>
+    <entry key="rule|text|FI-E1-BT-00124-201">BT-124(part) - 'Access Tools Uri' is not in use.</entry>
+    <entry key="rule|text|FI-E1-BT-00017-101">BT-17(lot) - 'Submission Method Code' is mandatory.</entry>
+    <entry key="rule|text|FI-E1-BT-00019-101">BT-19(lot) - 'Process Reason Code' should occure once or less.</entry>
+    <entry key="rule|text|FI-E1-BT-00141-001">BT-141 - 'Change Description' is mandatory'</entry>
+    <entry key="rule|text|FI-E1-BT-00140-001">BT-140 - 'Reason Code' should occure once or less.</entry>
+    <entry key="rule|text|FI-E1-BT-00762-001">BT-762 - 'Reason Description' should occure once or less.</entry>
+    <entry key="rule|text|FI-E1-BT-00501-001">BT-501 - 'Company Id' is mandatory.</entry>
+    <entry key="rule|text|FI-E1-BT-00506-001">BT-506 - 'Electronic Mail' is mandatory when: the organisation
+        (OPT-200-Organization-Company) is a Buyer (OPT-300-Procedure-Buyer) (in '4 – Prior information notice used only
+        for information – general directive'
+    </entry>
+    <entry key="rule|text|FI-E1-BT-00507-001">BT-507 - 'Country subdivision Code' is mandatory, except when: 'Country'
+        (BT-514-Organization-Company) does not have NUTS codes (in '4 – Prior information notice used only for
+        information – general directive')
+    </entry>
+    <entry key="rule|text|FI-E1-BT-00507-002">BT-507 - 'Country Subdivision Code' is not allowed when: 'Country'
+        (BT-514-Organization-Company) does not have NUTS codes (in '4 – Prior information notice used only for
+        information – general directive')
+    </entry>
+    <entry key="rule|text|FI-E1-BT-00513-001">BT-513 - 'City Name' is mandatory.</entry>
+    <entry key="rule|text|FI-E1-BT-05071-101">BT-5071(lot) - 'Country subdivision (NUTS)' is not allowed (in '4 – Prior
+        information notice used only for information – general directive')
+    </entry>
+    <entry key="rule|text|FI-E1-BT-05071-201">BT-5071(part) - 'Country subdivision (NUTS)' is mandatory when: 'Other
+        restrictions on the place of performance' (BT-727) is not filled in and 'Country' (BT-5141-UBO) does have NUTS
+        codes (in '4 – Prior information notice used only for information – general directive')
+    </entry>
+    <entry key="rule|text|FI-E1-BT-05071-202">BT-5071(part) - 'Country subdivision (NUTS)' is not allowed when: 'Other
+        restrictions on the place of performance' (BT-727) is filled in or 'Country' (BT-5141) is not filled in (in '4 –
+        Prior information notice used only for information – general directive')
+    </entry>
+    <entry key="rule|text|FI-E1-BT-05141-101">BT-5141(lot) - 'Country' is mandatory, except when: 'Other restrictions on
+        the place of performance' (BT-727-Part) must not be 'Anywhere' or 'Anywhere in the European Economic Area' (in
+        '4 – Prior information notice used only for information – general directive')
+    </entry>
+    <entry key="rule|text|FI-E1-BT-05141-102">BT-5141(lot) - 'Country' is not allowed when: 'Other restrictions on the
+        place of performance' (BT-727-Part) must not be 'Anywhere' or 'Anywhere in the European Economic Area' (in '4 –
+        Prior information notice used only for information – general directive')
+    </entry>
+    <entry key="rule|text|FI-E1-BT-05141-201">BT-5141(part) - 'Country' is not allowed (in '4 – Prior information notice
+        used only for information – general directive')
+    </entry>
+    <entry key="rule|text|FI-E1-BT-00727-001">BT-727 - 'Other restrictions on the place of performance' is not allowed
+        when: 'Country subdivision (NUTS)' (BT-5071-Procedure) is filled in (in '4 – Prior information notice used only
+        for information – general directive')
+    </entry>
+    <entry key="rule|text|FI-E1-BT-00727-101">BT-727(lot) - 'Other restrictions on the place of performance') is not
+        allowed (in '4 – Prior information notice used only for information – general directive')
+    </entry>
+    <entry key="rule|text|FI-E1-BT-00727-201">BT-727(part) - 'Other restrictions on the place of performance' is not
+        allowed when: 'Country subdivision (NUTS)' (BT-5071-Part) is filled in (in '4 – Prior information notice used
+        only for information – general directive')
+    </entry>
+
+    <!-- E3 -->
+    <entry key="rule|text|FI-E3-BT-00010-001">BT-10 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-00105-001">BT-105 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-00106-001">BT-106 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00109-001">'Justification for the duration of the framework agreement' (BT-109-Lot) is mandatory, except when: Duration of the lot must be greater than 4 years (in '16 – Contract notice – general directive, standard regime')</entry>
+    <entry key="rule|text|FI-E3-BT-00109-002">'Justification for the duration of the framework agreement' (BT-109-Lot) is not allowed when: Duration of the lot must be greater than 4 years (in '16 – Contract notice – general directive, standard regime')</entry>
+    <entry key="rule|text|FI-E3-BT-00011-001">BT-11 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-00111-001">BT-111 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00113-001">'Maximum number of participants' (BT-113-Lot) is mandatory, except when: 'Framework agreement is involved' (BT-765-Lot) is not one of the following: 'Framework agreement, partly without reopening and partly with reopening of competition'; 'Framework agreement, with reopening of competition'; 'Framework agreement, without reopening of competition' (in '16 – Contract notice – general directive, standard regime')</entry>
+    <entry key="rule|text|FI-E3-BT-00113-002">'Maximum number of participants' (BT-113-Lot) is not allowed when: 'Framework agreement is involved' (BT-765-Lot) is not one of the following: 'Framework agreement, partly without reopening and partly with reopening of competition'; 'Framework agreement, with reopening of competition'; 'Framework agreement, without reopening of competition' (in '16 – Contract notice – general directive, standard regime')</entry>
+    <entry key="rule|text|FI-E3-BT-00124-001">BT-124 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00124-002">BT-124 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-01251-002">BT-1251 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-01251-001">BT-1251 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00132-002">BT-132 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00132-001">BT-132 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00133-001">BT-133 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00134-001">BT-134 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-01351-001">BT-1351 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-01375-001">BT-1375 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00014-001">BT-14 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-00014-002">BT-14 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-00141-001">BT-141 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-00157-001">BT-157 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00017-001">BT-17 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-00018-001">BT-18 - is mandatory if BT-17 value is not 'not-allowed'.</entry>
+    <entry key="rule|text|FI-E3-BT-00023-003">BT-23 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-00023-002">BT-23 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-00023-001">BT-23 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-00025-001">BT-25 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00330-001">BT-330 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00036-002">'Duration' (BT-36-Part) is not allowed (in '16 – Contract notice – general directive, standard regime')</entry>
+    <entry key="rule|text|FI-E3-BT-00036-001">'Kesto' (BT-36-Lot) ei ole sallittu, kun: 'Alkamispäivä' ja 'Päättymispäivä' (BT-536-Lot, BT-537-Lot) ovat läsnä, tai 'Muu kesto' (BT-538-Lot) on läsnä ('16 – Hankintailmoitus – yleisdirektiivi, vakiojärjestelmä')</entry>
+    <entry key="rule|text|FI-E3-BT-00040-001">'The criteria will be used to select the candidates to be invited for the second stage of the procedure' (BT-40-Lot) is mandatory, except when: 'The procedure will take place in successive stages. At each stage, some participants may be eliminated' (BT-52-Lot) is not 'yes'; 'Type of procedure' (BT-105) is not one of the following: 'Competitive dialogue'; 'Innovation partnership'; 'Negotiated with prior publication of a call for competition / competitive with negotiation'; 'Other multiple stage procedure'; 'Restricted' (in '16 – Contract notice – general directive, standard regime')</entry>
+    <entry key="rule|text|FI-E3-BT-00040-002">'The criteria will be used to select the candidates to be invited for the second stage of the procedure' (BT-40-Lot) is not allowed when: 'The procedure will take place in successive stages. At each stage, some participants may be eliminated' (BT-52-Lot) is not 'yes'; 'Type of procedure' (BT-105) is not one of the following: 'Competitive dialogue'; 'Innovation partnership'; 'Negotiated with prior publication of a call for competition / competitive with negotiation'; 'Other multiple stage procedure'; 'Restricted' (in '16 – Contract notice – general directive, standard regime')</entry>
+    <entry key="rule|text|FI-E3-BT-00044-001">BT-44 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00045-001">BT-45 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00501-001">'Registration number' (BT-501-Organization-Company) is mandatory (in '16 – Contract notice – general directive, standard regime')</entry>
+    <entry key="rule|text|FI-E3-BT-00506-001">BT-506 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-00507-001">'Country subdivision (NUTS)' (BT-507-Organization-Company) is not allowed when: 'Country' (BT-514-Organization-Company) does not have NUTS codes (in '16 – Contract notice – general directive, standard regime')</entry>
+    <entry key="rule|text|FI-E3-BT-05071-003">'Country subdivision (NUTS)' (BT-5071-Part) is not allowed (in '16 – Contract notice – general directive, standard regime')</entry>
+    <entry key="rule|text|FI-E3-BT-05071-002">'Country subdivision (NUTS)' (BT-5071-Lot) is not allowed when: 'Other restrictions on the place of performance' (BT-727) is filled in or 'Country' (BT-5141) is not filled in (in '16 – Contract notice – general directive, standard regime')</entry>
+    <entry key="rule|text|FI-E3-BT-05071-001">'Country subdivision (NUTS)' (BT-5071-Lot) is mandatory when: 'Other restrictions on the place of performance' (BT-727) is not filled in and 'Country' (BT-5141-UBO) does have NUTS codes (in '16 – Contract notice – general directive, standard regime')</entry>
+    <entry key="rule|text|FI-E3-BT-00508-001">BT-508 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00509-001">BT-509 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00051-001">'Maximum number of candidates to be invited for the second stage of the procedure' (BT-51-Lot) is mandatory, except when: 'There is a maximum number of candidates to be invited for the second stage of the procedure' (BT-661-Lot) is not 'yes' (in '16 – Contract notice – general directive, standard regime')</entry>
+    <entry key="rule|text|FI-E3-BT-00051-002">'Maximum number of candidates to be invited for the second stage of the procedure' (BT-51-Lot) is not allowed when: 'There is a maximum number of candidates to be invited for the second stage of the procedure' (BT-661-Lot) is not 'yes' (in '16 – Contract notice – general directive, standard regime')</entry>
+    <entry key="rule|text|FI-E3-BT-00513-001">'Town' (BT-513-Organization-Company) is mandatory (in '16 – Contract notice – general directive, standard regime')</entry>
+    <entry key="rule|text|FI-E3-BT-05141-001">'Country' (BT-5141-Lot) is mandatory, except when: 'Other restrictions on the place of performance' (BT-727-Lot) is 'Anywhere' or 'Anywhere in the European Economic Area' (in '16 – Contract notice – general directive, standard regime')</entry>
+    <entry key="rule|text|FI-E3-BT-05141-002">'Country' (BT-5141-Lot) is not allowed when: 'Other restrictions on the place of performance' (BT-727-Lot) is 'Anywhere' or 'Anywhere in the European Economic Area' (in '16 – Contract notice – general directive, standard regime')</entry>
+    <entry key="rule|text|FI-E3-BT-05141-003">'Country' (BT-5141-Part) is not allowed (in '16 – Contract notice – general directive, standard regime')</entry>
+    <entry key="rule|text|FI-E3-BT-00052-001">BT-52 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-00536-002">'Start date' (BT-536-Part) is not allowed (in '16 – Contract notice – general directive, standard regime')</entry>
+    <entry key="rule|text|FI-E3-BT-00536-001">'Alkamispäivä' (BT-536-Lot) ei ole sallittu, kun: 'Kesto' (BT-36-Lot) ja 'Päättymispäivä' (BT-537-Lot) ovat läsnä, tai 'Muu kesto' (BT-538-Lot) ja 'Päättymispäivä' (BT-537-Lot) ovat läsnä ('16 – Hankintailmoitus – yleisdirektiivi, vakiojärjestelmä')</entry>
+    <entry key="rule|text|FI-E3-BT-00537-001">'Päättymispäivä' (BT-537-Lot) ei ole sallittu, kun: 'Alkamispäivä' (BT-536-Lot) ja 'Muu kesto' (BT-538-Lot) ovat läsnä, tai 'Alkamispäivä' (BT-536-Lot) ja 'Kesto' (BT-36-Lot) ovat läsnä, tai 'Muu kesto' (BT-538-Lot) on läsnä ja yhtä suuri kuin 'Rajoittamaton' ('16 – Hankintailmoitus – yleisdirektiivi, vakiojärjestelmä')</entry>
+    <entry key="rule|text|FI-E3-BT-00537-002">'Duration end date' (BT-537-Part) is not allowed (in '16 – Contract notice – general directive, standard regime')</entry>
+    <entry key="rule|text|FI-E3-BT-00538-001">'Muu kesto' (BT-538-Lot) ei ole sallittu, kun: 'Kesto' (BT-36-Lot) on läsnä, tai 'Alkamispäivä' ja 'Päättymispäivä' (BT-536-Lot, BT-537-Lot) ovat läsnä ('16 – Hankintailmoitus – yleisdirektiivi, vakiojärjestelmä')</entry>
+    <entry key="rule|text|FI-E3-BT-00538-002">'Other duration' (BT-538-Part) is not allowed (in '16 – Contract notice – general directive, standard regime')</entry>
+    <entry key="rule|text|FI-E3-BT-00539-001">BT-539 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-00540-001">BT-540 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-00006-001">BT-6 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00060-001">BT-60 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-00610-001">BT-610 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00625-001">BT-625 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00630-002">BT-630 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00630-001">BT-630 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00633-001">BT-633 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00634-001">BT-634 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00644-001">BT-644 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00651-001">BT-651 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00661-001">BT-661 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-00067-001">BT-67 - place holder.</entry>
+    <entry key="rule|text|FI-E3-BT-00071-001">BT-71 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-00071-002">BT-71 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-00717-001">BT-717 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00726-001">BT-726 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00727-003">'Other restrictions on the place of performance' (BT-727-Part) is not allowed (in '16 – Contract notice – general directive, standard regime')</entry>
+    <entry key="rule|text|FI-E3-BT-00727-001">'Suorituspaikkaa koskevat rajoitukset' (BT-727-Procedure) ei ole sallittu, kun: 'Maaryhmittely (NUTS)' (BT-5071-Procedure) on täytetty ('16 – Hankintailmoitus – yleisdirektiivi, vakiojärjestelmä'</entry>
+    <entry key="rule|text|FI-E3-BT-00727-002">'Other restrictions on the place of performance' (BT-727-Lot) is not allowed when: 'Country subdivision (NUTS)' B373(BT-5071-Lot) is filled in (in '16 – Contract notice – general directive, standard regime')</entry>
+    <entry key="rule|text|FI-E3-BT-00735-001">BT-735 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00735-001">BT-735 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00736-001">BT-736 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-00736-002">BT-736 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-00738-001">BT-738 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00739-001">BT-739 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00740-001">BT-740 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00744-001">BT-744 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00745-001">'Description' (BT-745-Lot) is mandatory when: Electronic submission is not allowed (in '16 – Contract notice – general directive, standard regime')</entry>
+    <entry key="rule|text|FI-E3-BT-00745-002">'Description' (BT-745-Lot) is not allowed when: Electronic submission is required (in '16 – Contract notice – general directive, standard regime')</entry>
+    <entry key="rule|text|FI-E3-BT-00075-001">'Description' (BT-75-Lot) is mandatory when: 'A guarantee is required' (BT-751-Lot) is 'True' </entry>
+    <entry key="rule|text|FI-E3-BT-00750-001">'Description' (BT-750-Lot) is mandatory, except when: The selection criterion (BT-809) code does not exist (in '16 – Contract notice – general directive, standard regime')</entry>
+    <entry key="rule|text|FI-E3-BT-00750-002">'Description' (BT-750-Lot) is not allowed when: The selection criterion (BT-809) code does not exist (in '16 – Contract notice – general directive, standard regime')</entry>
+    <entry key="rule|text|FI-E3-BT-00751-001">BT-751 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-00752-001">BT-752 - is mandatory if BT-7531 or BT-7532 are provided</entry>
+    <entry key="rule|text|FI-E3-BT-00754-001">BT-754 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00755-001">BT-755 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00076-001">'Legal form that must be taken by a group of tenderers that is awarded a contract' (BT-76-Lot) is  mandatory when 'A certain legal form must be taken by a group of tenderers that is awarded a contract' is filled in.</entry>
+    <entry key="rule|text|FI-E3-BT-00765-001">BT-765 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-00765-002">BT-765 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-00766-002">BT-766 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-00766-001">BT-766 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-00767-001">BT-767 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-00771-001">BT-771 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00772-001">BT-772 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00774-001">BT-774 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00775-001">BT-775 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00776-001">BT-776 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00777-001">BT-777 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00805-001">BT-805 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00810-001">BT-810 - is not allowed.</entry>
+    <entry key="rule|text|FI-E3-BT-00088-001">BT-88 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-00097-001">BT-97 - is mandatory.</entry>
+
+    <entry key="rule|text|FI-E4-BT-00006-001">FI-E4-BT-00006-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-00009-001">FI-E4-BT-00009-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-00010-001">FI-E4-BT-00010-001 - place holder.</entry>
+    <entry key="rule|text|FI-E4-BT-00011-001">FI-E4-BT-00011-001 - is mandatory.</entry>
+    <entry key="rule|text|FI-E4-BT-00025-001">FI-E4-BT-00025-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-00036-001">FI-E4-BT-00036-001 - place holder.</entry>
+    <entry key="rule|text|FI-E4-BT-00057-001">FI-E4-BT-00057-001 - place holder.</entry>
+    <entry key="rule|text|FI-E4-BT-00060-001">FI-E4-BT-00060-001 - is mandatory.</entry>
+    <entry key="rule|text|FI-E4-BT-00088-001">FI-E4-BT-00088-001 - place holder.</entry>
+    <entry key="rule|text|FI-E4-BT-00105-001">FI-E4-BT-00105-001 - is mandatory.</entry>
+    <entry key="rule|text|FI-E4-BT-00106-001">FI-E4-BT-00106-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-00111-001">FI-E4-BT-00111-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-00118-001">FI-E4-BT-00118-001 - place holder.</entry>
+    <entry key="rule|text|FI-E4-BT-00119-001">FI-E4-BT-00119-001 - place holder.</entry>
+    <entry key="rule|text|FI-E4-BT-00140-001">FI-E4-BT-00140-001 - place holder.</entry>
+    <entry key="rule|text|FI-E4-BT-00141-001">FI-E4-BT-00141-001 - is mandatory.</entry>
+    <entry key="rule|text|FI-E4-BT-00144-001">FI-E4-BT-00144-001 - place holder.</entry>
+    <entry key="rule|text|FI-E4-BT-00151-001">FI-E4-BT-00151-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-00157-001">FI-E4-BT-00157-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-00160-001">FI-E4-BT-00160-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-00161-001">FI-E4-BT-00161-001 - place holder.</entry>
+    <entry key="rule|text|FI-E4-BT-00162-001">FI-E4-BT-00162-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-00163-001">FI-E4-BT-00163-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-00171-001">FI-E4-BT-00171-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-00193-001">FI-E4-BT-00193-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-00195-001">FI-E4-BT-00195-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-00196-001">FI-E4-BT-00196-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-00197-001">FI-E4-BT-00197-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-00198-001">FI-E4-BT-00198-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-00262-001">FI-E4-BT-00262-001 - is mandatory.</entry>
+    <entry key="rule|text|FI-E4-BT-00330-001">FI-E4-BT-00330-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-00501-001">FI-E4-BT-00501-001 - place holder.</entry>
+    <entry key="rule|text|FI-E4-BT-00506-001">FI-E4-BT-00506-001 - place holder.</entry>
+    <entry key="rule|text|FI-E4-BT-00507-001">FI-E4-BT-00507-001 - place holder.</entry>
+    <entry key="rule|text|FI-E4-BT-00508-001">FI-E4-BT-00508-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-00509-001">FI-E4-BT-00509-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-00513-001">FI-E4-BT-00513-001 - place holder.</entry>
+    <entry key="rule|text|FI-E4-BT-00536-001">FI-E4-BT-00536-001 - place holder.</entry>
+    <entry key="rule|text|FI-E4-BT-00537-001">FI-E4-BT-00537-001 - place holder.</entry>
+    <entry key="rule|text|FI-E4-BT-00539-001">FI-E4-BT-00539-001 - is mandatory.</entry>
+    <entry key="rule|text|FI-E4-BT-00540-001">FI-E4-BT-00540-001 - is mandatory.</entry>
+    <entry key="rule|text|FI-E4-BT-00610-001">FI-E4-BT-00610-001 - place holder.</entry>
+    <entry key="rule|text|FI-E4-BT-00625-001">FI-E4-BT-00625-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-00633-001">FI-E4-BT-00633-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-00634-001">FI-E4-BT-00634-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-00660-001">FI-E4-BT-00660-001 - place holder.</entry>
+    <entry key="rule|text|FI-E4-BT-00710-001">FI-E4-BT-00710-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-00711-001">FI-E4-BT-00711-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-00717-001">FI-E4-BT-00717-001 - place holder.</entry>
+    <entry key="rule|text|FI-E4-BT-00723-001">FI-E4-BT-00723-001 - place holder.</entry>
+    <entry key="rule|text|FI-E4-BT-00727-001">FI-E4-BT-00727-001 - place holder.</entry>
+    <entry key="rule|text|FI-E4-BT-00735-001">FI-E4-BT-00735-001 - place holder.</entry>
+    <entry key="rule|text|FI-E4-BT-00738-001">FI-E4-BT-00738-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-00739-001">FI-E4-BT-00739-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-00740-001">FI-E4-BT-00740-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-00754-001">FI-E4-BT-00754-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-00755-001">FI-E4-BT-00755-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-00756-001">FI-E4-BT-00756-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-00759-001">FI-E4-BT-00759-001 - is mandatory.</entry>
+    <entry key="rule|text|FI-E4-BT-00760-001">FI-E4-BT-00760-001 - is mandatory.</entry>
+    <entry key="rule|text|FI-E4-BT-00762-001">FI-E4-BT-00762-001 - place holder.</entry>
+    <entry key="rule|text|FI-E4-BT-00765-001">FI-E4-BT-00765-001 - is mandatory.</entry>
+    <entry key="rule|text|FI-E4-BT-00766-001">FI-E4-BT-00766-001 - is mandatory.</entry>
+    <entry key="rule|text|FI-E4-BT-00767-001">FI-E4-BT-00767-001 - is mandatory.</entry>
+    <entry key="rule|text|FI-E4-BT-00773-001">FI-E4-BT-00773-001 - is mandatory.</entry>
+    <entry key="rule|text|FI-E4-BT-00774-001">FI-E4-BT-00774-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-00775-001">FI-E4-BT-00775-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-00776-001">FI-E4-BT-00776-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-00777-001">FI-E4-BT-00777-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-00805-001">FI-E4-BT-00805-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-00810-001">FI-E4-BT-00810-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-01118-001">FI-E4-BT-01118-001 - place holder.</entry>
+    <entry key="rule|text|FI-E4-BT-01251-001">FI-E4-BT-01251-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-01351-001">FI-E4-BT-01351-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-01375-001">FI-E4-BT-01375-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-01561-001">FI-E4-BT-01561-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-01711-001">FI-E4-BT-01711-001 - is not allowed.</entry>
+    <entry key="rule|text|FI-E4-BT-05071-001">FI-E4-BT-05071-001 - place holder.</entry>
+    <entry key="rule|text|FI-E4-BT-05141-001">FI-E4-BT-05141-001 - place holder.</entry>
+</properties>
