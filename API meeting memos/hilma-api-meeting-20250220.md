@@ -3,6 +3,7 @@
 - Laura Kivinkangas
 
 # Topics
+> Note: topics to be discussed in the next API meeting
 
 ## National eForms notices
 - Test environment API now accepts E1, E3, and E4 notices with TED 1.13 specification
@@ -17,5 +18,5 @@
     - **FSR**: BT-682, BT-681
 	
 	
-- How does the rollout for SDK 1.13  look like for partners? 
+- How does the rollout for SDK 1.13 look like for partners? 
     - Are we able to establish a date when partners and Hilma start supporting SDK 1.13 at the same time without the need for backwards compatibility grace period (SDK 1.10.2)?
