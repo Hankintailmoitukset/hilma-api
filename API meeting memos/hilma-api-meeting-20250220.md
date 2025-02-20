@@ -18,4 +18,4 @@
 	
 	
 - How does the rollout for SDK 1.13  look like for partners? 
-    - Are we able to establish a date when partners and Hilma start supporting SDK 1.13 at the same time without the need for backwards compatibility (SDK 1.10.2)?
+    - Are we able to establish a date when partners and Hilma start supporting SDK 1.13 at the same time without the need for backwards compatibility grace period (SDK 1.10.2)?
