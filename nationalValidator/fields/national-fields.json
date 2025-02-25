@@ -1,0 +1,266 @@
+{
+  "xmlStructure": [
+    {
+      "id": "ND-NationalExtensionRoot",
+      "parentId": "ND-Root",
+      "xpathAbsolute": "/*/hilma:NationalExtension",
+      "xpathRelative": "hilma:NationalExtension",
+      "repeatable": false
+    },
+    {
+      "id": "ND-NationalProcurementProject",
+      "parentId": "ND-NationalExtensionRoot",
+      "xpathAbsolute": "/*/hilma:NationalExtension/hilma:ProcurementProject",
+      "xpathRelative": "hilma:ProcurementProject",
+      "repeatable": false
+    }
+  ],
+  "fields": [
+    {
+      "id": "FI-11",
+      "parentNodeId": "ND-NationalProcurementProject",
+      "name": "Applicable legislation",
+      "btId": "FI-11",
+      "xpathAbsolute": "/*/hilma:NationalExtension/hilma:ProcurementProject/hilma:ApplicableLegislation",
+      "xpathRelative": "hilma:ApplicableLegislation",
+      "type": "code",
+      "businessEntityId": "procedure",
+      "legalType": "CODE",
+      "repeatable": {
+        "value": false,
+        "severity": "ERROR"
+      },
+      "codeList": {
+        "value": {
+          "id": "national-applicable-legislation",
+          "type": "flat"
+        },
+        "severity": "ERROR"
+      },
+      "mandatory": {
+        "value": false,
+        "severity": "ERROR",
+        "constraints": [
+          { "noticeTypes": ["E3"], "value": true, "severity": "ERROR" }
+        ]
+      },
+      "forbidden": {
+        "value": false,
+        "severity": "ERROR",
+        "constraints": [
+          {
+            "noticeTypes": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10",
+              "11",
+              "12",
+              "13",
+              "14",
+              "15",
+              "16",
+              "17",
+              "18",
+              "19",
+              "20",
+              "21",
+              "22",
+              "23",
+              "24",
+              "25",
+              "26",
+              "27",
+              "28",
+              "29",
+              "30",
+              "31",
+              "32",
+              "33",
+              "34",
+              "35",
+              "36",
+              "37",
+              "38",
+              "39",
+              "40",
+              "CEI",
+              "E1",
+              "E2",
+              "E4",
+              "E5",
+              "E6",
+              "T01",
+              "T02",
+              "X01",
+              "X02"
+            ],
+            "value": true,
+            "severity": "ERROR"
+          }
+        ]
+      }
+    },
+    {
+      "id": "FI-30",
+      "parentNodeId": "ND-NationalProcurementProject",
+      "name": "PredictedValue",
+      "btId": "FI-30",
+      "xpathAbsolute": "/*/hilma:NationalExtension/hilma:ProcurementProject/hilma:PredictedValueConstraintIndicator",
+      "xpathRelative": "hilma:PredictedValueConstraintIndicator",
+      "type": "indicator",
+      "businessEntityId": "procedure",
+      "mandatory": {
+        "value": false,
+        "severity": "ERROR",
+        "constraints": [
+          { "noticeTypes": ["E3", "E4"], "value": true, "severity": "ERROR" }
+        ]
+      },
+      "forbidden": {
+        "value": false,
+        "severity": "ERROR",
+        "constraints": [
+          {
+            "noticeTypes": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10",
+              "11",
+              "12",
+              "13",
+              "14",
+              "15",
+              "16",
+              "17",
+              "18",
+              "19",
+              "20",
+              "21",
+              "22",
+              "23",
+              "24",
+              "25",
+              "26",
+              "27",
+              "28",
+              "29",
+              "30",
+              "31",
+              "32",
+              "33",
+              "34",
+              "35",
+              "36",
+              "37",
+              "38",
+              "39",
+              "40",
+              "CEI",
+              "E1",
+              "E2",
+              "E5",
+              "E6",
+              "T01",
+              "T02",
+              "X01",
+              "X02"
+            ],
+            "value": true,
+            "severity": "ERROR"
+          }
+        ]
+      }
+    },
+    {
+      "id": "FI-20",
+      "parentNodeId": "ND-NationalProcurementProject",
+      "name": "IsEUApplicable",
+      "btId": "FI-20",
+      "xpathAbsolute": "/*/hilma:NationalExtension/hilma:ProcurementProject/hilma:IsEUApplicableConstraintIndicator",
+      "xpathRelative": "hilma:IsEUApplicableConstraintIndicator",
+      "type": "indicator",
+      "businessEntityId": "procedure",
+      "mandatory": {
+        "value": false,
+        "severity": "ERROR",
+        "constraints": [
+          { "noticeTypes": ["E1", "E3", "E4"], "value": true, "severity": "ERROR" }
+        ]
+      },
+      "forbidden": {
+        "value": false,
+        "severity": "ERROR",
+        "constraints": [
+          {
+            "noticeTypes": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10",
+              "11",
+              "12",
+              "13",
+              "14",
+              "15",
+              "16",
+              "17",
+              "18",
+              "19",
+              "20",
+              "21",
+              "22",
+              "23",
+              "24",
+              "25",
+              "26",
+              "27",
+              "28",
+              "29",
+              "30",
+              "31",
+              "32",
+              "33",
+              "34",
+              "35",
+              "36",
+              "37",
+              "38",
+              "39",
+              "40",
+              "CEI",
+              "E2",
+              "E5",
+              "E6",
+              "T01",
+              "T02",
+              "X01",
+              "X02"
+            ],
+            "value": true,
+            "severity": "ERROR"
+          }
+        ]
+      }
+    }
+  ]
+}
