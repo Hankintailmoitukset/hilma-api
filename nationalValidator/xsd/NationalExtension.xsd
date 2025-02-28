@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="urn:hanselHilma:NationalExtension"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="urn:hanselHilma:NationalExtension"
+            xmlns:udt="urn:oasis:names:specification:bdndr:schema:xsd:UnqualifiedDataTypes-1"
+            elementFormDefault="qualified"
+            attributeFormDefault="unqualified">
+
+  
+    <xsd:element name="PredictedValueConstraintIndicator"
+             type="PredictedValueConstraintIndicatorType"/>
+
+    <xsd:element name="IsEUApplicableConstraintIndicator"
+         type="IsEUApplicableConstraintIndicatorType"/>
+
+    <xsd:element name="ApplicableLegislationCode"
+        type="ApplicableLegislationCodeType"/>
+  
+    <xsd:complexType name="PredictedValueConstraintIndicatorType">
+      <xsd:simpleContent>
+        <xsd:restriction base="udt:IndicatorType"/>
+      </xsd:simpleContent>
+    </xsd:complexType>
+
+  <xsd:complexType name="IsEUApplicableConstraintIndicatorType">
+    <xsd:simpleContent>
+      <xsd:restriction base="udt:IndicatorType"/>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="ApplicableLegislationCodeType">
+    <xsd:simpleContent>
+      <xsd:restriction base="udt:CodeType"/>
+    </xsd:simpleContent>
+  </xsd:complexType>  
+  
+    <xsd:element name="NationalExtension">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="ProcurementProject">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <!-- FI-11 (Sovellettava lainsäädäntö) -->
+                            <xsd:element ref="ApplicableLegislationCode" minOccurs="0" maxOccurs="1"/>
+
+                            <!-- FI-30 -->
+                            <xsd:element ref="PredictedValueConstraintIndicator" minOccurs="0" maxOccurs="1"/>
+
+                            <!-- FI-20 -->
+                            <xsd:element ref="IsEUApplicableConstraintIndicator" minOccurs="0" maxOccurs="1"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+</xsd:schema>

@@ -1,0 +1,10 @@
+{
+  "codelists": [
+    {
+      "id": "applicable-legislation-national",
+      "filename": "applicable-legislation-national-extension.gc",
+      "description": "Provides selections for whether the procurement project pertains to defense or is a regular procurement.",
+      "_label": "codelist|name|applicable-legislation-national"
+    }
+  ]
+}

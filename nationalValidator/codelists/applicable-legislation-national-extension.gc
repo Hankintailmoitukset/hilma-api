@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--File generated from metadata database-->
+<gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+   <Identification>
+      <ShortName>ApplicableLegislationNational</ShortName>
+      <LongName>applicable-legislation-national</LongName>
+      <LongName Identifier="eFormsParentId">applicableLegislation</LongName>
+      <Version>1.13.0</Version>
+      <CanonicalUri/>
+      <CanonicalVersionUri/>
+      <Agency>
+         <ShortName>Hansel</ShortName>
+         <LongName>Hansel</LongName>
+      </Agency>
+   </Identification>
+   <ColumnSet>
+      <Column Id="code" Use="required">
+         <ShortName>Code</ShortName>
+         <Data Lang="eng" Type="normalizedString"/>
+      </Column>
+      <Column Id="Name" Use="optional">
+         <ShortName>Name</ShortName>
+         <Data Lang="eng" Type="string"/>
+      </Column>
+      <Column Id="eng_label" Use="optional">
+         <ShortName>engLabel</ShortName>
+         <Data Lang="eng" Type="string"/>
+      </Column>
+      <Column Id="fin_label" Use="optional">
+         <ShortName>finLabel</ShortName>
+         <Data Lang="fin" Type="string"/>
+      </Column>
+      <Column Id="swe_label" Use="optional">
+         <ShortName>sweLabel</ShortName>
+         <Data Lang="swe" Type="string"/>
+      </Column>
+   </ColumnSet>
+   <SimpleCodeList>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>procurement-legislation</SimpleValue>
+         </Value>
+         <Value ColumnRef="Name">
+            <SimpleValue>Procurement Legislation</SimpleValue>
+         </Value>
+         <Value ColumnRef="eng_label">
+            <SimpleValue>Law on public procurement and concessions (Act on Public Procurements) (1397/2016)</SimpleValue>
+         </Value>
+         <Value ColumnRef="fin_label">
+            <SimpleValue>Laki julkisista hankinnoista ja käyttöoikeussopimuksista (Hankintalaki) (1397/2016)</SimpleValue>
+         </Value>
+         <Value ColumnRef="swe_label">
+            <SimpleValue>Lag om offentlig upphandling och koncession (Lag om offentlig upphandling) (1397/2016)</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>defence-legislation</SimpleValue>
+         </Value>
+         <Value ColumnRef="Name">
+            <SimpleValue>Defence procurement legislation</SimpleValue>
+         </Value>
+         <Value ColumnRef="eng_label">
+            <SimpleValue>Public Defence and Security Procurement Act (1531/2011)</SimpleValue>
+         </Value>
+         <Value ColumnRef="fin_label">
+            <SimpleValue>Laki julkisista puolustus- ja turvallisuushankinnoista (PUTU-laki) (1531/2011)</SimpleValue>
+         </Value>
+         <Value ColumnRef="swe_label">
+            <SimpleValue>Lag om offentlig försvars- och säkerhetsupphandling (1531/2011)</SimpleValue>
+         </Value>
+      </Row>
+   </SimpleCodeList>
+</gc:CodeList>

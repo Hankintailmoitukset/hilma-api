@@ -1,0 +1,127 @@
+<properties>
+    <!-- Manual -->
+    <entry key="rule|text|FI-11-2">FI-11-2 - NationalExtension is manditory on E1, E3 and E4.</entry>
+
+    <!-- Shared -->
+    <entry key="rule|text|FI-11-1">FI-11-1 - There cannot be multiple instances of FI-11.</entry>
+    <entry key="rule|text|FI-20-1">FI-20-1 - There cannot be multiple instances of FI-11.</entry>
+    <entry key="rule|text|FI-30-1">FI-30-1 - There cannot be multiple instances of FI-11.</entry>
+    <entry key="rule|text|FI-11-2">FI-11-2 - Can only be a valid value of ApplicableLegislationNational.</entry>
+
+    <!-- E1 -->
+    <entry key="rule|text|FI-E1-BT-11-Procedure-Buyer-1">FI-E1-BT-11-Procedure-Buyer-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E1-BT-13716-notice-1">'Section identifier' (BT-13716-notice) is mandatory, except when: 'Version of the previous notice to be changed' (BT-758-notice) is not filled in (in 'E1')</entry>
+    <entry key="rule|text|FI-E1-BT-13716-notice-2">'Section identifier' (BT-13716-notice) is not allowed when: 'Version of the previous notice to be changed' (BT-758-notice) is not filled in (in 'E1')</entry>
+    <entry key="rule|text|FI-E1-BT-141(a)-notice-1">'Description of changes' (BT-141(a)-notice) is mandatory, except when: 'Section identifier' (BT-13716-notice) is not filled in (in 'E1')</entry>
+    <entry key="rule|text|FI-E1-BT-141(a)-notice-2">'Description of changes' (BT-141(a)-notice) is not allowed when: 'Section identifier' (BT-13716-notice) is not filled in (in 'E1')</entry>
+    <entry key="rule|text|FI-E1-BT-17-Lot-1">FI-E1-BT-17-Lot-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E1-BT-23-Part-1">FI-E1-BT-23-Part-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E1-BT-262-Part-1">FI-E1-BT-262-Part-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E1-BT-501-Organization-Company-1">FI-E1-BT-501-Organization-Company-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E1-BT-506-Organization-Company-1">'Email' (BT-506-Organization-Company) is mandatory when: the organisation (OPT-200-Organization-Company) is a Buyer (OPT-300-Procedure-Buyer) (in 'E1')</entry>
+    <entry key="rule|text|FI-E1-BT-507-Organization-Company-1">'Country subdivision (NUTS)' (BT-507-Organization-Company) is mandatory, except when: 'Country' (BT-514-Organization-Company) does not have NUTS codes (in 'E1')</entry>
+    <entry key="rule|text|FI-E1-BT-507-Organization-Company-2">Country subdivision (NUTS)' (BT-507-Organization-Company) is not allowed when: 'Country' (BT-514-Organization-Company) does not have NUTS codes (in 'E1')</entry>
+    <entry key="rule|text|FI-E1-BT-513-Organization-Company-1">FI-E1-BT-513-Organization-Company-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E1-BT-758-notice-1">FI-E1-BT-758-notice-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E1-FI-11-1">FI-E1-FI-11-1 - place holder.</entry>
+    <entry key="rule|text|FI-E1-FI-20-1">FI-E1-FI-20-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E1-FI-30-1">FI-E1-FI-30-1 - is mandatory.</entry>
+
+    <!-- E3 -->
+    <entry key="rule|text|FI-E3-BT-105-Procedure-1">FI-E3-BT-105-Procedure-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-109-Lot-1">'Justification for the duration of the framework agreement' (BT-109-Lot) is mandatory, except when: Duration of the lot must be greater than 4 years (in 'E3')</entry>
+    <entry key="rule|text|FI-E3-BT-109-Lot-2">'Justification for the duration of the framework agreement' (BT-109-Lot) is not allowed when: Duration of the lot must be greater than 4 years (in 'E3')</entry>
+    <entry key="rule|text|FI-E3-BT-113-Lot-1">'Maximum number of participants' (BT-113-Lot) is mandatory, except when: 'Framework agreement is involved' (BT-765-Lot) is not one of the following: 'Framework agreement, partly without reopening and partly with reopening of competition'; 'Framework agreement, with reopening of competition'; 'Framework agreement, without reopening of competition' (in 'E3'</entry>
+    <entry key="rule|text|FI-E3-BT-113-Lot-2">'Maximum number of participants' (BT-113-Lot) is not allowed when: 'Framework agreement is involved' (BT-765-Lot) is not one of the following: 'Framework agreement, partly without reopening and partly with reopening of competition'; 'Framework agreement, with reopening of competition'; 'Framework agreement, without reopening of competition' (in 'E3')</entry>
+    <entry key="rule|text|FI-E3-BT-11-Procedure-Buyer-1">FI-E3-BT-11-Procedure-Buyer-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-13716-notice-1">'Section identifier' (BT-13716-notice) is mandatory, except when: 'Version of the previous notice to be changed' (BT-758-notice) is not filled in (in 'E3')</entry>
+    <entry key="rule|text|FI-E3-BT-13716-notice-2">'Section identifier' (BT-13716-notice) is not allowed when: 'Version of the previous notice to be changed' (BT-758-notice) is not filled in (in 'E3')</entry>
+    <entry key="rule|text|FI-E3-BT-141(a)-notice-1">'Description of changes' (BT-141(a)-notice) is mandatory, except when: 'Section identifier' (BT-13716-notice) is not filled in (in 'E3')</entry>
+    <entry key="rule|text|FI-E3-BT-141(a)-notice-2">'Description of changes' (BT-141(a)-notice) is not allowed when: 'Section identifier' (BT-13716-notice) is not filled in (in 'E3')</entry>
+    <entry key="rule|text|FI-E3-BT-14-Lot-1">FI-E3-BT-14-Lot-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-14-Part-1">FI-E3-BT-14-Part-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-17-Lot-1">FI-E3-BT-17-Lot-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-23-Part-1">FI-E3-BT-23-Part-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-262-Part-1">FI-E3-BT-262-Part-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-40-Lot-1">'The criteria will be used to select the candidates to be invited for the second stage of the procedure' (BT-40-Lot) is mandatory, except when: 'Selection criteria' (BT-809-Lot) does not exist or 'The procedure will take place in successive stages. At each stage, some participants may be eliminated' (BT-52-Lot) is not 'yes' or 'Type of procedure' (BT-105) is not 'Competitive dialogue', 'Innovation partnership', 'Negotiated with prior publication of a call for competition / competitive with negotiation', 'Other multiple stage procedure', or 'Restricted' (in 'E3')</entry>
+    <entry key="rule|text|FI-E3-BT-40-Lot-2">'The criteria will be used to select the candidates to be invited for the second stage of the procedure' (BT-40-Lot) is not allowed when: 'Selection criteria' (BT-809-Lot) does not exist or 'The procedure will take place in successive stages. At each stage, some participants may be eliminated' (BT-52-Lot) is not 'yes' or 'Type of procedure' (BT-105) is not 'Competitive dialogue', 'Innovation partnership', 'Negotiated with prior publication of a call for competition / competitive with negotiation', 'Other multiple stage procedure', or 'Restricted' (in 'E3')</entry>
+    <entry key="rule|text|FI-E3-BT-501-Organization-Company-1">FI-E3-BT-501-Organization-Company-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-506-Organization-Company-1">'Email' (BT-506-Organization-Company) is mandatory when: the organisation (OPT-200-Organization-Company) is a Buyer (OPT-300-Procedure-Buyer) (in 'E3')</entry>
+    <entry key="rule|text|FI-E3-BT-507-Organization-Company-1">'Country subdivision (NUTS)' (BT-507-Organization-Company) is mandatory, except when: 'Country' (BT-514-Organization-Company) does not have NUTS codes (in 'E3')</entry>
+    <entry key="rule|text|FI-E3-BT-507-Organization-Company-2">'Country subdivision (NUTS)' (BT-507-Organization-Company) is not allowed when: 'Country' (BT-514-Organization-Company) does not have NUTS codes (in 'E3')</entry>
+    <entry key="rule|text|FI-E3-BT-513-Organization-Company-1">FI-E3-BT-513-Organization-Company-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-52-Lot-1">'The procedure will take place in successive stages. At each stage, some participants may be eliminated' (BT-52-Lot) is mandatory when: 'Type of procedure' (BT-105) must not be either 'Competitive dialogue', 'Innovation partnership'; 'Negotiated with prior publication of a call for competition / competitive with negotiation' (in 'E3')</entry>
+    <entry key="rule|text|FI-E3-BT-52-Lot-2">'The procedure will take place in successive stages. At each stage, some participants may be eliminated' (BT-52-Lot) is not allowed when: 'Type of procedure' (BT-105) is 'Open' or 'Other single stage procedure' or 'Negotiated without prior call for competition' (in 'E3')</entry>
+    <entry key="rule|text|FI-E3-BT-539-Lot-1">FI-E3-BT-539-Lot-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-539-LotsGroup-1">'Type' (BT-539-LotsGroup) is mandatory, except when: Lot ID is not filled in (in 'E3')</entry>
+    <entry key="rule|text|FI-E3-BT-539-LotsGroup-2">'Type' (BT-539-LotsGroup) is not allowed when: Lot ID is not filled in (in 'E3')</entry>
+    <entry key="rule|text|FI-E3-BT-60-Lot-1">FI-E3-BT-60-Lot-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-630(d)-Lot-1">'Deadline for receipt of expressions of interest' (BT-630(d)-Lot) is not allowed (in 'E3')</entry>
+    <entry key="rule|text|FI-E3-BT-630(t)-Lot-1">'Deadline for receipt of expressions of interest' (BT-630(t)-Lot) is not allowed (in 'E3')</entry>
+    <entry key="rule|text|FI-E3-BT-661-Lot-1">'There is a maximum number of candidates to be invited for the second stage of the procedure' (BT-661-Lot) is mandatory, except when: 'Type of procedure' (BT-105) is 'Open' or 'Other single stage procedure' or 'Negotiated without prior call for competition' (in 'E3')</entry>
+    <entry key="rule|text|FI-E3-BT-661-Lot-2">'There is a maximum number of candidates to be invited for the second stage of the procedure' (BT-661-Lot) is not allowed when: 'Type of procedure' (BT-105) is 'Open' or 'Other single stage procedure' or 'Negotiated without prior call for competition' (in 'E3')</entry>
+    <entry key="rule|text|FI-E3-BT-71-Lot-1">FI-E3-BT-71-Lot-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-71-Part-1">FI-E3-BT-71-Part-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-736-Lot-1">FI-E3-BT-736-Lot-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-736-Part-1">FI-E3-BT-736-Part-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-745-Lot-1">'Description' (BT-745-Lot) is mandatory when: Electronic submission is not allowed (in 'E3')</entry>
+    <entry key="rule|text|FI-E3-BT-750-Lot-1">'Description' (BT-750-Lot) is mandatory, except when: The selection criterion (BT-809) code does not exist (in 'E3')</entry>
+    <entry key="rule|text|FI-E3-BT-750-Lot-2">'Description' (BT-750-Lot) is not allowed when: The selection criterion (BT-809) code does not exist (in 'E3')</entry>
+    <entry key="rule|text|FI-E3-BT-751-Lot-1">FI-E3-BT-751-Lot-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-752-Lot-ThresholdNumber-1">{ND-SecondStageWeightCriterionParameter} ${(BT-7531-Lot is present or BT-7532-Lot is present)}</entry>
+    <entry key="rule|text|FI-E3-BT-758-notice-1">FI-E3-BT-758-notice-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-765-Lot-1">FI-E3-BT-765-Lot-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-765-Part-1">FI-E3-BT-765-Part-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-766-Lot-1">FI-E3-BT-766-Lot-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-766-Part-1">FI-E3-BT-766-Part-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-767-Lot-1">FI-E3-BT-767-Lot-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-769-Lot-1">(BT-769-Lot) is not allowed (in 'E3')</entry>
+    <entry key="rule|text|FI-E3-BT-88-Procedure-1">count(cbc:Description) &gt; 0 or not(cbc:ProcedureCode/normalize-space(text()) = ('oth-mult','oth-single'))</entry>
+    <entry key="rule|text|FI-E3-BT-97-Lot-1">FI-E3-BT-97-Lot-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-FI-11-1">FI-E3-FI-11-1 - place holder.</entry>
+    <entry key="rule|text|FI-E3-FI-20-1">FI-E3-FI-20-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-FI-30-1">FI-E3-FI-30-1 - is mandatory.</entry>
+
+    <!-- E4 -->
+    <entry key="rule|text|FI-E4-BT-105-Procedure-1">FI-E4-BT-105-Procedure-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E4-BT-10-Procedure-Buyer-1">count(cac:ContractingActivity/cbc:ActivityTypeCode[@listName='authority-activity']) &gt; 0 or not(cac:ContractingPartyType/cbc:PartyTypeCode[@listName='buyer-legal-type']/normalize-space(text()) = ('body-pl','body-pl-cga','body-pl-la','body-pl-ra','cga','def-cont','eu-ins-bod-ag','grp-p-aut','int-org','la','org-sub','org-sub-cga','org-sub-la','org-sub-ra','ra'))</entry>
+    <entry key="rule|text|FI-E4-BT-10-Procedure-Buyer-2">count(cac:ContractingActivity/cbc:ActivityTypeCode[@listName='authority-activity']) = 0 or (cac:ContractingPartyType/cbc:PartyTypeCode[@listName='buyer-legal-type']/normalize-space(text()) = ('body-pl','body-pl-cga','body-pl-la','body-pl-ra','cga','def-cont','eu-ins-bod-ag','grp-p-aut','int-org','la','org-sub','org-sub-cga','org-sub-la','org-sub-ra','ra'))</entry>
+    <entry key="rule|text|FI-E4-BT-1118-NoticeResult-1">'Approximate value of the framework agreements' (BT-1118-NoticeResult) is mandatory, except when: No winner was chosen; It is not a framework contract; 'Re-estimated value of the framework agreement' (BT-660-LotResult) is not filled in (in 'E4')</entry>
+    <entry key="rule|text|FI-E4-BT-1118-NoticeResult-2">'Approximate value of the framework agreements' (BT-1118-NoticeResult) is not allowed when: No winner was chosen; It is not a framework contract; 'Re-estimated value of the framework agreement' (BT-660-LotResult) is not filled in (in 'E4')</entry>
+    <entry key="rule|text|FI-E4-BT-118-NoticeResult-1">'Maximum value of the framework agreements in this notice' (BT-118-NoticeResult) is mandatory, except when: No winner was chosen; It is not a framework contract; 'Maximum value of the framework agreement' (BT-709-LotResult) is not filled in (in 'E4')</entry>
+    <entry key="rule|text|FI-E4-BT-118-NoticeResult-2">'Maximum value of the framework agreements in this notice' (BT-118-NoticeResult) is not allowed when: No winner was chosen; It is not a framework contract; 'Maximum value of the framework agreement' (BT-709-LotResult) is not filled in (in 'E4')</entry>
+    <entry key="rule|text|FI-E4-BT-11-Procedure-Buyer-1">FI-E4-BT-11-Procedure-Buyer-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E4-BT-13716-notice-1">'Section identifier' (BT-13716-notice) is mandatory, except when: 'Version of the previous notice to be changed' (BT-758-notice) is not filled in (in 'E4')</entry>
+    <entry key="rule|text|FI-E4-BT-13716-notice-2">'Section identifier' (BT-13716-notice) is not allowed when: 'Version of the previous notice to be changed' (BT-758-notice) is not filled in (in 'E4')</entry>
+    <entry key="rule|text|FI-E4-BT-141(a)-notice-1">'Description of changes' (BT-141(a)-notice) is mandatory, except when: 'Section identifier' (BT-13716-notice) is not filled in (in 'E4')</entry>
+    <entry key="rule|text|FI-E4-BT-141(a)-notice-2">'Description of changes' (BT-141(a)-notice) is not allowed when: 'Section identifier' (BT-13716-notice) is not filled in (in 'E4')</entry>
+    <entry key="rule|text|FI-E4-BT-144-LotResult-1">'The reason why a winner was not chosen' (BT-144-LotResult) is mandatory, except when: 'Winner selection status' (BT-142-LotResult) is not 'No winner was chosen and the competition is closed.' (in 'E4')</entry>
+    <entry key="rule|text|FI-E4-BT-144-LotResult-2">'The reason why a winner was not chosen' (BT-144-LotResult) is not allowed when: 'Winner selection status' (BT-142-LotResult) is not 'No winner was chosen and the competition is closed.' (in 'E4')</entry>
+    <entry key="rule|text|FI-E4-BT-161-NoticeResult-1">'Value of all contracts awarded in this notice' (BT-161-NoticeResult) is mandatory, except when: No winner was chosen; It is not a framework contract (in 'E4')</entry>
+    <entry key="rule|text|FI-E4-BT-161-NoticeResult-2">'Value of all contracts awarded in this notice' (BT-161-NoticeResult) is not allowed when: No winner was chosen; It is not a framework contract (in 'E4')</entry>
+    <entry key="rule|text|FI-E4-BT-262-Part-1">FI-E4-BT-262-Part-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E4-BT-501-Organization-Company-1">FI-E4-BT-501-Organization-Company-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E4-BT-506-Organization-Company-1">'Email' (BT-506-Organization-Company) is mandatory when: the organisation (OPT-200-Organization-Company) is a Buyer (OPT-300-Procedure-Buyer) (in 'E4')</entry>
+    <entry key="rule|text|FI-E4-BT-507-Organization-Company-1">'Country subdivision (NUTS)' (BT-507-Organization-Company) is mandatory, except when: 'Country' (BT-514-Organization-Company) does not have NUTS codes (in 'E4')</entry>
+    <entry key="rule|text|FI-E4-BT-507-Organization-Company-2">'Country subdivision (NUTS)' (BT-507-Organization-Company) is not allowed when: 'Country' (BT-514-Organization-Company) does not have NUTS codes (in 'E4')</entry>
+    <entry key="rule|text|FI-E4-BT-513-Organization-Company-1">FI-E4-BT-513-Organization-Company-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E4-BT-539-Lot-1">FI-E4-BT-539-Lot-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E4-BT-539-LotsGroup-1">'Type' (BT-539-LotsGroup) is mandatory, except when: Lot ID is not filled in (in 'E4')</entry>
+    <entry key="rule|text|FI-E4-BT-539-LotsGroup-2">'Type' (BT-539-LotsGroup) is not allowed when: Lot ID is not filled in (in 'E4')</entry>
+    <entry key="rule|text|FI-E4-BT-60-Lot-1">FI-E4-BT-60-Lot-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E4-BT-758-notice-1">FI-E4-BT-758-notice-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E4-BT-760-LotResult-1">'Type of received submissions' (BT-760-LotResult) is mandatory, except when: 'Winner selection status' (BT-142-LotResult) is 'The winner was not yet chosen, but the competition is still ongoing.' (in 'E4')</entry>
+    <entry key="rule|text|FI-E4-BT-760-LotResult-2">'Type of received submissions' (BT-760-LotResult) is not allowed when: 'Winner selection status' (BT-142-LotResult) is 'The winner was not yet chosen, but the competition is still ongoing.' (in 'E4')</entry>
+    <entry key="rule|text|FI-E4-BT-765-Lot-1">FI-E4-BT-765-Lot-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E4-BT-765-Part-1">FI-E4-BT-765-Part-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E4-BT-766-Lot-1">FI-E4-BT-766-Lot-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E4-BT-766-Part-1">FI-E4-BT-766-Part-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E4-BT-767-Lot-1">FI-E4-BT-767-Lot-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E4-BT-773-Tender-1">'Subcontracting' (BT-773-Tender) is mandatory, except when: 'Technical ID of the tender' (OPT-321-Tender) is not filled in (in 'E4')</entry>
+    <entry key="rule|text|FI-E4-BT-773-Tender-2">'Subcontracting' (BT-773-Tender) is not allowed when: 'Technical ID of the tender' (OPT-321-Tender) is not filled in (in 'E4')</entry>
+    <entry key="rule|text|FI-E4-BT-88-Procedure-1">count(cbc:Description) &gt; 0 or not(cbc:ProcedureCode/normalize-space(text()) = ('oth-mult','oth-single'))</entry>
+    <entry key="rule|text|FI-E4-FI-11-1">FI-E4-FI-11-1 - place holder.</entry>
+    <entry key="rule|text|FI-E4-FI-20-1">FI-E4-FI-20-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E4-FI-30-1">FI-E4-FI-30-1 - is mandatory.</entry>
+</properties>
+
