@@ -52,7 +52,6 @@
     <entry key="rule|text|FI-E3-BT-507-Organization-Company-2">'Country subdivision (NUTS)' (BT-507-Organization-Company) is not allowed when: 'Country' (BT-514-Organization-Company) does not have NUTS codes (in 'E3')</entry>
     <entry key="rule|text|FI-E3-BT-513-Organization-Company-1">FI-E3-BT-513-Organization-Company-1 - is mandatory.</entry>
     <entry key="rule|text|FI-E3-BT-52-Lot-1">'The procedure will take place in successive stages. At each stage, some participants may be eliminated' (BT-52-Lot) is mandatory when: 'Type of procedure' (BT-105) must not be either 'Competitive dialogue', 'Innovation partnership'; 'Negotiated with prior publication of a call for competition / competitive with negotiation' (in 'E3')</entry>
-    <entry key="rule|text|FI-E3-BT-52-Lot-2">'The procedure will take place in successive stages. At each stage, some participants may be eliminated' (BT-52-Lot) is not allowed when: 'Type of procedure' (BT-105) is 'Open' or 'Other single stage procedure' or 'Negotiated without prior call for competition' (in 'E3')</entry>
     <entry key="rule|text|FI-E3-BT-539-Lot-1">FI-E3-BT-539-Lot-1 - is mandatory.</entry>
     <entry key="rule|text|FI-E3-BT-539-LotsGroup-1">'Type' (BT-539-LotsGroup) is mandatory, except when: Lot ID is not filled in (in 'E3')</entry>
     <entry key="rule|text|FI-E3-BT-539-LotsGroup-2">'Type' (BT-539-LotsGroup) is not allowed when: Lot ID is not filled in (in 'E3')</entry>

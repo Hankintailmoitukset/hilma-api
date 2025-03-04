@@ -132,6 +132,7 @@
   "mandatory" : {
     "constraints" : [ {
       "noticeTypes" : [ "E3" ],
+      "condition" : "{ND-LotTenderingProcess} ${BT-105-Procedure in ('comp-dial','innovation','neg-w-call')}",
       "severity" : "ERROR",
       "value" : true
     } ],
