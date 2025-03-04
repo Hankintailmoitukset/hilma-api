@@ -1,6 +1,6 @@
 <properties>
     <!-- Manual -->
-    <entry key="rule|text|FI-11-2">FI-11-2 - NationalExtension is manditory on E1, E3 and E4.</entry>
+    <entry key="rule|text|FI-11-2">FI-11-2 - NationalExtension is mandatory on E1, E3 and E4.</entry>
 
     <!-- Shared -->
     <entry key="rule|text|FI-11-1">FI-11-1 - There cannot be multiple instances of FI-11.</entry>
@@ -24,7 +24,7 @@
     <entry key="rule|text|FI-E1-BT-513-Organization-Company-1">FI-E1-BT-513-Organization-Company-1 - is mandatory.</entry>
     <entry key="rule|text|FI-E3-BT-745-Lot-1">'Description' (BT-745-Lot) is mandatory when: Electronic submission is 'not allowed' or 'allowed' (in 'E3')</entry>
     <entry key="rule|text|FI-E1-BT-758-notice-1">FI-E1-BT-758-notice-1 - is mandatory.</entry>
-    <entry key="rule|text|FI-E1-FI-11-1">FI-E1-FI-11-1 - place holder.</entry>
+    <entry key="rule|text|FI-E1-FI-11-1">FI-E1-FI-11-1 - is forbidden.</entry>
     <entry key="rule|text|FI-E1-FI-20-1">FI-E1-FI-20-1 - is mandatory.</entry>
     <entry key="rule|text|FI-E1-FI-30-1">FI-E1-FI-30-1 - is mandatory.</entry>
 
@@ -79,7 +79,7 @@
     <entry key="rule|text|FI-E3-BT-769-Lot-1">(BT-769-Lot) is not allowed (in 'E3')</entry>
     <entry key="rule|text|FI-E3-BT-88-Procedure-1">count(cbc:Description) &gt; 0 or not(cbc:ProcedureCode/normalize-space(text()) = ('oth-mult','oth-single'))</entry>
     <entry key="rule|text|FI-E3-BT-97-Lot-1">FI-E3-BT-97-Lot-1 - is mandatory.</entry>
-    <entry key="rule|text|FI-E3-FI-11-1">FI-E3-FI-11-1 - place holder.</entry>
+    <entry key="rule|text|FI-E3-FI-11-1">FI-E3-FI-11-1 - is mandatory.</entry>
     <entry key="rule|text|FI-E3-FI-20-1">FI-E3-FI-20-1 - is mandatory.</entry>
     <entry key="rule|text|FI-E3-FI-30-1">FI-E3-FI-30-1 - is mandatory.</entry>
 
@@ -121,7 +121,7 @@
     <entry key="rule|text|FI-E4-BT-773-Tender-1">'Subcontracting' (BT-773-Tender) is mandatory, except when: 'Technical ID of the tender' (OPT-321-Tender) is not filled in (in 'E4')</entry>
     <entry key="rule|text|FI-E4-BT-773-Tender-2">'Subcontracting' (BT-773-Tender) is not allowed when: 'Technical ID of the tender' (OPT-321-Tender) is not filled in (in 'E4')</entry>
     <entry key="rule|text|FI-E4-BT-88-Procedure-1">count(cbc:Description) &gt; 0 or not(cbc:ProcedureCode/normalize-space(text()) = ('oth-mult','oth-single'))</entry>
-    <entry key="rule|text|FI-E4-FI-11-1">FI-E4-FI-11-1 - place holder.</entry>
+    <entry key="rule|text|FI-E4-FI-11-1">FI-E4-FI-11-1 - is forbidden.</entry>
     <entry key="rule|text|FI-E4-FI-20-1">FI-E4-FI-20-1 - is mandatory.</entry>
     <entry key="rule|text|FI-E4-FI-30-1">FI-E4-FI-30-1 - is mandatory.</entry>
 </properties>
