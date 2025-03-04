@@ -15,7 +15,6 @@
 <assert id="FI-E3-BT-17-Lot-1" role="ERROR" test="count(cbc:SubmissionMethodCode[@listName='esubmission']) &gt; 0">rule|text|FI-E3-BT-17-Lot-1</assert>
 <assert id="FI-E3-BT-52-Lot-1" role="ERROR" test="count(cbc:CandidateReductionConstraintIndicator) &gt; 0 or ../../cac:TenderingProcess/cbc:ProcedureCode/normalize-space(text()) = 'open' or ../../cac:TenderingProcess/cbc:ProcedureCode/normalize-space(text()) = 'oth-single' or ../../cac:TenderingProcess/cbc:ProcedureCode/normalize-space(text()) = 'neg-wo-call'">rule|text|FI-E3-BT-52-Lot-1</assert>
 <assert id="FI-E3-BT-52-Lot-2" role="ERROR" test="count(cbc:CandidateReductionConstraintIndicator) = 0 or ../../cac:TenderingProcess/cbc:ProcedureCode/normalize-space(text()) = 'open' or ../../cac:TenderingProcess/cbc:ProcedureCode/normalize-space(text()) = 'oth-single' or ../../cac:TenderingProcess/cbc:ProcedureCode/normalize-space(text()) = 'neg-wo-call'">rule|text|FI-E3-BT-52-Lot-2</assert>
-<assert id="FI-E3-BT-745-Lot-1" role="ERROR" test="count(cac:ProcessJustification/cbc:Description) &gt; 0 or cbc:SubmissionMethodCode[@listName='esubmission']/normalize-space(text()) = 'not-allowed'">rule|text|FI-E3-BT-745-Lot-1</assert>
 </rule>
 <rule context="/*/cac:ContractingParty[$noticeSubType = 'E3']">
 <assert id="FI-E3-BT-11-Procedure-Buyer-1" role="ERROR" test="count(cac:ContractingPartyType/cbc:PartyTypeCode[@listName='buyer-legal-type']) &gt; 0">rule|text|FI-E3-BT-11-Procedure-Buyer-1</assert>
@@ -87,6 +86,9 @@
 </rule>
 <rule context="/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:ContractExecutionRequirement[cbc:ExecutionRequirementCode/@listName='reserved-execution'][$noticeSubType = 'E3']">
 <assert id="FI-E3-BT-736-Part-1" role="ERROR" test="count(cbc:ExecutionRequirementCode) &gt; 0">rule|text|FI-E3-BT-736-Part-1</assert>
+</rule>
+<rule context="/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingProcess/cac:ProcessJustification[$noticeSubType = 'E3']">
+<assert id="FI-E3-BT-745-Lot-1" role="ERROR" test="count(cbc:Description) &gt; 0 or ../cbc:SubmissionMethodCode[@listName='esubmission']/normalize-space(text()) = 'not-allowed' or ../cbc:SubmissionMethodCode[@listName='esubmission']/normalize-space(text()) = 'allowed'">rule|text|FI-E3-BT-745-Lot-1</assert>
 </rule>
 <rule context="/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:RequiredFinancialGuarantee[$noticeSubType = 'E3']">
 <assert id="FI-E3-BT-751-Lot-1" role="ERROR" test="count(cbc:GuaranteeTypeCode[@listName='tender-guarantee-required']) &gt; 0">rule|text|FI-E3-BT-751-Lot-1</assert>

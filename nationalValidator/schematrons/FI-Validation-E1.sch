@@ -34,6 +34,9 @@
 <rule context="/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:Organizations/efac:Organization/efac:Company/cac:PostalAddress[$noticeSubType = 'E1']">
 <assert id="FI-E1-BT-513-Organization-Company-1" role="ERROR" test="count(cbc:CityName) &gt; 0">rule|text|FI-E1-BT-513-Organization-Company-1</assert>
 </rule>
+<rule context="/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingProcess/cac:ProcessJustification[$noticeSubType = 'E1']">
+<assert id="FI-E1-BT-745-Lot-1" role="ERROR" test="count(cbc:Description) &gt; 0 or ../cbc:SubmissionMethodCode[@listName='esubmission']/normalize-space(text()) = 'not-allowed' or ../cbc:SubmissionMethodCode[@listName='esubmission']/normalize-space(text()) = 'allowed'">rule|text|FI-E1-BT-745-Lot-1</assert>
+</rule>
 <rule context="/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:Changes[$noticeSubType = 'E1']">
 <assert id="FI-E1-BT-758-notice-1" role="ERROR" test="count(efbc:ChangedNoticeIdentifier) &gt; 0">rule|text|FI-E1-BT-758-notice-1</assert>
 </rule>

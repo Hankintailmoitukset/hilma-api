@@ -841,46 +841,23 @@
     "value" : false
   }
 },{
-  "id" : "BT-745-Lot",
-  "forbidden" : {
-    "constraints" : [ {
-      "noticeTypes" : [ ],
-      "severity" : "ERROR",
-      "value" : true
-    } ],
-    "severity" : "",
-    "value" : false
+  "id": "BT-745-Lot",
+  "forbidden": {
+    "value": false,
+    "severity": "ERROR",
+    "constraints": []
   },
-  "mandatory" : {
-    "constraints" : [  {
-      "noticeTypes" : [ "E3"],
-      "condition" : "{ND-LotTenderingProcess} ${BT-17-Lot == 'not-allowed'}",
-      "value" : true,
-      "severity" : "ERROR"
-    } ],
-    "severity" : "",
-    "value" : false
-  }
-},{
-  "id" : "BT-745-Lot",
-  "forbidden" : {
-    "constraints" : [ {
-      "noticeTypes" : [ ],
-      "severity" : "ERROR",
-      "value" : true
-    } ],
-    "severity" : "",
-    "value" : false
-  },
-  "mandatory" : {
-    "constraints" : [  {
-      "noticeTypes" : [ "E3"],
-      "condition" : "{ND-LotTenderingProcess} ${BT-17-Lot == 'not-allowed'}",
-      "value" : true,
-      "severity" : "ERROR"
-    } ],
-    "severity" : "",
-    "value" : false
+  "mandatory": {
+    "value": false,
+    "severity": "ERROR",
+    "constraints": [
+      {
+        "noticeTypes": ["E1", "E3"],
+        "value": true,
+        "severity": "ERROR",
+        "condition": "{ND-NonEsubmission} ${BT-17-Lot == 'not-allowed' or BT-17-Lot == 'allowed'}"
+      }
+    ]
   }
 },{
   "id" : "BT-10-Procedure-Buyer",

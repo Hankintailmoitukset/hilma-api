@@ -22,6 +22,7 @@
     <entry key="rule|text|FI-E1-BT-507-Organization-Company-1">'Country subdivision (NUTS)' (BT-507-Organization-Company) is mandatory, except when: 'Country' (BT-514-Organization-Company) does not have NUTS codes (in 'E1')</entry>
     <entry key="rule|text|FI-E1-BT-507-Organization-Company-2">Country subdivision (NUTS)' (BT-507-Organization-Company) is not allowed when: 'Country' (BT-514-Organization-Company) does not have NUTS codes (in 'E1')</entry>
     <entry key="rule|text|FI-E1-BT-513-Organization-Company-1">FI-E1-BT-513-Organization-Company-1 - is mandatory.</entry>
+    <entry key="rule|text|FI-E3-BT-745-Lot-1">'Description' (BT-745-Lot) is mandatory when: Electronic submission is 'not allowed' or 'allowed' (in 'E3')</entry>
     <entry key="rule|text|FI-E1-BT-758-notice-1">FI-E1-BT-758-notice-1 - is mandatory.</entry>
     <entry key="rule|text|FI-E1-FI-11-1">FI-E1-FI-11-1 - place holder.</entry>
     <entry key="rule|text|FI-E1-FI-20-1">FI-E1-FI-20-1 - is mandatory.</entry>
@@ -64,7 +65,7 @@
     <entry key="rule|text|FI-E3-BT-71-Part-1">FI-E3-BT-71-Part-1 - is mandatory.</entry>
     <entry key="rule|text|FI-E3-BT-736-Lot-1">FI-E3-BT-736-Lot-1 - is mandatory.</entry>
     <entry key="rule|text|FI-E3-BT-736-Part-1">FI-E3-BT-736-Part-1 - is mandatory.</entry>
-    <entry key="rule|text|FI-E3-BT-745-Lot-1">'Description' (BT-745-Lot) is mandatory when: Electronic submission is not allowed (in 'E3')</entry>
+    <entry key="rule|text|FI-E3-BT-745-Lot-1">'Description' (BT-745-Lot) is mandatory when: Electronic submission is 'not allowed' or 'allowed' (in 'E3')</entry>
     <entry key="rule|text|FI-E3-BT-750-Lot-1">'Description' (BT-750-Lot) is mandatory, except when: The selection criterion (BT-809) code does not exist (in 'E3')</entry>
     <entry key="rule|text|FI-E3-BT-750-Lot-2">'Description' (BT-750-Lot) is not allowed when: The selection criterion (BT-809) code does not exist (in 'E3')</entry>
     <entry key="rule|text|FI-E3-BT-751-Lot-1">FI-E3-BT-751-Lot-1 - is mandatory.</entry>
@@ -124,4 +125,3 @@
     <entry key="rule|text|FI-E4-FI-20-1">FI-E4-FI-20-1 - is mandatory.</entry>
     <entry key="rule|text|FI-E4-FI-30-1">FI-E4-FI-30-1 - is mandatory.</entry>
 </properties>
-
