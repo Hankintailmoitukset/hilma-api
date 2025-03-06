@@ -3,6 +3,8 @@
 - Laura Kivinkangas
 - Joel Hallikainen
 - Hjalmar Sedwall
+- Thomas Hauken
+- Baran Elis
 
 ## National eForms notices
 - Test environment API now accepts E1, E3, and E4 notices with TED 1.13 specification
