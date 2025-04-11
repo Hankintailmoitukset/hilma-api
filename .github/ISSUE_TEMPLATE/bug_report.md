@@ -12,6 +12,12 @@ assignees: ''
 **Describe the bug**
 A clear and concise description of what the bug is.
 
+**Severity of the bug**
+Select one of the options:
+- Occasional error in the API
+- Occasional error in the API, but visible for the end-users
+- Continuous error in the API that is visible for the end-users
+
 **To Reproduce**
 Steps to reproduce the behavior:
 - API endpoint that the request was sent to
