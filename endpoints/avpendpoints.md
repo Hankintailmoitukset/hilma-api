@@ -1,3 +1,6 @@
+To use the read api you need to create a subscription key that you need to send in the `Ocp-Apim-Subscription-Key` header along with your request.
+You can obtain a subscription key by signing up here for [prod](https://hns-hilma-prod-apim.developer.azure-api.net) or [test](https://hns-hilma-test-apim.developer.azure-api.net) and creating a new subscription at Products > avp-read > Subscribe.
+
 # Search Notices
 <a name="search"></a>
 
