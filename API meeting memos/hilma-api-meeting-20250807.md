@@ -1,6 +1,8 @@
 # Participants
 - Diego Rönkkömäki-Tapia
 - Laura Kivikangas
+- Thomas Hauken
+- Sami Ristinen
 
 # Topics
 
@@ -26,7 +28,14 @@
  
 ## National tailoring coming to clean vehicles:
 - Field BT-725 can only be filled in when the value "Linja-auto (M3)" has been selected in field BT-723.
-- Some of the values are removed from selection list in field BT-723: "M1", "M2", "N1", "N2" and "N3". Three values remain: "Henkilöautot ja kevyet hyötyajoneuvot (M1, M2, N1)", "Linja-autot (M3)" and "Kuorma-autot (N2, N3)".
+- Some of the values are removed from selection list in field BT-723:
+	- M1
+ 	- M2
+  	- N1
+  	- N2
+  	- N3
+
+Three values remain: "Henkilöautot ja kevyet hyötyajoneuvot (M1, M2, N1)", "Linja-autot (M3)" and "Kuorma-autot (N2, N3)".
 
 ## GitHub Issues
 - Remember to use GitHub to report any issues with the API in either PROD or TEST environment
