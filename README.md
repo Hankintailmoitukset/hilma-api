@@ -18,9 +18,7 @@ The production API portal is hosted at: https://hns-hilma-prod-apim.developer.az
 
 The test API portal is hosted at: https://hns-hilma-test-apim.developer.azure-api.net/
 
-Hilma uses [eForms SDK 1.7.0](https://github.com/OP-TED/eForms-SDK/releases/tag/1.7.0)
-
-[SDK 1.10](https://www.hankintailmoitukset.fi/fi/documentation) is expected to be usable in Hilma test env in March 2024
+Hilma uses [eForms SDK 1.13.0](https://github.com/OP-TED/eForms-SDK/releases/tag/1.13.0)
 
 [EForms SDK 1.7.0 to 1.10.1 migration guide](https://github.com/Hankintailmoitukset/hilma-api/tree/master/migrations/eForms_SDK_1_7_to_1_10.md)
 
