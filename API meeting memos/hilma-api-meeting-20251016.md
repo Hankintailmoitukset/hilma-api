@@ -1,5 +1,10 @@
 Participants:
 - Diego Rönkkömäki-Tapia
+- Laura Kivikangas
+- Jussi Steenari
+- Tuuli Martikainen
+- Joel Ollikainen
+  
 
 ## eForms reform of national notices
 Second phase of national eForms notices is postponed to 2026. The second phase notifications are Pienhankintailmoitus, Maatalouden hankintailmoitus, Ennakkoilmoitus suorahankinnasta (ex ante) ja Avoimuusilmoitus ulosmyyntiaikeesta
@@ -21,11 +26,16 @@ FSR, IPI and EED fields
 IPI and EED are probably not ready in October 2025
 
 ## Planned schedule for the following changes is Q4/2025.
+Already in production:
 - Fields BT-735, BT-723, BT-715, BT-725, BT-716 are mandatory when field BT-717 is true. (Clean and energy-efficient vehicles)
 - Field BT-725 can only be filled in when the value "Linja-auto (M3)" has been selected in field BT-723. (Clean and energy-efficient vehicles)
 - Some of the values are removed from selection list in field BT-723: "M1", "M2", "N1", "N2" and "N3". Three values remain: "Henkilöautot ja kevyet hyötyajoneuvot (M1, M2, N1)", "Linja-autot (M3)" and "Kuorma-autot (N2, N3)". (Clean and energy-efficient vehicles)
+
+TBD:
 - New field "FI-70 Contract value" coming for award notices for contracts.
 - Field BT-536 "(Arvioitu) alkamispäivä" becomes mandatory when the value of field BT-538 "Toistaiseksi voimassa oleva sopimus tai sopimuksen kesto ei ole tiedossa" is "Toistaiseksi voimassa oleva".
  
 ## Other topics
 A new field, FI-125, is being added to the national notice E3, which can be used to refer to the previous notice using the Hilma notice number.
+
+Information about national fields can be found in Hilma SDK Github repository: https://github.com/Hankintailmoitukset/hilma-sdk
