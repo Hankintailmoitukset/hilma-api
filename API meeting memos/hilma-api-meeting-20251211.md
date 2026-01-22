@@ -2,8 +2,9 @@
 - Jarkko Sikiö
 - Laura Kivikangas
 - Joel Ollikainen
-- Mauri Korhonen
 - Mikita Lisouski
+- Joose Huopio
+- Sami Ristinen
 
 # Topics
 

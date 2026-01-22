@@ -2,8 +2,8 @@
 - Jarkko Sikiö
 - Laura Kivikangas
 - Joel Ollikainen
-- Mauri Korhonen
 - Mikita Lisouski
+- Jussi Steenari
 
 # Topics
 
