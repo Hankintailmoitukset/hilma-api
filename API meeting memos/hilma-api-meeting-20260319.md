@@ -28,6 +28,7 @@
 	- Field FI-70 works in tandem with notice-level field BT-161 (Contract Value)
 		- BT-161 should be the sum of all FI-70 fields
 	- Field BT-536 "(Arvioitu) alkamispäivä" becomes mandatory when the value of field BT-538 "Toistaiseksi voimassa oleva sopimus tai sopimuksen kesto ei ole tiedossa" is "Toistaiseksi voimassa oleva"
+	- There will be a transition period in Hilma SDK for these	
 
 ## API Updates
 - ReadAPI(eForm): Addition of Modified and Created timestamps added to PublicNoticeContract JSON
