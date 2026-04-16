@@ -1,0 +1,38 @@
+# Participants
+- Diego Rönkkömäki-Tapia
+- Mikita Lisouski
+
+# Topics
+
+## National tailoring of eForms notices
+- Documentation in GitHub at https://github.com/Hankintailmoitukset/hilma-api/blob/master/Hilma_national_tailoring_API.xlsx and https://github.com/Hankintailmoitukset/hilma-api/blob/master/National%20eForms%20-%20specifications%20version%200.99.xlsx
+
+## SDK version update
+- The SDK version 1.13.2 in test environment
+	- Should be a backwards compatible minor update
+	- If breaking changes are identified, there will be a 3 month transition period
+- SDK version 1.13.3 coming at some point
+- Next major version change is 2.0.0, planned to be done during Q3/2027
+
+## Upcoming national tailoring
+- The planned schedule for the implementation of the EED and IPI fields has changed. The goal is Q1/2026 together with SDK 1.13.2.
+	- IPI and EED fields need SDK 1.13.2 version, so a minor SDK update is also needed
+  - IPI and EED are currently available in Hilma Test environment
+- In the next test release (maybe 21th - 25th of April)
+	- New field "FI-70 Contract value" coming for award notices for contracts
+	- Field BT-536 "(Arvioitu) alkamispäivä" becomes mandatory when the value of field BT-538 "Toistaiseksi voimassa oleva sopimus tai sopimuksen kesto ei ole tiedossa" is "Toistaiseksi voimassa oleva"
+	- Because of the above, we will have to release Hilma SDK v3 (v2 gets a grace period)
+
+## BT-125 - Previous Planning Identifier
+- A new field FI-125 to refer to a previous notice
+- Allows only TED notice identifiers, so if the notice is published only in Hilma (with FI-20) we will instead use field FI-125
+- The new field FI-125 is now also added to national notice E3 and is used to refer to the previous notice using the Hilma notice number
+
+## Does Hilma expose an API for getting organisation info (y-tunnus / national registration number)
+- Sometimes organisation IDs would be good to check/validate before submitting notices
+- Currently no external API in Hilma for getting organisation info. is it possible to have an external API in the future?
+
+## GitHub Issues
+- Remember to use GitHub to report any issues with the API in either PROD or TEST environment
+- Remember the documentation at https://hns-hilma-prod-apim.developer.azure-api.net
+	- Needs Signing up before any documentation is visible, the approval process for sign up takes a few minutes and you will get an email to verify when it's done
